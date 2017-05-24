@@ -17,3 +17,6 @@
 /yarn-error.log
 
 .byebug_history
+
+# don't commit local env vars
+.env
