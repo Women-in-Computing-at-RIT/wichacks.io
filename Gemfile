@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'hackathon_manager', path: '../hackathon_manager'
+gem 'hackathon_manager', git: 'https://github.com/codeRIT/hackathon_manager.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'

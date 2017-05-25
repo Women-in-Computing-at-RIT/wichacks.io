@@ -1,5 +1,6 @@
-PATH
-  remote: ../hackathon_manager
+GIT
+  remote: https://github.com/codeRIT/hackathon_manager.git
+  revision: cda1a9c58df04fefde25c87d2a042a8356647e2a
   specs:
     hackathon_manager (0.1.0)
       ajax-datatables-rails (~> 0.4.0)
