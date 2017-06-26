@@ -3,6 +3,7 @@ defaults: &defaults
   event_is_over: true
   last_day_to_apply: <%= Date.new(2017, 2, 11) %>
   auto_late_waitlist: true
+  logo_asset: logo.png
 
 development:
   <<: *defaults
