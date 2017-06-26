@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   get 'pages/index'
+  get '/extras', to: 'pages#extras'
 
   root 'pages#index'
 end

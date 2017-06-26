@@ -12,4 +12,9 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require ./wichacks/vendor/jquery.js
 //= require_tree .
+
+$(document).ready(function() {
+  $(document).foundation();
+});
