@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby IO.read(File.expand_path("../.ruby-version", __FILE__)).chomp
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
