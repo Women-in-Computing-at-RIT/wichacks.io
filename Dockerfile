@@ -14,12 +14,12 @@ RUN apt-get install -y libxml2-dev libxslt1-dev
 # for a JS runtime
 RUN apt-get install -y nodejs
 
-ENV APP_HOME /app
-RUN mkdir $APP_HOME
-WORKDIR $APP_HOME
+RUN mkdir /app
+WORKDIR /app
 
-ADD Gemfile* $APP_HOME/
-ADD .ruby-version $APP_HOME/
-RUN gem install bundler && bundle install --jobs 20 --retry 5
+ADD Gemfile* /app/
+ADD .ruby-version /app/
+RUN gem install bundler
+RUN bundle install
 
-ADD . $APP_HOME
+ADD . /app
