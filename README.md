@@ -37,7 +37,20 @@ docker-compose up --build
 ```bash
 docker-compose run web rails db:setup
 ```
-5. You should now be able to access the website at [http://localhost:3000](http://localhost:3000)
+5. You should now be able to access the website at http://localhost:3000
+
+You'll then want to make an account & promote yourself to an admin.
+
+1. Visit http://localhost:3000/users/sign_up
+2. Make a regular account
+4. Promote yourself to an admin:
+```bash
+docker-compose run web rails c
+# Wait for the console to start...
+Loading development environment (Rails 5.1.1)
+irb(main):001:0> User.last.update_attribute(:admin, true)
+```
+5. You should now be able to visit http://localhost:3000/manage
 
 ## Tooling
 
