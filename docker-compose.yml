@@ -1,0 +1,19 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.6.22
+    ports:
+      - "3306"
+    restart: always
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+
+  web:
+    build: .
+    command: bin/rails server --port 3000 --binding 0.0.0.0
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    volumes:
+      - .:/app
