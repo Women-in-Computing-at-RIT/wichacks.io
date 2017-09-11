@@ -8,6 +8,11 @@ services:
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
+  redis:
+    image: redis:4.0-alpine
+    ports:
+      - "6379"
+
   web:
     build: .
     command: bin/rails server --port 3000 --binding 0.0.0.0
@@ -15,5 +20,8 @@ services:
       - "3000:3000"
     links:
       - db
+      - redis
     volumes:
       - .:/app
+    environment:
+      - REDIS_URL=redis://redis:6379
