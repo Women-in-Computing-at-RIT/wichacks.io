@@ -20,6 +20,6 @@ WORKDIR /app
 ADD Gemfile* /app/
 ADD .ruby-version /app/
 RUN gem install bundler
-RUN bundle install
+RUN bundle install --jobs 20 --retry 5
 
 ADD . /app
