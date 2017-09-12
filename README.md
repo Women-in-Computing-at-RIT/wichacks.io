@@ -1,27 +1,13 @@
-# README
+# wichacks.io  [![Build Status](https://travis-ci.org/Women-in-Computing-at-RIT/wichacks.io.svg?branch=develop)](https://travis-ci.org/Women-in-Computing-at-RIT/wichacks.io) [![Code Climate](https://codeclimate.com/github/Women-in-Computing-at-RIT/wichacks.io/badges/gpa.svg)](https://codeclimate.com/github/Women-in-Computing-at-RIT/wichacks.io) [![Test Coverage](https://codeclimate.com/github/Women-in-Computing-at-RIT/wichacks.io/badges/coverage.svg)](https://codeclimate.com/github/Women-in-Computing-at-RIT/wichacks.io/coverage) [![security](https://hakiri.io/github/Women-in-Computing-at-RIT/wichacks.io/develop.svg)](https://hakiri.io/github/Women-in-Computing-at-RIT/wichacks.io/develop)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The public facing site for WiCHacks.
 
-Things you may want to cover:
+* **Hacker applications:** Users sign up/in using [MyMLH](https://my.mlh.io/), which includes standard hackathon application info. This pre-fills the BrickHack application, so hackers don't have to duplicate information!
+* **Acceptance, RSVPs**: Manage applications & coordinate acceptance/waitlist/denials
+* **Bus Lists:** Coordinate bus sign-ups during the RSVP process while communicating important information to riders & captains
+* **Email communication**: Ensure hackers get consistent, timely information throughout their application process, while enabling the organizing team to communicate important information at any time.
+* **Statistics & Visualization:** Surface key information about the application base, distribution of applicants, progress towards attendance, etc.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 ## Getting Started
 
