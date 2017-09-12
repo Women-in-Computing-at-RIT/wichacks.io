@@ -76,3 +76,15 @@ docker-compose up -d web sidekiq
 ```
 
 You can follow the same format for `db` and `redis`, though you shouldn't ever need to restart those.
+
+## Gotchas
+
+* If you see the error message `web_1 | A server is already running. Check /app/tmp/pids/server.pid`, and you don't have any other servers running, remove the PID file and try again.
+```bash
+rm tmp/pids/server.pid
+```
+* If you try to `docker-compose run web` and get an error message along the lines of `Could not find foogem-x.y.z in any of the sources`, your local bundle is conflicting with Docker or you haven't run `bundle install`.
+```bash
+rm -rf .bundle
+docker-compose run web bundle install
+```
