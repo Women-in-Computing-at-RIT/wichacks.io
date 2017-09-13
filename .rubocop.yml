@@ -8,7 +8,7 @@ Bundler/OrderedGems:
   Enabled: false
 
 Metrics/LineLength:
-  Max: 120
+  Enabled: false
 
 Style/ClassAndModuleChildren:
   Enabled: false
@@ -28,11 +28,25 @@ Style/Documentation:
 Style/SymbolArray:
   Enabled: false
 
+Style/WordArray:
+  Enabled: false
+
 Metrics/AbcSize:
   Exclude:
     - db/migrate/*
+
+Metrics/BlockLength:
+  Exclude:
+    - test/**/*
+
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*
 
 Metrics/MethodLength:
   Max: 15
   Exclude:
     - db/migrate/*
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
