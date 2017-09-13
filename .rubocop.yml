@@ -1,0 +1,38 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - vendor/**/*
+    - bin/**/*
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*
+
+Metrics/MethodLength:
+  Max: 15
+  Exclude:
+    - db/migrate/*
