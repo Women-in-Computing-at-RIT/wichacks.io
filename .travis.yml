@@ -1,0 +1,28 @@
+language: ruby
+dist: precise # Temp fix: https://github.com/travis-ci/travis-ci/issues/8331
+cache: bundler
+sudo: false
+bundler_args: --path vendor --local --without development
+before_script:
+  - mysql -e 'create database myapp_test;'
+  - mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+  - echo -e "Host wic.oweb.co\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+script:
+- bundle exec rake db:migrate db:test:prepare
+- bundle exec rake test
+# - RUN_COVERAGE=travis bundle exec rake test
+# - bundle exec rake coverage:report
+# deploy:
+#   - provider: script
+#     script: .travis/deploy_stage.sh
+#     on:
+#       branch: develop
+#       repo: Women-in-Computing-at-RIT/wichacks.io
+#   - provider: script
+#     script: .travis/deploy_prod.sh
+#     on:
+#       branch: master
+#       repo: Women-in-Computing-at-RIT/wichacks.io
+# addons:
+#   code_climate:
+#     repo_token: c377cc636e3f10276b52d937c1731f3fb693e7fea35bea2322bddafd55fe5261
