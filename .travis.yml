@@ -11,9 +11,8 @@ before_script:
   - echo -e "Host wic.oweb.co\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script:
 - bundle exec rake db:migrate db:test:prepare
-- bundle exec rake test
-# - RUN_COVERAGE=travis bundle exec rake test
-# - bundle exec rake coverage:report
+- RUN_COVERAGE=travis bundle exec rake test
+- bundle exec rake coverage:report
 # deploy:
 #   - provider: script
 #     script: .travis/deploy_stage.sh
@@ -25,6 +24,6 @@ script:
 #     on:
 #       branch: master
 #       repo: Women-in-Computing-at-RIT/wichacks.io
-# addons:
-#   code_climate:
-#     repo_token: c377cc636e3f10276b52d937c1731f3fb693e7fea35bea2322bddafd55fe5261
+addons:
+  code_climate:
+    repo_token: c377cc636e3f10276b52d937c1731f3fb693e7fea35bea2322bddafd55fe5261
