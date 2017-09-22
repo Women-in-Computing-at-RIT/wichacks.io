@@ -20,3 +20,6 @@
 
 # don't commit local env vars
 .env
+
+# Non-encrypted Travis files
+.travis/deploy_ssh_key
