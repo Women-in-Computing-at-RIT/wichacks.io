@@ -1,5 +1,5 @@
-/* purple: #704d9d */
-/* black: #141414*/
+$purple: #704d9d;
+$black: #141414;
 
 .centered {
   text-align: center;
@@ -23,7 +23,7 @@ body {
 .top-bar,
 .top-bar-section li:not(.has-form) a:not(.button),
 .top-bar .name h1 {
-    background: #141414 !important;
+    background: $black !important;
     font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }
 
@@ -88,7 +88,7 @@ p {
 }
 
 .menu-container {
-    background-color: #141414;
+    background-color: $black;
     height:3rem;
     left:0;
     position:fixed;
@@ -139,7 +139,7 @@ span.eventname {
 }
 
 .register {
-    background-color: #704d9d;
+    background-color: $purple;
 }
 
 span.white {
@@ -172,7 +172,7 @@ div.logo p {
     font-weight: 600;
     color: #FDC000;
     margin: 0px auto;
-    text-shadow: 0px 0px 8px #141414;
+    text-shadow: 0px 0px 8px $black;
     font-size: 1.7rem;
     line-height: 1.9rem;
 }
@@ -258,14 +258,14 @@ span.italics {
 }
 
 a {
-    color: #704d9d;
+    color: $purple;
     font-weight: bold;
     text-decoration: none;
     font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }
 
 a:visited {
-    color: #704d9d;
+    color: $purple;
 }
 
 .twitter-follow {
@@ -371,9 +371,9 @@ div.sponsor a img:hover,
 
 .team-pic {
     display: inline-block;
-    -webkit-box-shadow: 0px 0px 10px #141414;
-       -moz-box-shadow: 0px 0px 10px #141414;
-            box-shadow: 0px 0px 10px #141414;
+    -webkit-box-shadow: 0px 0px 10px $black;
+       -moz-box-shadow: 0px 0px 10px $black;
+            box-shadow: 0px 0px 10px $black;
     border-style:solid;
     border-width:5px;
     border-color: white;
@@ -388,7 +388,7 @@ div.sponsor a img:hover,
 .team-name {
     font-weight: bold;
     text-transform: uppercase;
-    color: #704d9d;
+    color: $purple;
 }
 
 .team-info {
