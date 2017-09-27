@@ -783,7 +783,6 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   codeclimate-test-reporter (~> 0.6.0)
-  coffee-rails (~> 4.2)
   dotenv-rails
   hackathon_manager (~> 0.2.0)
   jbuilder (~> 2.5)
