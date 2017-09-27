@@ -11,21 +11,23 @@ The public facing site for WiCHacks.
 
 ## Getting Started
 
-TODO: `git pull`...
-
-1. Download & install [Docker](https://www.docker.com/community-edition#/download)
-2. Open/start Docker
-3. Once docker is started, build & bring up the website:
+1. See [CONTRIBUTING.md](CONTRIBUTING.md) for details on cloning the repo.
+2. Download & install [Docker](https://www.docker.com/community-edition#/download)
+3. Open/start Docker
+4. Once docker is started, build & bring up the website:
 ```bash
 docker-compose up --build
 ```
-4. **In a new terminal window,** setup the database:
+5. **In a new terminal window,** setup the database:
 ```bash
 docker-compose run web rails db:setup
 ```
-5. You should now be able to access the website at http://localhost:3000
+6. You should now be able to access the website at http://localhost:3000
+_**Windows users:** be sure to accept the security pop-ups - they might be hidden! The website will not start until you accept them._
 
-You'll then want to make an account & promote yourself to an admin.
+#### Admin Access
+
+You'll want to make an account & promote yourself to an admin in order to access the entire website.
 
 1. Visit http://localhost:3000/users/sign_up
 2. Sign up for a regular account
@@ -68,9 +70,10 @@ You can follow the same format for `db` and `redis`, though you shouldn't ever n
 * If you see the error message `web_1 | A server is already running. Check /app/tmp/pids/server.pid`, and you don't have any other servers running, remove the PID file and try again.
 ```bash
 rm tmp/pids/server.pid
+docker-compose restart web
 ```
 * If you try to `docker-compose run web` and get an error message along the lines of `Could not find foogem-x.y.z in any of the sources`, your local bundle is conflicting with Docker or you haven't run `bundle install`.
 ```bash
 rm -rf .bundle
-docker-compose run web bundle install
+docker-compose up --build # This will rebuild the containers, install new dependencies, and start the website
 ```
