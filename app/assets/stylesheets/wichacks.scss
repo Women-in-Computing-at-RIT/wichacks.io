@@ -205,7 +205,7 @@ div.logo p {
 .logo-background {
   z-index: -4;
   position: relative;
-  background-image: url(logo-background.png);
+  background-image: image-url("logo-background.png");
   background-size: cover;
 }
 
