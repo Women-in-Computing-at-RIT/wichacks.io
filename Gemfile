@@ -7,7 +7,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'hackathon_manager', '~> 0.2.0'
+if ENV['HACKATHON_MANAGER_DEV'] == '1'
+  gem 'hackathon_manager', path: '../hackathon_manager'
+else
+  gem 'hackathon_manager', '~> 0.2.0'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
