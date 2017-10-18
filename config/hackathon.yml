@@ -1,9 +1,16 @@
 defaults: &defaults
+  # Logic config
   registration_is_open: false
   event_is_over: true
   last_day_to_apply: <%= Date.new(2017, 2, 11) %>
   auto_late_waitlist: true
+
+  # Content config
+  name: WiCHacks
   logo_asset: wic-hacks-logo.png
+  agreement_pdf_asset: wic-logo.png
+  email_from: '"WiCHacks" <hello@wichacks.io>'
+  default_page_title: WiCHacks
 
 development:
   <<: *defaults
