@@ -1,54 +1,49 @@
-/* html, body {
-    margin: 0;
-    height: 100%;
-    min-width: 320px;
- }
+  html, body {
+     margin: 0;
+     height: 100%;
+     min-width: 320px;
+  }
 
- html, h1, title, body {
-     font-family: 'Work Sans', sans-serif;
-     font-size: 100px; 
-     background: none; 
-   }
+  html, h1, h2, title, body {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 100px; 
+    }
 
- #container{
-   min-height: 100%;
-   position: relative;
-   background-color: #402761;
-   background: linear-gradient(to bottom left, #8E4FE0, #993A91, #C99F18);
- }
+  #container{
+    min-height: 100%;
+    position: relative;
+    background-color: #402761;
+    background: linear-gradient(to bottom left, #8E4FE0, #993A91, #C99F18);
+  }
 
- #date ul {
-   background: none;
- }
+  #date {
+    list-style-type: none;
+    font-size: 60px;
+    background: none;
+  }
 
- #date {
-   list-style-type: none;
-   font-size: 60px;
-   background: none;
- }
+  #info {
+    list-style-type: none;
+    font-size: 40px;
+    margin-left: 50%;
+  }
 
- #info {
-   list-style-type: none;
-   font-size: 40px;
-   margin-left: 50%;
- }
+  #info ul {
+    float: left;
+    margin-left: 50%;
+  }
 
- #info ul {
-   float: left;
-   margin-left: 50%;
- }
+  #info li {
+    float: right;
+    background: none;
+  }
 
- #info li {
-   float: right;
-   background: none;
- }
+  .resize {
+    width: 100%;
+  }
 
- .resize {
-   width: 100%;
- }
-
- #pattern {
-   bottom: 0%;
-   position: absolute;
-   background: none;
- } */
+  #pattern {
+    bottom: 0%;
+    position: absolute;
+    background: none;
+  }
