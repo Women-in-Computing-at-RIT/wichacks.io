@@ -96,6 +96,18 @@ h1, h2, h3, title, body {
   border: 6px white solid;
 }
 
+.box--no-bottom-border {
+  border-bottom: none;
+}
+
+.box--no-top-border {
+  border-top: none;
+}
+
+.box--no-left-border {
+  border-left: none; 
+}
+
 /* small screen */
 @media screen and (max-width: 700px) {
 
@@ -115,6 +127,6 @@ h1, h2, h3, title, body {
 /* very large screen */
 @media only screen and (min-width: 1150px) {
   html, body {
-    font-size: 2.5rem;
+    font-size: 1.4rem;
   }
 }
