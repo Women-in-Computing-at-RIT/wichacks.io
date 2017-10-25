@@ -6,12 +6,14 @@ html, body {
    margin: 0;
    height: 100%;
    min-width: 320px;
-   font-family: 'Work Sans', sans-serif;
+   font-family: 'Verdana', sans-serif;
+   font-weight: bold;
    font-size: 1rem;
+   text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
 }
 
 h1, h2, h3, title, body {
-    color: #E2E2E2;
+    color: rgb(255, 255, 255);
   }
 
 #container{
@@ -46,25 +48,28 @@ h1, h2, h3, title, body {
 }
 
 #logo {
-  width: 75%;
+  width: 70%;
 }
 
 .date {
   font-size: 2.5rem;
   list-style-type: none;
   float: left;
+  margin-top: -5px;
 }
 
 #month {
-  padding-right: 1.8rem;
+  padding: 10px;
+  font-size: 25px;
 }
 
 #year {
-  font-size: 5rem;
+  font-size: 71px;
+  padding: 2px;
 }
 
 #info {
-  font-size: 2rem;
+  font-size: 25px;
   list-style-type: none;
 }
 
@@ -106,6 +111,10 @@ h1, h2, h3, title, body {
 
 .box--no-left-border {
   border-left: none; 
+}
+
+.date--more-spacing {
+  margin-bottom: 5px;
 }
 
 /* small screen */
