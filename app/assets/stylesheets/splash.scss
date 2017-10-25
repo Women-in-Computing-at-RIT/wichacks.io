@@ -19,38 +19,52 @@ h1, h2, h3, title, body {
   background: linear-gradient(to bottom left, #704c9c, #90308e, #bd7e4c);
 }
 
+.social li {
+  float: left;
+  padding-top: 20px;
+  padding-left: 20px; 
+}
+
+#facebook {
+  width: 35px;
+  height: 40px;
+}
+
+#twitter {
+  width: 35px;
+}
+
 .center{
   margin: auto;
   width: 50%;
 }
 
 #inner-content{
-  margin: 0%, 25%, 0%, 25%;
-  padding: 0;
+  padding-top: 80px;
   width: 60%;
 }
 
 #logo {
-  
+  width: 75%;
 }
 
 .date {
+  font-size: 50px;
   list-style-type: none;
-  font-size: 60px;
-}
-
-#month {
   float: left;
 }
 
+#month {
+  padding-right: 15px; 
+}
+
 #year {
-  float: right;
+  font-size: 100px;
 }
 
 #info {
-  font-size: 30px;
+  font-size: 25px;
   list-style-type: none;
-  margin-left: 50%;
 }
 
 #info ul {
@@ -60,6 +74,7 @@ h1, h2, h3, title, body {
 
 #info li {
   float: right;
+  padding-top: 5px;
   background: none;
 }
 
