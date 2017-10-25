@@ -7,6 +7,7 @@ html, body {
    height: 100%;
    min-width: 320px;
    font-family: 'Work Sans', sans-serif;
+   font-size: 1rem;
 }
 
 h1, h2, h3, title, body {
@@ -49,21 +50,21 @@ h1, h2, h3, title, body {
 }
 
 .date {
-  font-size: 50px;
+  font-size: 2.5rem;
   list-style-type: none;
   float: left;
 }
 
 #month {
-  padding-right: 15px; 
+  padding-right: 1.8rem; 
 }
 
 #year {
-  font-size: 100px;
+  font-size: 5rem;
 }
 
 #info {
-  font-size: 25px;
+  font-size: 2rem;
   list-style-type: none;
 }
 
@@ -74,7 +75,7 @@ h1, h2, h3, title, body {
 
 #info li {
   float: right;
-  padding-top: 5px;
+  padding: 0.5rem;
   background: none;
 }
 
@@ -86,4 +87,27 @@ h1, h2, h3, title, body {
   bottom: -20%;
   position: absolute;
   background: none;
+}
+
+/* small screen */
+@media screen and (max-width: 700px) {
+  
+  html, body {
+      font-size: 0.8rem;
+  }
+}
+
+/* medium screen */
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  
+  html, body {
+      font-size: 1.4rem;
+  }
+}
+
+/* very large screen */
+@media only screen and (min-width: 1150px) {
+  html, body {
+    font-size: 2.5rem;
+  }
 }
