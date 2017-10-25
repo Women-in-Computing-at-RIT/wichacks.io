@@ -23,7 +23,7 @@ h1, h2, h3, title, body {
 .social li {
   float: left;
   padding-top: 20px;
-  padding-left: 20px; 
+  padding-left: 20px;
 }
 
 #facebook {
@@ -56,7 +56,7 @@ h1, h2, h3, title, body {
 }
 
 #month {
-  padding-right: 1.8rem; 
+  padding-right: 1.8rem;
 }
 
 #year {
@@ -91,7 +91,7 @@ h1, h2, h3, title, body {
 
 /* small screen */
 @media screen and (max-width: 700px) {
-  
+
   html, body {
       font-size: 0.8rem;
   }
@@ -99,7 +99,7 @@ h1, h2, h3, title, body {
 
 /* medium screen */
 @media screen and (min-width: 700px) and (max-width: 900px) {
-  
+
   html, body {
       font-size: 1.4rem;
   }
