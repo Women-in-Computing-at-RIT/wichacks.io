@@ -42,7 +42,11 @@ h1, h2, h3, title, body {
 
 #inner-content{
   padding-top: 80px;
-  width: 60%;
+  width: 800px;
+
+  @media (max-width: 900px) {
+    width: 90%;
+  }
 }
 
 #logo {
@@ -105,7 +109,7 @@ h1, h2, h3, title, body {
 }
 
 .box--no-left-border {
-  border-left: none; 
+  border-left: none;
 }
 
 /* small screen */
@@ -117,16 +121,16 @@ h1, h2, h3, title, body {
 }
 
 /* medium screen */
-@media screen and (min-width: 700px) and (max-width: 900px) {
+// @media screen and (min-width: 700px) and (max-width: 900px) {
 
-  html, body {
-      font-size: 1.4rem;
-  }
-}
+//   html, body {
+//       font-size: 1.4rem;
+//   }
+// }
 
 /* very large screen */
-@media only screen and (min-width: 1150px) {
-  html, body {
-    font-size: 1.4rem;
-  }
-}
+// @media only screen and (min-width: 1150px) {
+//   html, body {
+//     font-size: 1.4rem;
+//   }
+// }
