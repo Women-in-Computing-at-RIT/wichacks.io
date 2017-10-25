@@ -12,32 +12,45 @@
   <body>
     <div id="container">
 
-        <div class="social">
+      <div class="social">
 
-        </div>
+      </div>
+
+      <div class="center" id="inner-content">
 
         <%= image_tag("wic-hacks-logo-white.png", id:"logo")%>
 
-        <h1>
-          WiCHacks
-        </h1>
-        <h2>
-          <ul id="date">
-            <li>February</li>
-            <li>10-12</li>
-          </ul>
-        </h2>
-
-        <ul id=info>
-          <li>Coming soon</li>
-          <li>Sign up for updates</li>
-        </ul>
-
+        <div>
+            <h2>
+              <ul class="date" id="month">
+                <li>February</li>
+                <li>10-12</li>
+              </ul>
+            </h2>
         </div>
 
-       <%= image_tag("splash-pattern.png", class:"resize", id:"pattern")%>
+        <div class="date" id="year">             
+            <h1>
+              <li>
+                2017
+              </li>
+            </h1> 
+        </div>
 
+        <div id="info">
+            <h3>
+              <ul>
+                <li>Coming soon</li>
+                <li>Sign up for updates</li>
+              </ul>
+            </h3>
+        </div>
+
+      </div>
 
     </div>
+
+    <%= image_tag("splash-pattern.png", class:"resize", id:"pattern") %>
+    
   </body>
 </html>
