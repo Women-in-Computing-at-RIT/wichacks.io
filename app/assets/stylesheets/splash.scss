@@ -19,13 +19,17 @@ h1, h2, h3, title, body {
 #container{
   min-height: 100%;
   background-color: #402761;
-  background: linear-gradient(to bottom left, #704c9c, #90308e, #bd7e4c);
+  background: linear-gradient(to bottom right, #704c9c, #90308e, #bd7e4c);
 }
 
 .social li {
   float: left;
-  padding-top: 20px;
-  padding-left: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
 }
 
 #facebook {
@@ -35,6 +39,10 @@ h1, h2, h3, title, body {
 
 #twitter {
   width: 35px;
+}
+
+#wic {
+  height: 25px;
 }
 
 .center{
@@ -115,6 +123,19 @@ h1, h2, h3, title, body {
 
 .date--more-spacing {
   margin-bottom: 5px;
+}
+
+.white-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.white-link:hover {
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 1.0);
+}
+
+.social li:hover {
+  opacity: 1.0;
 }
 
 /* small screen */
