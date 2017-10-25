@@ -83,10 +83,13 @@ h1, h2, h3, title, body {
   width: 100%;
 }
 
-#pattern { 
-  bottom: -20%;
+.pattern {
+  bottom: 0;
   position: absolute;
-  background: none;
+  background: asset-url('splash-pattern.png') center top;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
 }
 
 /* small screen */
