@@ -92,6 +92,10 @@ h1, h2, h3, title, body {
   height: 200px;
 }
 
+.box {
+  border: 6px white solid;
+}
+
 /* small screen */
 @media screen and (max-width: 700px) {
 
