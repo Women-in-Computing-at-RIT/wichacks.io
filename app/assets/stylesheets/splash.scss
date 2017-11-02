@@ -1,28 +1,28 @@
 /*
- *= require 'reset.css'
- */
+*= require 'reset.css'
+*/
 
 $breakpoint-mobile-max: 500px;
 $breakpoint-mid: 870px;
 $breakpoint-small: 1150px;
 
 html, body {
-   margin: 0;
-   height: 100%;
-   min-width: 320px;
-   font-family: 'Verdana', sans-serif;
-   font-weight: bold;
-   font-size: 1rem;
-   text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+  margin: 0;
+  height: 100%;
+  min-width: 320px;
+  font-family: 'Verdana', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
 }
 
 h1, h2, h3, title, body {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 html {
   background-color: #402761;
-  background: linear-gradient(to bottom right, #704c9c, #9E2189, #BD7415);    
+  background: linear-gradient(to bottom right, #704c9c, #9E2189, #BD7415);
   height: 100%;
   background-size: cover;
 }
@@ -107,11 +107,11 @@ html {
   @media (max-width: $breakpoint-mobile-max) {
     font-size: 4.0rem;
     padding-top: 4px;
-  } 
+  }
   @media (min-width: $breakpoint-mid) {
     font-size: 5.0rem;
     padding-top: 4px;
-  } 
+  }
 }
 
 #info {
@@ -119,101 +119,101 @@ html {
   list-style-type: none;
   margin-top: 10vh;
   // @media (max-width: $breakpoint-mobile-max) {
-  //   margin-top: 30px;
-  // }
-  // @media (min-width: $breakpoint-mid) {
-  //   margin-top: 60px;
-  // }
-}
+    //   margin-top: 30px;
+    // }
+    // @media (min-width: $breakpoint-mid) {
+      //   margin-top: 60px;
+      // }
+    }
 
-#info ul {
-  float: right;
-}
+    #info ul {
+      float: right;
+    }
 
-#info li {
-  float: right;
-  text-align: right;
-  padding: 0.5rem;
-  background: none;
-  display: block;
-  clear: both;
-}
+    #info li {
+      float: right;
+      text-align: right;
+      padding: 0.5rem;
+      background: none;
+      display: block;
+      clear: both;
+    }
 
-.resize {
-  width: 100%;
-}
+    .resize {
+      width: 100%;
+    }
 
-.pattern {
-  bottom: 0;
-  position: absolute;
-  background: asset-url('splash-pattern.png') center top;
-  background-size: cover;
-  width: 100%;
-  height: 200px;
+    .pattern {
+      bottom: 0;
+      position: absolute;
+      background: asset-url('splash-pattern.png') center top;
+      background-size: cover;
+      width: 100%;
+      height: 200px;
 
-  @media (max-height: 600px) {
-    position: relative;
-  }
-}
+      @media (max-height: 600px) {
+        position: relative;
+      }
+    }
 
-.clear-fix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .clear-fix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-.box {
-  border: 6px white solid;
-}
+    .box {
+      border: 6px white solid;
+    }
 
-.box--no-bottom-border {
-  border-bottom: none;
-}
+    .box--no-bottom-border {
+      border-bottom: none;
+    }
 
-.box--no-top-border {
-  border-top: none;
-}
+    .box--no-top-border {
+      border-top: none;
+    }
 
-.box--no-left-border {
-  border-left: none;
-}
+    .box--no-left-border {
+      border-left: none;
+    }
 
-.date--more-spacing {
-  margin-bottom: 5px;
-}
+    .date--more-spacing {
+      margin-bottom: 5px;
+    }
 
-.white-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
+    .white-link {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
 
-.white-link:hover {
-  text-shadow: 0px 0px 40px rgba(255, 255, 255, 1.0);
-}
+    .white-link:hover {
+      text-shadow: 0px 0px 40px rgba(255, 255, 255, 1.0);
+    }
 
-.social li:hover {
-  opacity: 1.0;
-}
+    .social li:hover {
+      opacity: 1.0;
+    }
 
-/* small screen */
-@media screen and (max-width: $breakpoint-mid) {
+    /* small screen */
+    @media screen and (max-width: $breakpoint-mid) {
 
-  html, body {
-      font-size: 0.8rem;
-  }
-}
+      html, body {
+        font-size: 0.8rem;
+      }
+    }
 
-/* medium screen */
-// @media screen and (min-width: 700px) and (max-width: 900px) {
+    /* medium screen */
+    // @media screen and (min-width: 700px) and (max-width: 900px) {
 
-//   html, body {
-//       font-size: 1.4rem;
-//   }
-// }
+      //   html, body {
+        //       font-size: 1.4rem;
+        //   }
+        // }
 
-/* very large screen */
-// @media only screen and (min-width: 1150px) {
-//   html, body {
-//     font-size: 1.4rem;
-//   }
-// }
+        /* very large screen */
+        // @media only screen and (min-width: 1150px) {
+          //   html, body {
+            //     font-size: 1.4rem;
+            //   }
+            // }
