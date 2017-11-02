@@ -27,9 +27,8 @@ html {
   background-size: cover;
 }
 
-#container{
+.container{
   min-height: 100%;
-  //background: linear-gradient(to bottom right, #704c9c, #9E2189, #BD7415);
 }
 
 .social li {
@@ -42,25 +41,25 @@ html {
   opacity: 0.8;
 }
 
-#facebook {
+.facebook {
   width: 35px;
   height: 40px;
 }
 
-#twitter {
+.twitter {
   width: 35px;
 }
 
-#wic {
+.wic {
   height: 25px;
 }
 
-.center{
+.center {
   margin: auto;
   width: 50%;
 }
 
-#inner-content{
+.inner-content {
   padding-top: 80px;
   width: 800px;
 
@@ -69,7 +68,7 @@ html {
   }
 }
 
-#logo {
+.logo {
   width: 500px;
   box-sizing: border-box;
 
@@ -93,14 +92,14 @@ html {
   }
 }
 
-#month {
+.month {
   padding: 10px;
   margin-top: 3px;
   display: block;
   text-shadow: 0px 0px 40px rgba(255, 255, 255, 9.5);
 }
 
-#year {
+.year {
   font-size: 5.4rem;
   padding: 0.18rem;
 
@@ -114,23 +113,17 @@ html {
   }
 }
 
-#info {
+.info {
   font-size: 1.8rem;
   list-style-type: none;
   margin-top: 10vh;
-  // @media (max-width: $breakpoint-mobile-max) {
-    //   margin-top: 30px;
-    // }
-    // @media (min-width: $breakpoint-mid) {
-      //   margin-top: 60px;
-      // }
-    }
+}
 
-    #info ul {
+    .info ul {
       float: right;
     }
 
-    #info li {
+    .info li {
       float: right;
       text-align: right;
       padding: 0.5rem;
@@ -202,18 +195,3 @@ html {
         font-size: 0.8rem;
       }
     }
-
-    /* medium screen */
-    // @media screen and (min-width: 700px) and (max-width: 900px) {
-
-      //   html, body {
-        //       font-size: 1.4rem;
-        //   }
-        // }
-
-        /* very large screen */
-        // @media only screen and (min-width: 1150px) {
-          //   html, body {
-            //     font-size: 1.4rem;
-            //   }
-            // }
