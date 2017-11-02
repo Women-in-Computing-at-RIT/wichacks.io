@@ -18,12 +18,18 @@ html, body {
 
 h1, h2, h3, title, body {
     color: rgb(255, 255, 255);
-  }
+}
+
+html {
+  background-color: #402761;
+  background: linear-gradient(to bottom right, #704c9c, #9E2189, #BD7415);    
+  height: 100%;
+  background-size: cover;
+}
 
 #container{
   min-height: 100%;
-  background-color: #402761;
-  background: linear-gradient(to bottom right, #704c9c, #9E2189, #BD7415);
+  //background: linear-gradient(to bottom right, #704c9c, #9E2189, #BD7415);
 }
 
 .social li {
@@ -144,6 +150,10 @@ h1, h2, h3, title, body {
   background-size: cover;
   width: 100%;
   height: 200px;
+
+  @media (max-height: 600px) {
+    position: relative;
+  }
 }
 
 .clear-fix:after {
