@@ -22,9 +22,9 @@ linters:
     enabled: false
     max_elements: 1
 
+  # Changed from hound default
   BorderZero:
-    enabled: true
-    convention: zero # or `none`
+    enabled: false
 
   ChainedClasses:
     enabled: false
@@ -230,8 +230,9 @@ linters:
   TransitionAll:
     enabled: false
 
+  # Changed from hound default
   UnnecessaryMantissa:
-    enabled: true
+    enabled: false
 
   UnnecessaryParentReference:
     enabled: true
