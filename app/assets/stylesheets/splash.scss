@@ -121,81 +121,81 @@ html {
   margin-top: 10vh;
 }
 
-    .info ul {
-      float: right;
-    }
+.info ul {
+  float: right;
+}
 
-    .info li {
-      float: right;
-      text-align: right;
-      padding: 0.5rem;
-      background: none;
-      display: block;
-      clear: both;
-    }
+.info li {
+  float: right;
+  text-align: right;
+  padding: 0.5rem;
+  background: none;
+  display: block;
+  clear: both;
+}
 
-    .resize {
-      width: 100%;
-    }
+.resize {
+  width: 100%;
+}
 
-    .pattern {
-      bottom: 0;
-      position: absolute;
-      background: asset-url('splash-pattern.png') center top;
-      background-size: cover;
-      width: 100%;
-      height: 200px;
-      background-repeat: repeat-x;
+.pattern {
+  bottom: 0;
+  position: absolute;
+  background: asset-url('splash-pattern.png') center top;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  background-repeat: repeat-x;
 
-      @media (max-height: 600px) {
-        position: relative;
-        background-repeat: repeat-x;
-      }
-    }
+  @media (max-height: 600px) {
+    position: relative;
+    background-repeat: repeat-x;
+  }
+}
 
-    .clear-fix:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+.clear-fix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-    .box {
-      border: 6px white solid;
-    }
+.box {
+  border: 6px white solid;
+}
 
-    .box--no-bottom-border {
-      border-bottom: none;
-    }
+.box--no-bottom-border {
+  border-bottom: none;
+}
 
-    .box--no-top-border {
-      border-top: none;
-    }
+.box--no-top-border {
+  border-top: none;
+}
 
-    .box--no-left-border {
-      border-left: none;
-    }
+.box--no-left-border {
+  border-left: none;
+}
 
-    .date--more-spacing {
-      margin-bottom: 5px;
-    }
+.date--more-spacing {
+  margin-bottom: 5px;
+}
 
-    .white-link {
-      color: rgb(255, 255, 255);
-      text-decoration: none;
-    }
+.white-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
 
-    .white-link:hover {
-      text-shadow: 0px 0px 40px rgba(255, 255, 255, 1.0);
-    }
+.white-link:hover {
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 1.0);
+}
 
-    .social li:hover {
-      opacity: 1.0;
-    }
+.social li:hover {
+  opacity: 1.0;
+}
 
-    /* small screen */
-    @media screen and (max-width: $breakpoint-mid) {
+/* small screen */
+@media screen and (max-width: $breakpoint-mid) {
 
-      html, body {
-        font-size: 0.8rem;
-      }
-    }
+  html, body {
+    font-size: 0.8rem;
+  }
+}
