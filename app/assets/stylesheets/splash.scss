@@ -154,7 +154,18 @@ html {
   height: 200px;
   background-repeat: repeat-x;
 
-  @media (max-height: 690px) {
+  // Prevent from blocking sign-up link
+  z-index: -1;
+
+  @media (min-width: 1200px) {
+    height: 300px;
+  }
+
+  @media (max-height: 700px) {
+    height: 150px;
+  }
+
+  @media (max-height: 480px) {
     position: relative;
     background-repeat: repeat-x;
   }
