@@ -76,11 +76,8 @@ html {
 
 .logo {
   width: 500px;
+  max-width: 100%;
   box-sizing: border-box;
-
-  @media (max-width: $breakpoint-mobile-max) {
-    width: 100%;
-  }
 
   @media (min-width: $breakpoint-mid) {
     width: 600px;
