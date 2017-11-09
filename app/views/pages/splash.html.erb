@@ -27,12 +27,12 @@
           <%= image_tag("wic-hacks-logo-white-test.png", class:"logo box")%>
 
           <div class="date">
-              <h2>
-                <ul class="date box box--no-top-border month">
+              <div class="box box--no-top-border month">
+                <ul>
                   <li class="date date--more-spacing">February</li>
                   <li>10-12</li>
                 </ul>
-              </h2>
+              </div>
               <div class="box box--no-top-border box--no-left-border year">
                 <h1>2017</h1>
               </div>
@@ -43,7 +43,9 @@
             <h3>
               <ul>
                 <li class="box box--no-bottom-border">Coming soon</li>
-                <li class="box"><a class="white-link" href="https://docs.google.com/forms/d/1m9iiJHQfPDUsvzSHVKbVS4ROC8WTn_kIe1qYK5D0mAo/viewform">Sign up for updates</a></li>
+                <li class="box"><a class="white-link" href="https://docs.google.com/forms/d/1m9iiJHQfPDUsvzSHVKbVS4ROC8WTn_kIe1qYK5D0mAo/viewform">Sign up for updates »</a></li>
+                <li></li>
+                <li class="box box--thin info-text--small"><%= link_to 'Interested in Sponsoring?', image_path('WiCHacksSponsorLetter18-1.pdf'), class: 'white-link' %></li>
               </ul>
             </h3>
         </div>

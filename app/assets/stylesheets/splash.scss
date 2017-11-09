@@ -76,11 +76,8 @@ html {
 
 .logo {
   width: 500px;
+  max-width: 100%;
   box-sizing: border-box;
-
-  @media (max-width: $breakpoint-mobile-max) {
-    width: 100%;
-  }
 
   @media (min-width: $breakpoint-mid) {
     width: 600px;
@@ -88,7 +85,7 @@ html {
 }
 
 .date {
-  font-size: 2rem;
+  font-size: 2.05rem;
   list-style-type: none;
   float: left;
   margin-top: -5px;
@@ -96,36 +93,29 @@ html {
   flex-flow: row nowrap;
 
   @media (max-width: $breakpoint-mobile-max) {
-    font-size: 18px;
+    font-size: 1.5rem;
   }
 }
 
 .month {
-  padding: 10px;
-  margin-top: 3px;
+  padding: 15px 10px 8px;
   display: block;
   text-shadow: 0px 0px 40px rgba(255, 255, 255, 9.5);
 }
 
 .year {
-  font-size: 5.4rem;
-  padding: 0.18rem;
+  font-size: 5rem;
+  padding: 5px;
 
   @media (max-width: $breakpoint-mobile-max) {
     font-size: 4.0rem;
-    padding-top: 4px;
-  }
-
-  @media (min-width: $breakpoint-mid) {
-    font-size: 5.0rem;
-    padding-top: 4px;
   }
 }
 
 .info {
   font-size: 1.8rem;
   list-style-type: none;
-  margin-top: 10vh;
+  margin-top: 8vh;
 }
 
 .info ul {
@@ -139,6 +129,10 @@ html {
   background: none;
   display: block;
   clear: both;
+}
+
+.info-text--small {
+  font-size: 1rem;
 }
 
 .resize {
@@ -164,8 +158,14 @@ html {
   @media (max-height: 700px) {
     height: 150px;
   }
+}
 
-  @media (max-height: 480px) {
+@media (max-height: 590px), (min-width: 900px) and (max-height: 780px) {
+  .container {
+    min-height: auto;
+  }
+
+  .pattern {
     position: relative;
     background-repeat: repeat-x;
   }
@@ -193,6 +193,10 @@ html {
   border-left: none;
 }
 
+.box--thin {
+  border-width: 4px;
+}
+
 .date--more-spacing {
   margin-bottom: 5px;
 }
@@ -203,7 +207,7 @@ html {
 }
 
 .white-link:hover {
-  text-shadow: 0px 0px 40px rgba(255, 255, 255, 1.0);
+  text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
 }
 
 .social li:hover {
