@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%
+    title = "WiCHacks – Feb 10-11, 2018 – RIT Women in Computing"
+    description = "All women's 24-hour hackathon @ RIT returning February 10-11, 2018!"
+    url = "https://wichacks.io"
+    %>
 
-    <title>WiCHacks | RIT Women in Computing</title>
+    <title><%= title %></title>
 
     <!-- Import CSS -->
     <%= stylesheet_link_tag 'splash', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Search engine & social media info -->
+    <meta content="hackathons, hackathon, hack-a-thon, programming, hardware, development, design, rit, wic, women in computing" name="keywords"/>
+    <meta content="<%= description %>" name="description"/>
+    <meta content="<%= title %>" property="og:title"/>
+    <meta content="<%= url %>" property="og:url"/>
+    <meta content="<%= description %>" property="og:description"/>
+    <!-- <meta content="TODO..." property="og:image"/> -->
+    <!-- <meta content="TODO..." property="og:image"/> -->
+    <meta content="summary" name="twitter:card"/>
+    <meta content="<%= url %>" name="twitter:url"/>
+    <meta content="<%= title %>" name="twitter:title"/>
+    <!-- <meta content="TODO..." name="twitter:image"/> -->
+    <meta content="<%= description %>" name="twitter:description"/>
   </head>
 
   <body>
