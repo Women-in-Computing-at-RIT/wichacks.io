@@ -141,6 +141,10 @@ html {
   clear: both;
 }
 
+.info-text--small {
+  font-size: 1rem;
+}
+
 .resize {
   width: 100%;
 }
@@ -191,6 +195,10 @@ html {
 
 .box--no-left-border {
   border-left: none;
+}
+
+.box--thin {
+  border-width: 4px;
 }
 
 .date--more-spacing {
