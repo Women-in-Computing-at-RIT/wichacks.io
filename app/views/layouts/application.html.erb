@@ -31,6 +31,7 @@ url = "https://wichacks.io"
   <!-- <meta content="TODO..." name="twitter:image"/> -->
   <meta content="<%= description %>" name="twitter:description"/>
 
+  <% if Rails.env.production? %>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110114712-1"></script>
   <script>
@@ -39,6 +40,7 @@ url = "https://wichacks.io"
     gtag('js', new Date());
     gtag('config', 'UA-110114712-1');
   </script>
+  <% end %>
 </head>
 <body>
   <div class="sticky" id="sticky-menu">
