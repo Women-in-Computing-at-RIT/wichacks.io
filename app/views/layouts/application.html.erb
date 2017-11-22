@@ -1,15 +1,35 @@
+<%
+title = "WiCHacks – Feb 10-11, 2018 – RIT Women in Computing"
+description = "All women's 24-hour hackathon @ RIT returning February 10-11, 2018!"
+url = "https://wichacks.io"
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width" />
 
-  <title>WiCHacks | RIT Women in Computing</title>
+  <title><%= title %></title>
 
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <!-- Search engine & social media info -->
+  <meta content="hackathons, hackathon, hack-a-thon, programming, hardware, development, design, rit, wic, women in computing" name="keywords"/>
+  <meta content="<%= description %>" name="description"/>
+  <meta content="<%= title %>" property="og:title"/>
+  <meta content="<%= url %>" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="<%= description %>" property="og:description"/>
+  <!-- <meta content="TODO..." property="og:image"/> -->
+  <!-- <meta content="TODO..." property="og:image"/> -->
+  <meta content="summary" name="twitter:card"/>
+  <meta content="<%= url %>" name="twitter:url"/>
+  <meta content="<%= title %>" name="twitter:title"/>
+  <!-- <meta content="TODO..." name="twitter:image"/> -->
+  <meta content="<%= description %>" name="twitter:description"/>
 
   <script>
     // Google analytics
