@@ -1,0 +1,25 @@
+@import 'variables';
+
+.section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.section__content {
+  flex: 1;
+  max-width: 500px;
+  padding: 20px 30px;
+}
+
+.section--white {
+  background: $white;
+}
+
+.section--purple {
+  background: $purple;
+
+  h1, h2, h3, h4 {
+    color: $white;
+  }
+}
