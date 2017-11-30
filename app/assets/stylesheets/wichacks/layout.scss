@@ -26,6 +26,7 @@
 .section--purple {
   background: $purple;
   color: $white;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.2);
 
   h1, h2, h3, h4 {
     color: $white;
@@ -34,23 +35,24 @@
 
 .section--gradient {
   background-color: #402761;
-  background: linear-gradient(to bottom left, #704c9c, #9E2189, #BD7415);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  // background: linear-gradient(to bottom left, #4c1f59, #963187, #fdc000);
+  background: linear-gradient(45deg, rgb(188, 126, 78), rgb(156, 60, 140), rgb(116, 73, 156));
+  // background: linear-gradient(45deg, #bc7e4e 0%,#9d3c7e 25%,#993586 50%,#8d3381 70%,#37215e 100%);
 }
 
 .section--top {
   padding-top: 40px;
 }
 
+/* Split columns */
+
 .split {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 -25px;
+  margin: 0 -25px -1em;
 }
 
 .split__section {
-  flex: 1 1 200px;
-  margin: 0 25px;
+  flex: 1 0 220px;
+  margin: 0 25px 1em;
 }

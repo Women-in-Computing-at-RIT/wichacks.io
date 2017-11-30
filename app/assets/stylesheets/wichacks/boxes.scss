@@ -5,12 +5,13 @@ $box-spacer--vert: 10px;
 .box__wrapper {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 
 .box {
   width: 31%;
-  border: 4px solid $purple;
-  margin: $box-spacer--vert 1.5%;
+  border: 4px solid $magenta;
+  margin: $box-spacer--vert 1.7%;
   box-sizing: border-box;
   text-align: center;
 

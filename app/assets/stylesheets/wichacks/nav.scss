@@ -2,9 +2,10 @@
 
 .nav {
   background: rgba($white, 0.4);
-  padding: 9px 18px;
+  padding: 14px 19px;
   position: absolute;
   width: 100%;
+  box-sizing: border-box;
 
   a, a:visited {
     color: $white;
@@ -13,7 +14,9 @@
 }
 
 .nav__link {
-  margin-right: 20px;
+  margin-right: 25px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
 
   &:last-child {
     margin-right: 0;
