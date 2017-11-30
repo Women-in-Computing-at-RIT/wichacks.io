@@ -1,0 +1,21 @@
+@import 'variables';
+
+.nav {
+  background: rgba($white, 0.2);
+  padding: 9px 18px;
+  position: absolute;
+  width: 100%;
+
+  a, a:visited {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.nav__link {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
