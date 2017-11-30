@@ -7,18 +7,18 @@
   font-size: 13px;
   color: $white;
   line-height: 1;
+  width: 100%;
+  max-width: 500px;
 }
 
 .logo__image {
   width: 100%;
-  max-width: 500px;
   box-sizing: border-box;
 }
 
 .logo__date {
   font-size: 1.7em;
   list-style-type: none;
-  float: left;
   margin-top: -5px;
   display: inline-flex;
   flex-flow: row nowrap;
