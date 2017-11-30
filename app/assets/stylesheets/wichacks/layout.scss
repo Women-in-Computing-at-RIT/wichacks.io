@@ -52,8 +52,12 @@
   background: $white;
 
   &:before {
-    background-image: asset-url('squig-white.png');
+    background-image: asset-url('squig-white-black.png');
   }
+}
+
+.section--white-purple-shadow:before {
+  background-image: asset-url('squig-white-purple.png');
 }
 
 .section--purple {
