@@ -15,8 +15,29 @@
         </div>
       </div>
     </div>
+    <div class="cta-button__wrapper">
+      <% if current_user %>
+        <% if current_user.admin %>
+          <%= link_to manage_dashboard_index_path, class: 'cta-button' do %>
+            Management Dashboard<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+          <% end %>
+        <% else %>
+          <%= link_to questionnaires_path, class: 'cta-button' do %>
+            View My Account<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+          <% end %>
+        <% end %>
+      <% elsif Rails.configuration.hackathon['registration_is_open'] %>
+        <%= link_to new_user_registration_path, class: 'cta-button' do %>
+          Apply Now<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+        <% end %>
+      <% end %>
+      <% if Rails.configuration.hackathon['event_is_over'] %>
+        <%= link_to "https://wichacks2018.devpost.com/submissions/", class: 'cta-button' do %>
+          Submissions<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-  <!-- Apply button -->
 </div>
 
 <div id="about"></div>
