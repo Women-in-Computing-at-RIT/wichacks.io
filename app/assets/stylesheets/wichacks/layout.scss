@@ -12,6 +12,11 @@
   padding: 20px 30px;
 }
 
+.section__content--top {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
 .section--white {
   background: $white;
 }
@@ -27,11 +32,14 @@
 
 .section--gradient {
   background-color: #402761;
-  background: linear-gradient(to bottom right, #704c9c, #9E2189, #BD7415);
-  height: 100%;
+  background: linear-gradient(to bottom left, #704c9c, #9E2189, #BD7415);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.section--top {
+  padding-top: 40px;
 }
 
 .split {
