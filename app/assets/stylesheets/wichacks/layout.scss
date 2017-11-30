@@ -8,8 +8,8 @@
 
 .section__content {
   flex: 1;
-  max-width: 500px;
-  padding: 20px 30px;
+  max-width: 600px;
+  padding: 40px 30px;
 }
 
 .section__content--top {
@@ -45,10 +45,10 @@
 .split {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 -10px;
+  margin: 0 -25px;
 }
 
 .split__section {
   flex: 1 1 200px;
-  margin: 0 10px;
+  margin: 0 25px;
 }
