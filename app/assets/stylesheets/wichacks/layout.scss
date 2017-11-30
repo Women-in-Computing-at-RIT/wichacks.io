@@ -10,17 +10,48 @@
   flex: 1;
   max-width: 700px;
   padding: 40px 30px 50px;
+
+  /* For squig */
+  z-index: 1;
+  padding-bottom: 260px;
 }
 
 .section__content--top {
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 260px; /* Should be pulled from section__content */
   justify-content: center;
   display: flex;
 }
 
+.section--white, .section--purple {
+  padding-top: 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    background-position: center top;
+
+    /* Height-dependent */
+    height: 200px;
+    /* Should be slightly less than 200px to avoid hairline separation between top border and image */
+    margin-top: -180px;
+    background-size: 100vw 200px;
+
+    @media (max-width: 800px) {
+      background-size: cover;
+      background-position-x: 94%;
+    }
+  }
+}
+
 .section--white {
   background: $white;
+
+  &:before {
+    background-image: asset-url('squig-white.png');
+  }
 }
 
 .section--purple {
@@ -30,6 +61,10 @@
 
   h1, h2, h3, h4 {
     color: $white;
+  }
+
+  &:before {
+    background-image: asset-url('squig-purple.png');
   }
 }
 
@@ -42,6 +77,11 @@
 
 .section--top {
   padding-top: 40px;
+  height: 50vh;
+}
+
+.pull-into-squig {
+  margin-top: -1em;
 }
 
 /* Split columns */
