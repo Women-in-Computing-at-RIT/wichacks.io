@@ -33,3 +33,14 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
+.split {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -10px;
+}
+
+.split__section {
+  flex: 1 1 200px;
+  margin: 0 10px;
+}
