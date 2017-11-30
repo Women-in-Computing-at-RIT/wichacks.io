@@ -20,7 +20,7 @@
   box-shadow: 1px 0 15px rgba(0, 0, 0, 0.1);
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.03);
 
-  transition: transform 0.1s ease-out;
+  transition-property: transform color;
 
   &:hover {
     color: lighten($magenta, 7%);
@@ -36,5 +36,5 @@
 
 .cta-button__icon {
   font-size: 0.93em;
-  transition: transform 0.1s ease-out;
+  transition-property: transform;
 }
