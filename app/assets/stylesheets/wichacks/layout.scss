@@ -24,3 +24,12 @@
     color: $white;
   }
 }
+
+.section--gradient {
+  background-color: #402761;
+  background: linear-gradient(to bottom right, #704c9c, #9E2189, #BD7415);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
