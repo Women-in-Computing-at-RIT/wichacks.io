@@ -5,9 +5,12 @@
 
   background: rgba($white, 0.4);
   padding: 10px 150px 10px 19px;
-  position: absolute;
-  width: 100%;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  transition: background 0.3s ease-in;
 
   display: flex;
   justify-content: space-between;
@@ -27,6 +30,10 @@
   @media (max-width: 480px) {
     padding-right: 23%;
   }
+}
+
+.nav--dark {
+  background: rgba(darken($purple, 15%), 0.6);
 }
 
 .nav__link {

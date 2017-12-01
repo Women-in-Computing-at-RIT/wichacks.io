@@ -12,9 +12,4 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require ./vendor/jquery.js
 //= require_tree .
-
-$(document).ready(function() {
-  // ...
-});
