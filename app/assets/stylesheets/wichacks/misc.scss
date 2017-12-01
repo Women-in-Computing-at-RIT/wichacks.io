@@ -1,11 +1,17 @@
+@import 'variables';
+
 * {
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
 }
 
+body {
+  min-width: 320px;
+}
+
 .map {
   width: 100%;
-  height: 200px;
+  height: 245px;
 }
 
 .video {
@@ -19,4 +25,10 @@
 
 .icon-space-r {
   margin-right: 0.5em;
+}
+
+.visible-mobile-only {
+  @media (min-width: $breakpoint-mobile-max + 1px) {
+    display: none;
+  }
 }

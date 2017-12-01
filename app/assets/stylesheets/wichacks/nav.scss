@@ -2,23 +2,87 @@
 
 .nav {
   background: rgba($white, 0.4);
-  padding: 14px 19px;
+  padding: 10px 150px 10px 19px;
   position: absolute;
   width: 100%;
   box-sizing: border-box;
 
-  a, a:visited {
-    color: $white;
+  display: flex;
+  justify-content: space-between;
+
+  @include link-color($white, $white);
+
+  a {
     text-decoration: none;
+  }
+
+  @media (max-width: 1000px) {
+    padding-right: 15%;
+  }
+
+  @media (max-width: 600px) {
+    padding-right: 20%;
+  }
+
+  @media (max-width: 480px) {
+    padding-right: 23%;
   }
 }
 
 .nav__link {
-  margin-right: 25px;
+  margin-right: 30px;
   font-weight: 500;
   letter-spacing: 0.4px;
+  opacity: 0.9;
+  transition-property: opacity;
+  margin-top: 4px;
+  margin-bottom: 4px;
 
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba($white, 0.2);
+  }
+}
+
+.nav__link--tight {
+  margin-right: 20px;
+}
+
+.nav__section {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.nav__section--right {
+  flex-shrink: 0;
+}
+
+/* Icon links */
+
+.nav__link--wic {
+  width: 40px;
+  height: 21px;
+  background: asset-url('wic-hacks-logo-white-small.png') no-repeat;
+  background-size: 40px 21px;
+  text-indent: -9999px;
+}
+
+.nav__link--twitter {
+  width: 25px;
+  height: 21px;
+  background: asset-url('social-twitter-logo.png') no-repeat;
+  background-size: 25px 21px;
+  text-indent: -9999px;
+}
+
+.nav__link--facebook {
+  width: 23px;
+  height: 21px;
+  background: asset-url('social-facebook-logo.png') no-repeat;
+  background-size: 23px 21px;
+  text-indent: -9999px;
 }

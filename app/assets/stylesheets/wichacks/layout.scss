@@ -53,6 +53,11 @@
   background: $purple;
   color: $white;
   text-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  @include link-color($white, darken($white, 15%));
+
+  &:hover {
+    text-decoration: none;
+  }
 
   h1, h2, h3, h4 {
     color: $white;
@@ -98,6 +103,10 @@
   @media (min-width: 1400px) {
     padding-bottom: 360px;
   }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    padding-bottom: 220px;
+  }
 }
 
 .section__content--top {
@@ -111,6 +120,11 @@
   @media (min-width: 1400px) {
     padding-top: 100px;
     padding-bottom: 360px - 20px;
+  }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    padding-top: 20vh;
+    padding-bottom: 220px;
   }
 }
 
@@ -127,6 +141,7 @@
   flex-flow: row nowrap;
   align-items: flex-end;
   justify-content: center;
+  text-align: center;
   padding-top: 70px;
   padding-bottom: 0;
   height: 30vh;
@@ -151,4 +166,9 @@
 .split__section {
   flex: 1 0 220px;
   margin: 0 25px 1em;
+}
+
+.hash-anchor {
+  position: absolute;
+  margin-top: -50px;
 }

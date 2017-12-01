@@ -16,8 +16,7 @@ url = "https://wichacks.io"
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <!-- TODO: use fewer weights -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
 
   <!-- Search engine & social media info -->
   <meta content="hackathons, hackathon, hack-a-thon, programming, hardware, development, design, rit, wic, women in computing" name="keywords"/>
@@ -47,11 +46,18 @@ url = "https://wichacks.io"
 </head>
 <body>
   <div class="nav">
-    <a class="nav__link" href="http://wic.rit.edu">WiC</a>
-    <a class="nav__link" href="/#faq">FAQ</a>
-    <a class="nav__link" href="/#sponsors">Sponsors</a>
-    <a class="nav__link" href="#">Facebook</a><!-- TODO: UPDATE LINK -->
-    <a class="nav__link" href="#">Twitter</a><!-- TODO: UPDATE LINK -->
+    <div class="nav__section nav__section--left">
+      <a class="nav__link nav__link--wic" href="http://wic.rit.edu">WiC</a>
+      <a class="nav__link" href="/#about">About</a>
+      <a class="nav__link" href="/#info">Info</a>
+      <a class="nav__link" href="/#schedule">Schedule</a>
+      <a class="nav__link" href="/#faq">FAQ</a>
+      <a class="nav__link" href="/#sponsors">Sponsors</a>
+    </div>
+    <div class="nav__section nav__section--right">
+      <a class="nav__link nav__link--facebook nav__link--tight" href="https://www.facebook.com/wic.hacks.rit/">Facebook</a>
+      <a class="nav__link nav__link--twitter" href="https://twitter.com/wichacks?lang=en">Twitter</a>
+    </div>
   </div>
 
   <%= yield %>

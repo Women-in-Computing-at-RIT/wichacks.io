@@ -21,6 +21,8 @@ $box-spacer--horiz: 12px;
 }
 
 .box--animates {
+  cursor: default;
+
   &:hover {
     .box__display {
       transform: scale(0.75) translateY(-85px);
