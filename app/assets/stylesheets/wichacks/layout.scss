@@ -1,28 +1,11 @@
 @import 'variables';
 
+/* Sections */
+
 .section {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-}
-
-.section__content {
-  flex: 1;
-  max-width: 700px;
-  padding: 40px 30px 50px;
-
-  /* For squig */
-  z-index: 1;
-  padding-bottom: 260px;
-}
-
-.section__content--top {
-  padding-top: 40px;
-  padding-bottom: 260px; /* Should be pulled from section__content */
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  flex-flow: column nowrap;
 }
 
 .section--white, .section--purple {
@@ -38,12 +21,18 @@
     /* Height-dependent */
     height: 200px;
     /* Should be slightly less than 200px to avoid hairline separation between top border and image */
-    margin-top: -180px;
+    margin-top: -1 * (200px - 20px);
     background-size: 100vw 200px;
 
     @media (max-width: 800px) {
       background-size: cover;
       background-position-x: 94%;
+    }
+
+    @media (min-width: 1400px) {
+      height: 300px;
+      margin-top: -1 * (300px - 20px);
+      background-size: 100vw 300px;
     }
   }
 }
@@ -81,6 +70,11 @@
   // background: linear-gradient(45deg, #bc7e4e 0%,#9d3c7e 25%,#993586 50%,#8d3381 70%,#37215e 100%);
 }
 
+.section--pattern {
+  background: asset-url('splash-pattern.png') center top;
+  background-size: cover;
+}
+
 .section--top {
   padding-top: 40px;
   min-height: 50vh;
@@ -88,6 +82,62 @@
 
 .pull-into-squig {
   margin-top: -1em;
+}
+
+/* Section content */
+
+.section__content {
+  flex: 1;
+  max-width: 700px;
+  padding: 40px 30px 50px;
+
+  /* For squig */
+  z-index: 1;
+  padding-bottom: 260px;
+
+  @media (min-width: 1400px) {
+    padding-bottom: 360px;
+  }
+}
+
+.section__content--top {
+  padding-top: 80px;
+  padding-bottom: 260px - 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+
+  @media (min-width: 1400px) {
+    padding-top: 100px;
+    padding-bottom: 360px - 20px;
+  }
+}
+
+.section__content--last {
+  padding-bottom: 60px;
+
+  @media (min-width: 1400px) {
+    padding-bottom: 100px;
+  }
+}
+
+.section__content--bottom {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 0;
+  height: 30vh;
+}
+
+.footer-content {
+  font-weight: 500;
+  font-size: $font-size * 0.91;
+  background: rgba($white, 0.7);
+  padding: 10px 16px;
+  box-shadow: 0 0 6px rgba($white, 0.7);
 }
 
 /* Split columns */
