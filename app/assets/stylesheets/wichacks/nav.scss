@@ -1,6 +1,8 @@
 @import 'variables';
 
 .nav {
+  @include link-color($white, $white);
+
   background: rgba($white, 0.4);
   padding: 10px 150px 10px 19px;
   position: absolute;
@@ -9,8 +11,6 @@
 
   display: flex;
   justify-content: space-between;
-
-  @include link-color($white, $white);
 
   a {
     text-decoration: none;
