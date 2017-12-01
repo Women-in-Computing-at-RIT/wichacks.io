@@ -69,10 +69,29 @@
 }
 
 .section--gradient {
+  $color-stop-1: rgb(188, 126, 78);
+  $color-stop-2: rgb(156, 60, 140);
+  $color-stop-3: rgb(116, 73, 156);
   background-color: #402761;
-  // background: linear-gradient(to bottom left, #4c1f59, #963187, #fdc000);
-  background: linear-gradient(45deg, rgb(188, 126, 78), rgb(156, 60, 140), rgb(116, 73, 156));
-  // background: linear-gradient(45deg, #bc7e4e 0%,#9d3c7e 25%,#993586 50%,#8d3381 70%,#37215e 100%);
+  background: linear-gradient(45deg, $color-stop-1, $color-stop-2, $color-stop-3, $color-stop-2, $color-stop-2, $color-stop-3);
+  background-size: 600% 150%;
+  -webkit-animation: gradient 120s ease infinite;
+  -moz-animation: gradient 120s ease infinite;
+  animation: gradient 120s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 10%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .section--pattern {
