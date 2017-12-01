@@ -23,7 +23,7 @@ $box-spacer--horiz: 12px;
 .box--animates {
   cursor: default;
 
-  &:hover {
+  &:hover, &.active {
     .box__display {
       transform: scale(0.75) translateY(-85px);
       flex: 0 0 1;
