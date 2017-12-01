@@ -70,7 +70,8 @@
       </div>
       <div class="split__section">
         <h3>Date</h3>
-        <p>February 10-11, 2017</p>
+        <p class="margin-after">February 10-11, 2017</p>
+        <p>Louise Slaughter Hall<br />Rochester Institute of Technology</p>
         <p>&nbsp;</p>
         <h3>Getting There</h3>
         <p>Busses are not being provided at this time. For directions, RIT provides info on <a href="http://www.rit.edu/emcs/admissions/visit/info/getting-to-rit">getting to RIT</a>.</p>
@@ -284,15 +285,15 @@
 
     // Setup the click event listeners: simply set the map to Chicago.
     controlUI.addEventListener('click', function() {
-      window.open('https://www.google.com/maps/place/Golisano+College+of+Computing+and+Information+Sciences,+20+Lomb+Memorial+Dr,+Rochester,+NY+14623/@43.0842278,-77.6823835,17z/data=!3m2!4b1!5s0x89d14c5f1b22852d:0x28aa2e767ee02fd0!4m5!3m4!1s0x89d14c5f06f76405:0xb4addbe128ccc74f!8m2!3d43.0844973!4d-77.6799181');
+      window.open('https://www.google.com/maps/place/Louise+Slaughter+Hall/@43.0844832,-77.6816009,18.82z/data=!4m5!3m4!1s0x89d14c5f34b7e501:0xfb14257f3669ce54!8m2!3d43.0849683!4d-77.6822032');
     });
   }
 
   function initMap() {
-    var location = {lat: 43.084675, lng: -77.679954};
+    var location = {lat: 43.084643, lng: -77.681755};
     var center = {lat: 43.0846346, lng: -77.6765977};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
+      zoom: 15,
       center: center,
       disableDefaultUI: true,
       zoomControl: true,
