@@ -1,25 +1,36 @@
 @import 'variables';
 
-$box-spacer--vert: 1.7%;
-$box-spacer--horiz: 1.7%;
+$box-spacer--vert: 12px;
+$box-spacer--horiz: 12px;
 
 .box__wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: (-1 * $box-spacer--vert) (-1 * $box-spacer--horiz);
+  margin: 0 (-1 * $box-spacer--horiz) (-1 * $box-spacer--vert);
 }
 
 .box {
-  width: 29.93%;
+  flex: 1 0 200px;
+  max-width: 240px;
   border: 4px solid $magenta;
   margin: $box-spacer--vert $box-spacer--horiz;
   box-sizing: border-box;
-  text-align: center;
+  height: 180px;
+  overflow: hidden;
+}
 
-  /* Vertically center text */
-  display: flex;
-  align-items: center;
+.box--animates {
+  &:hover {
+    .box__display {
+      transform: scale(0.75) translateY(-85px);
+      flex: 0 0 1;
+    }
+
+    .box__description {
+      transform: scale(1.0) translateY(-166px);
+    }
+  }
 }
 
 .box--inverted {
@@ -44,14 +55,25 @@ $box-spacer--horiz: 1.7%;
   width: 21%;
 }
 
+.box__inner {
+  text-align: center;
+  height: 180px;
+
+  /* Vertically center text */
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 .box__display {
   padding: 20px;
   width: 100%;
 }
 
 .box__description {
-  display: none;
-  // TODO: show on click
+  transform: scale(0.1);
+  padding: 20px;
+  width: 100%;
 }
 
 .box__image {
