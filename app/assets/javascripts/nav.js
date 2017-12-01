@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", (function() {
+  var usingDark = false;
+  var nav = document.getElementById('nav');
+  var about = document.getElementById('about');
   var onScroll = function() {
-    if (window.pageYOffset >= offsetTrigger) {
+    if (window.pageYOffset >= about.offsetTop - 100) {
       if (usingDark) {
         return;
       }
@@ -14,11 +17,6 @@ document.addEventListener("DOMContentLoaded", (function() {
       usingDark = false;
     }
   };
-
-  var usingDark = false;
-  var nav = document.getElementById('nav');
-  var about = document.getElementById('about');
-  var offsetTrigger = about && about.offsetTop - 100;
 
   if (about && nav) {
     window.addEventListener('scroll', onScroll, false);
