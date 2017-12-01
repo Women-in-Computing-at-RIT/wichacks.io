@@ -1,0 +1,312 @@
+<div class="section section--gradient section--top">
+  <div class="section__content section__content--top">
+    <div class="logo clear-fix">
+      <%= image_tag("wic-hacks-logo-white-test.png", class:"logo__image logo-box")%>
+
+      <div class="logo__date">
+        <div class="logo-box logo-box--no-top-border logo__date-month">
+          <ul>
+            <li class="logo__date--more-spacing">February</li>
+            <li>10-11</li>
+          </ul>
+        </div>
+        <div class="logo-box logo-box--no-top-border logo-box--no-left-border logo__date-year">
+          2018
+        </div>
+      </div>
+    </div>
+    <div class="cta-button__wrapper">
+      <% if current_user %>
+        <% if current_user.admin %>
+          <%= link_to manage_dashboard_index_path, class: 'cta-button' do %>
+            Management Dashboard<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+          <% end %>
+        <% else %>
+          <%= link_to questionnaires_path, class: 'cta-button' do %>
+            View My Account<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+          <% end %>
+        <% end %>
+      <% elsif Rails.configuration.hackathon['registration_is_open'] %>
+        <%= link_to new_user_registration_path, class: 'cta-button' do %>
+          Apply Now<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+        <% end %>
+      <% end %>
+      <% if Rails.configuration.hackathon['event_is_over'] %>
+        <%= link_to "https://wichacks2018.devpost.com/submissions/", class: 'cta-button' do %>
+          Submissions<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="hash-anchor"></div>
+<div class="section section--white section--white-purple-shadow">
+  <div class="section__content">
+    <h2 class="pull-into-squig">About</h2>
+    <div class="split">
+      <div class="split__section">
+        <p class="margin-after">WiCHacks is an all-women, 24-hour hackathon hosted by Women in Computing at RIT. A <strong>hackathon</strong> is a collaborative programming event in which participants create an app, website, game, or other piece of software over the course of the event.</p>
+        <p><strong>This event is open to all skill levels:</strong> from women who haven't programmed at all, to the best women programmers out there, it will be a great day to learn, invent, and create the future!</p>
+      </div>
+      <div class="split__section">
+        <iframe class="video" src="https://www.youtube.com/embed/OxlXmc-jViI?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="info" class="hash-anchor"></div>
+<div class="section section--purple white-text">
+  <div class="section__content">
+    <h2 class="pull-into-squig">Essential Info</h2>
+    <div class="split">
+      <div class="split__section">
+        <h3>Location</h3>
+        <div id="map" class="map"></div>
+      </div>
+      <div class="split__section">
+        <h3>Date</h3>
+        <p>February 10-11, 2017</p>
+        <p>&nbsp;</p>
+        <h3>Getting There</h3>
+        <p>Busses are not being provided at this time. For directions, RIT provides info on <a href="http://www.rit.edu/emcs/admissions/visit/info/getting-to-rit">getting to RIT</a>.</p>
+        <p>&nbsp;</p>
+        <h3>Eligibility</h3>
+        <p>All attendees must be female students currently enrolled at a college or university.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="schedule" class="hash-anchor"></div>
+<div class="section section--white">
+  <div class="section__content">
+    <h2 class="pull-into-squig">Schedule</h2>
+    <p class="margin-after"><strong>We're busy putting together a great weekend of events! Check back in January for our complete schedule.</strong></p>
+    <p>WiCHacks will take place over a 24 hour period, Saturday into Sunday. Registration will open Saturday morning, with demos and awards the following afternoon.</p>
+  </div>
+</div>
+
+<div id="faq" class="hash-anchor"></div>
+<div class="section section--purple white-text">
+  <div class="section__content">
+    <h2 class="pull-into-squig">FAQs</h2>
+    <div class="box__wrapper">
+      <div class="box box--inverted box--animates">
+        <div class="box__inner">
+          <div class="box__display">I am a boy. Can I participate?</div>
+        </div>
+        <div class="box__inner">
+          <div class="box__description">
+            While boys cannot participate as hackers, we'd love to have you as a volunteer! You can sign up <a href="">here</a>.
+          </div>
+        </div>
+      </div>
+      <div class="box box--inverted box--animates">
+        <div class="box__inner">
+          <div class="box__display">Will you reimburse for travel?</div>
+        </div>
+        <div class="box__inner">
+          <div class="box__description">
+            We are unable to provide travel reimburstment.
+          </div>
+        </div>
+      </div>
+      <div class="box box--inverted box--animates">
+        <div class="box__inner">
+          <div class="box__display">Can I high schoolers participate?</div>
+        </div>
+        <div class="box__inner">
+          <div class="box__description">
+            WiCHacks is only accepting college students at this time. Sign up <a href="https://goo.gl/forms/kUCPPoZndu9iBmgf1">here</a> in case this changes.
+          </div>
+        </div>
+      </div>
+      <div class="box box--inverted box--animates">
+        <div class="box__inner">
+          <div class="box__display">Is there a way for me to volunteer?</div>
+        </div>
+        <div class="box__inner">
+          <div class="box__description">
+            Absolutely! Please sign up <a href="">here</a>.
+          </div>
+        </div>
+      </div>
+      <div class="box box--inverted box--animates">
+        <div class="box__inner">
+          <div class="box__display">Does this event cost anything?</div>
+        </div>
+        <div class="box__inner">
+          <div class="box__description">
+            Nope! The event is completely free. Be sure to apply in advance to guarantee a spot.
+          </div>
+        </div>
+      </div>
+      <div class="box box--inverted box--animates">
+        <div class="box__inner">
+          <div class="box__display">How will I find a team to work with?</div>
+        </div>
+        <div class="box__inner">
+          <div class="box__description">
+            If you don't have a team yet, don't fret! There will be a team-formation session immediately after the kick-off.
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p class="text-center"><strong>Question unanswered?</strong><br class="visible-mobile-only" /> Email us at <a href="mailto:wic.hacks.rit@gmail.com">wic.hacks.rit@gmail.com</a></strong></p>
+  </div>
+</div>
+
+<div id="sponsors" class="hash-anchor"></div>
+<div class="section section--white">
+  <div class="section__content section__content--last">
+    <h2 class="pull-into-squig">Sponsors</h2>
+    <p>&nbsp;</p>
+    <div class="box__wrapper">
+      <div class="box box--noborder box--variable box--double">
+        <div class="box__inner">
+          <a class="box__display" href="https://www.intuit.com/">
+            <%= image_tag 'sponsors/intuit.png', class: 'box__image', alt: 'Intuit' %>
+          </div>
+        </a>
+      </div>
+      <div class="box box--noborder box--variable box--double">
+        <div class="box__inner">
+          <a class="box__display" href="https://www.harris.com/">
+            <%= image_tag 'sponsors/harris.svg', class: 'box__image',  alt: 'Harris', style: 'margin-bottom: -40px' %>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="box__wrapper">
+      <div class="box box--noborder box--variable box--small-triple">
+        <div class="box__inner">
+          <a class="box__display" href="https://www.jpmorganchase.com/">
+            <%= image_tag 'sponsors/jpmorgan.png', class: 'box__image',  alt: 'JP Morgan' %>
+          </div>
+        </a>
+      </div>
+      <div class="box box--noborder box--variable box--small-triple">
+        <div class="box__inner">
+          <a class="box__display" href="https://www.libertymutual.com/">
+            <%= image_tag 'sponsors/libertymutual.png', class: 'box__image', alt: 'Liberty Mutual' %>
+          </a>
+        </div>
+      </div>
+      <div class="box box--noborder box--variable box--small-triple">
+        <div class="box__inner">
+          <a class="box__display" href="https://www.blackbaud.com/">
+            <%= image_tag 'sponsors/blackbaud.png', class: 'box__image',  alt: 'Blackbaud' %>
+          </div>
+        </a>
+      </div>
+      <div class="box box--noborder box--variable box--small-triple">
+        <div class="box__inner">
+          <a class="box__display" href="https://www.att.com/">
+            <%= image_tag 'sponsors/att.svg', class: 'box__image',  alt: 'AT&T' %>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="box__wrapper">
+      <div class="box box--noborder box--variable box--small-quad">
+        <div class="box__inner">
+          <a class="box__display" href="https://willowtreeapps.com/">
+            <%= image_tag 'sponsors/willowtreeapps.png', class: 'box__image',  alt: 'WillowTree Apps' %>
+          </a>
+        </div>
+      </div>
+      <div class="box box--noborder box--variable box--small-quad">
+        <div class="box__inner">
+          <a class="box__display" href="https://www.factset.com/">
+            <%= image_tag 'sponsors/factset.jpg', class: 'box__image', alt: 'FactSet' %>
+          </div>
+        </a>
+      </div>
+      <div class="box box--noborder box--variable box--small-quad">
+        <div class="box__inner">
+          <a class="box__display" href="https://csh.rit.edu">
+            <%= image_tag 'sponsors/csh.svg', class: 'box__image', alt: 'Computer Science House @ RIT' %>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <p class="text-center">
+      <strong>Is your company interested in sponsoring WiCHacks?</strong>
+      We would love to talk to you! Please email
+      <a href="mailto:wic.hacks.rit@gmail.com">wic.hacks.rit@gmail.com</a>
+      for more information, or view our <%= link_to '2018 information packet', image_path('WiCHacksSponsorLetter18.pdf') %>.
+    </p>
+    </h6>
+  </div>
+</div>
+
+<div class="section section--pattern">
+  <div class="section__content section__content--bottom">
+    <p class="footer-content">Organized by <a href="http://wic.rit.edu">Women in Computing</a> &nbsp;&ndash;&nbsp; Source on <a href="https://github.com/women-in-Computing-at-RIT/wichacks.io">GitHub</a></p>
+  </div>
+</div>
+
+<!-- Setup map -->
+<script>
+  function CenterControl(controlDiv, map) {
+    // Set CSS for the control border.
+    var controlUI = document.createElement('div');
+    controlUI.style.backgroundColor = '#fff';
+    controlUI.style.border = '2px solid #fff';
+    controlUI.style.borderRadius = '3px';
+    controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+    controlUI.style.cursor = 'pointer';
+    controlUI.style.marginTop = '5px';
+    controlUI.style.marginRight = '5px';
+    controlUI.style.textAlign = 'center';
+    controlUI.title = 'Click to view map on Google Maps';
+    controlDiv.appendChild(controlUI);
+
+    // Set CSS for the control interior.
+    var controlText = document.createElement('div');
+    controlText.style.color = '#3a84df';
+    controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+    controlText.style.fontSize = '11px';
+    controlText.style.lineHeight = '16px';
+    controlText.style.paddingLeft = '5px';
+    controlText.style.paddingRight = '5px';
+    controlText.style.cursor = 'pointer';
+    controlText.innerHTML = 'View larger map';
+    controlUI.appendChild(controlText);
+
+    // Setup the click event listeners: simply set the map to Chicago.
+    controlUI.addEventListener('click', function() {
+      window.open('https://www.google.com/maps/place/Golisano+College+of+Computing+and+Information+Sciences,+20+Lomb+Memorial+Dr,+Rochester,+NY+14623/@43.0842278,-77.6823835,17z/data=!3m2!4b1!5s0x89d14c5f1b22852d:0x28aa2e767ee02fd0!4m5!3m4!1s0x89d14c5f06f76405:0xb4addbe128ccc74f!8m2!3d43.0844973!4d-77.6799181');
+    });
+  }
+
+  function initMap() {
+    var location = {lat: 43.084675, lng: -77.679954};
+    var center = {lat: 43.0846346, lng: -77.6765977};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: center,
+      disableDefaultUI: true,
+      zoomControl: true,
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+
+    // Create the DIV to hold the control and call the CenterControl()
+    // constructor passing in this DIV.
+    var centerControlDiv = document.createElement('div');
+    var centerControl = new CenterControl(centerControlDiv, map);
+
+    centerControlDiv.index = 1;
+    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(centerControlDiv);
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4N8LhHBv2LA3hlirMq-Kagsv5lAjRi70&callback=initMap"></script>

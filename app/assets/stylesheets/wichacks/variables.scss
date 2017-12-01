@@ -1,0 +1,25 @@
+/* Colors */
+$purple: rgb(112, 72, 159);
+$magenta: rgb(139, 56, 131);
+$white: #ffffff;
+$text-color: rgb(34, 34, 34);
+$font-size: 14px;
+
+/* Fonts */
+$font-family: 'Montserrat', Arial, sans-serif;
+
+/* Responsive breakpoints */
+$breakpoint-mobile-max: 500px;
+$breakpoint-mid: 870px;
+$breakpoint-small: 1150px;
+
+/* Global mixins */
+@mixin link-color($color, $hover-color) {
+  a, a:visited {
+    color: $color;
+  }
+
+  a:hover {
+    color: $hover-color;
+  }
+}
