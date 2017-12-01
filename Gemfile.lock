@@ -369,6 +369,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   codeclimate-test-reporter (~> 0.6.0)
   dotenv-rails
+  font-awesome-rails (~> 4.7)
   hackathon_manager (~> 0.3.0)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
