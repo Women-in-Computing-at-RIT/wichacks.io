@@ -32,3 +32,9 @@ body {
     display: none;
   }
 }
+
+#mlh-trust-badge {
+  @media (max-width: 480px) {
+    right: 10px !important;
+  }
+}
