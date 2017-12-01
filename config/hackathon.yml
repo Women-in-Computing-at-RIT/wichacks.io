@@ -7,10 +7,16 @@ defaults: &defaults
 
   # Content config
   name: WiCHacks
-  logo_asset: wic-hacks-logo.png
+  logo_asset: wic-hacks-logo-white.png
   agreement_pdf_asset: wic-logo.png
   email_from: '"WiCHacks" <hello@wichacks.io>'
   default_page_title: WiCHacks
+
+  disclaimer: |
+    **Applicants must be 18 years of age by February 11th.**
+    This may change if we have additional space available. If interested, please sign up [here](https://goo.gl/forms/kUCPPoZndu9iBmgf1) to be notified instead!
+  thanks_for_applying: |
+    Thanks for applying! You will be notified of your acceptance via email in January.
 
 development:
   <<: *defaults
