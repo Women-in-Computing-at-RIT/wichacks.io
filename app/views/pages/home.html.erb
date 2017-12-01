@@ -27,8 +27,11 @@
           <% end %>
         <% end %>
       <% elsif Rails.configuration.hackathon['registration_is_open'] %>
-        <%= link_to new_user_registration_path, class: 'cta-button' do %>
+        <%= link_to user_mlh_omniauth_authorize_path, class: 'cta-button' do %>
           Apply Now<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
+          <div class="cta-button__mlh-usage">
+            Using <%= image_tag 'my-mlh.svg', alt: 'MyMLH', class: 'cta-button__mlh-usage-image' %>
+          </div>
         <% end %>
       <% end %>
       <% if Rails.configuration.hackathon['event_is_over'] %>

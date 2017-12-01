@@ -10,6 +10,7 @@
   background: $white;
   display: block;
   text-align: center;
+  overflow: hidden;
 
   color: lighten($magenta, 5%);
   padding: 13px 24px;
@@ -37,4 +38,21 @@
 .cta-button__icon {
   font-size: 0.93em;
   transition-property: transform;
+}
+
+.cta-button__mlh-usage {
+  display: block;
+  border-top: 1px solid #d5d5d5;
+  margin: 8px -24px -13px;
+  padding: 2px 2px 4px;
+  font-size: 11px;
+  font-weight: 300;
+  color: #666;
+  background: #f2f2f2;
+}
+
+.cta-button__mlh-usage-image {
+  height: 12px;
+  margin-bottom: -3px;
+  margin-left: 3px;
 }
