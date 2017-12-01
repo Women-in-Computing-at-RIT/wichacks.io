@@ -89,6 +89,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Send email through Sparkpost API
+  config.action_mailer.delivery_method = :sparkpost
+
   # Required for Devise
   config.action_mailer.default_url_options = { host: 'wichacks.io', protocol: 'https' }
   config.action_mailer.asset_host = 'https://wichacks.io'
