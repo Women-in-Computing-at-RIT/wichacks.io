@@ -45,16 +45,46 @@ $box-spacer--horiz: 12px;
   border-color: transparent;
 }
 
+.box--variable {
+  flex: none;
+  max-width: 100%;
+  height: 140px;
+
+  .box__inner {
+    height: 140px;
+  }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    height: 100px;
+
+    .box__inner {
+      height: 100px;
+    }
+  }
+}
+
 .box--double {
   width: 46.6%;
+
+  @media (max-width: $breakpoint-mobile-max) {
+    width: 80%;
+  }
 }
 
 .box--small-triple {
   width: 27%;
+
+  @media (max-width: $breakpoint-mobile-max) {
+    width: 40%;
+  }
 }
 
 .box--small-quad {
   width: 21%;
+
+  @media (max-width: $breakpoint-mobile-max) {
+    width: 33%;
+  }
 }
 
 .box__inner {
