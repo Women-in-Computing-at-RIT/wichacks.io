@@ -52,6 +52,7 @@
   &:hover {
     opacity: 1;
     text-shadow: 0 0 6px rgba($white, 0.2);
+    transform: translateY(-1px);
   }
 }
 
