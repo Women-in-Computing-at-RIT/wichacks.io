@@ -2,7 +2,7 @@
 
 The public facing site for WiCHacks.
 
-* **Hacker applications:** Users sign up/in using [MyMLH](https://my.mlh.io/), which includes standard hackathon application info. This pre-fills the BrickHack application, so hackers don't have to duplicate information!
+* **Hacker applications:** Users sign up/in using [MyMLH](https://my.mlh.io/), which includes standard hackathon application info. This pre-fills the WiCHacks application, so hackers don't have to duplicate information!
 * **Acceptance, RSVPs**: Manage applications & coordinate acceptance/waitlist/denials
 * **Bus Lists:** Coordinate bus sign-ups during the RSVP process while communicating important information to riders & captains
 * **Email communication**: Ensure hackers get consistent, timely information throughout their application process, while enabling the organizing team to communicate important information at any time.
