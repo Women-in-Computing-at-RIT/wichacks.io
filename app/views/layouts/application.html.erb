@@ -25,12 +25,12 @@ url = "https://wichacks.io"
   <meta content="<%= url %>" property="og:url"/>
   <meta content="website" property="og:type"/>
   <meta content="<%= description %>" property="og:description"/>
-  <!-- <meta content="TODO..." property="og:image"/> -->
-  <!-- <meta content="TODO..." property="og:image"/> -->
+  <meta content="<%= image_url 'banner-1.jpg' %>" property="og:image"/>
+  <meta content="<%= image_url 'banner-2.jpg' %>" property="og:image"/>
   <meta content="summary" name="twitter:card"/>
   <meta content="<%= url %>" name="twitter:url"/>
   <meta content="<%= title %>" name="twitter:title"/>
-  <!-- <meta content="TODO..." name="twitter:image"/> -->
+  <meta content="<%= image_url 'banner-1.jpg' %>" name="twitter:image"/>
   <meta content="<%= description %>" name="twitter:description"/>
 
   <% if Rails.env.production? %>
