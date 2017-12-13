@@ -102,6 +102,10 @@ $box-spacer--horiz: 12px;
   width: 100%;
 }
 
+.box__display--small-padding {
+  padding: 10px;
+}
+
 .box__description {
   transform: scale(0.1);
   padding: 20px;
