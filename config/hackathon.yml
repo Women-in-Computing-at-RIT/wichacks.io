@@ -12,6 +12,8 @@ defaults: &defaults
   email_from: '"WiCHacks" <hello@wichacks.io>'
   default_page_title: WiCHacks
 
+  disabled_fields:
+    - why_attend
   disclaimer: |
     **Applicants must be 18 years of age by February 11th.**
     This may change if we have additional space available. If interested, please sign up [here](https://goo.gl/forms/kUCPPoZndu9iBmgf1) to be notified instead!
