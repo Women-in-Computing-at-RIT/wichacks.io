@@ -14,9 +14,8 @@ defaults: &defaults
 
   disabled_fields:
     - why_attend
-  disclaimer: |
-    **Applicants must be 18 years of age by February 11th.**
-    This may change if we have additional space available. If interested, please sign up [here](https://goo.gl/forms/kUCPPoZndu9iBmgf1) to be notified instead!
+  # disclaimer: |
+  #   Foo bar
   thanks_for_applying: |
     Thanks for applying! You will be notified of your acceptance via email in January.
 
