@@ -1,3 +1,5 @@
+<% google_maps_link = "https://www.google.com/maps/place/Louise+Slaughter+Hall/@43.0844832,-77.6816009,18.82z/data=!4m5!3m4!1s0x89d14c5f34b7e501:0xfb14257f3669ce54!8m2!3d43.0849683!4d-77.6822032" %>
+
 <div class="section section--gradient section--top">
   <div class="section__content section__content--top">
     <div class="logo clear-fix">
@@ -66,12 +68,12 @@
     <div class="split">
       <div class="split__section">
         <h3>Location</h3>
-        <div id="map" class="map"></div>
+        <p class="margin-after">Louise Slaughter Hall<a href="<%= google_maps_link %>"><span class="fa fa-external-link icon-space-l"></span></a><br />Rochester Institute of Technology</p>
+        <div id="map" class="map margin-after"></div>
       </div>
       <div class="split__section">
         <h3>Date</h3>
-        <p class="margin-after">February 10-11, 2018</p>
-        <p>Louise Slaughter Hall<br />Rochester Institute of Technology</p>
+        <p>February 10-11, 2018</p>
         <p>&nbsp;</p>
         <h3>Getting There</h3>
         <p>Busses are not being provided at this time. For directions, RIT provides info on <a href="http://www.rit.edu/emcs/admissions/visit/info/getting-to-rit">getting to RIT</a>.</p>
@@ -285,7 +287,7 @@
 
     // Setup the click event listeners: simply set the map to Chicago.
     controlUI.addEventListener('click', function() {
-      window.open('https://www.google.com/maps/place/Louise+Slaughter+Hall/@43.0844832,-77.6816009,18.82z/data=!4m5!3m4!1s0x89d14c5f34b7e501:0xfb14257f3669ce54!8m2!3d43.0849683!4d-77.6822032');
+      window.open('<%= google_maps_link %>');
     });
   }
 
