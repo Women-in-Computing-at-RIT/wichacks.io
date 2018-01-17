@@ -1,5 +1,6 @@
 @import 'variables';
 
+$box--height: 200px;
 $box-spacer--vert: 12px;
 $box-spacer--horiz: 12px;
 
@@ -16,7 +17,7 @@ $box-spacer--horiz: 12px;
   border: 4px solid $magenta;
   margin: $box-spacer--vert $box-spacer--horiz;
   box-sizing: border-box;
-  height: 180px;
+  height: $box--height;
   overflow: hidden;
 }
 
@@ -25,12 +26,13 @@ $box-spacer--horiz: 12px;
 
   &:hover, &.active {
     .box__display {
-      transform: scale(0.75) translateY(-85px);
+      transform: scale(0.75) translateY(-90px);
+      opacity: 0.6;
       flex: 0 0 1;
     }
 
     .box__description {
-      transform: scale(1.0) translateY(-166px);
+      transform: scale(1.0) translateY(-186px);
     }
   }
 }
@@ -89,7 +91,7 @@ $box-spacer--horiz: 12px;
 
 .box__inner {
   text-align: center;
-  height: 180px;
+  height: $box--height;
 
   /* Vertically center text */
   display: flex;
@@ -110,6 +112,7 @@ $box-spacer--horiz: 12px;
   transform: scale(0.1);
   padding: 20px;
   width: 100%;
+  font-size: $font-size - 2px;
 }
 
 .box__image {
