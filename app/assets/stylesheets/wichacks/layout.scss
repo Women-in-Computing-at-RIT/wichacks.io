@@ -59,7 +59,7 @@
     text-decoration: none;
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, strong {
     color: $white;
   }
 
@@ -120,6 +120,7 @@
   padding-bottom: 260px;
 
   @media (min-width: 1400px) {
+    max-width: 800px;
     padding-bottom: 360px;
   }
 
