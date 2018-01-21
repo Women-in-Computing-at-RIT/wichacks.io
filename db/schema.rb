@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180121190553) do
+ActiveRecord::Schema.define(version: 20180121191039) do
 
   create_table "blazer_audits", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20180121190553) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string "template", default: "default"
+    t.string "trigger"
   end
 
   create_table "questionnaires", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
