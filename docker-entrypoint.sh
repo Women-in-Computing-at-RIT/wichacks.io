@@ -11,5 +11,8 @@ touch .bundle-install-lock
 bundle check || bundle install --binstubs="$BUNDLE_BIN"
 rm -f .bundle-install-lock
 
+# Clean up a potential leftover Rails pid file
+rm -f /tmp/rails-server.pid
+
 # Finally call command issued to the docker service
 exec "$@"
