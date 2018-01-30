@@ -44,7 +44,6 @@ irb(main):001:0> User.last.update_attribute(:admin, true)
 
 * If you need to restart the Rails server:
 ```bash
-rm tmp/pids/server.pid
 docker-compose restart web
 ```
 * If you need to restart Sidekiq, the background job worker that handles emails:
@@ -67,11 +66,6 @@ You can follow the same format for `db` and `redis`, though you shouldn't ever n
 
 ## Gotchas
 
-* If you see the error message `web_1 | A server is already running. Check /app/tmp/pids/server.pid`, and you don't have any other servers running, remove the PID file and try again.
-```bash
-rm tmp/pids/server.pid
-docker-compose restart web
-```
 * If you try to `docker-compose run web` and get an error message along the lines of `Could not find foogem-x.y.z in any of the sources`, your local bundle is conflicting with Docker or you haven't run `bundle install`.
 ```bash
 rm -rf .bundle
