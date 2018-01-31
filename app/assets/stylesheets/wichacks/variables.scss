@@ -12,6 +12,7 @@ $font-family: 'Montserrat', Arial, sans-serif;
 $breakpoint-mobile-max: 500px;
 $breakpoint-mid: 870px;
 $breakpoint-small: 1150px;
+$breakpoint-xlarge: 1400px;
 
 /* Global mixins */
 @mixin link-color($color, $hover-color) {

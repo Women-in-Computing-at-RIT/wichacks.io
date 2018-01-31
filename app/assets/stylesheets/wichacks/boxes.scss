@@ -75,6 +75,7 @@ $box-spacer--horiz: 12px;
 
 .box--small-triple {
   width: 27%;
+  height: 120px;
 
   @media (max-width: $breakpoint-mobile-max) {
     width: 40%;
@@ -82,10 +83,16 @@ $box-spacer--horiz: 12px;
 }
 
 .box--small-quad {
-  width: 21%;
+  width: 19%;
+  min-width: 120px;
+  height: 120px;
 
   @media (max-width: $breakpoint-mobile-max) {
     width: 33%;
+  }
+
+  @media (min-width: $breakpoint-xlarge) {
+    width: 16%;
   }
 }
 
@@ -106,6 +113,12 @@ $box-spacer--horiz: 12px;
 
 .box__display--small-padding {
   padding: 10px;
+}
+
+.box__display--logo {
+  @media (max-width: $breakpoint-mobile-max) {
+    padding: 10px;
+  }
 }
 
 .box__description {
