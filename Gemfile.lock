@@ -111,7 +111,7 @@ GEM
       activesupport (>= 4.2.0)
     groupdate (3.2.0)
       activesupport (>= 3)
-    hackathon_manager (0.6.3)
+    hackathon_manager (0.6.5)
       ajax-datatables-rails (~> 0.4.0)
       aws-sdk (~> 2.0)
       blazer
@@ -235,7 +235,7 @@ GEM
     power_assert (1.1.1)
     public_suffix (3.0.1)
     puma (3.11.0)
-    rack (2.0.3)
+    rack (2.0.4)
     rack-protection (2.0.0)
       rack
     rack-test (0.8.2)
