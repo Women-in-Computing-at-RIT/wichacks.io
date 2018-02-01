@@ -10,7 +10,7 @@ class Schedule
   def initialize(spreadsheet_id, sheet = 0)
     cache_key = "schedule/#{spreadsheet_id}"
     fresh_data = false
-    parsed_response = Rails.cache.fetch(cache_key, expires_in: 1.hour) do
+    parsed_response = Rails.cache.fetch(cache_key, expires_in: 30.minutes) do
       fresh_data = true
       response = HTTParty.get(SHEETS_URL + "#{spreadsheet_id}?#{SHEETS_FIELDS}&key=#{SHEETS_KEY}")
       response ? response.parsed_response.to_hash : nil
