@@ -188,6 +188,10 @@
   margin: 0 25px 1em;
 }
 
+.split__section--wide {
+  flex-basis: 300px;
+}
+
 .hash-anchor {
   position: absolute;
   margin-top: -60px;

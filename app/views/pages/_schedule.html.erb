@@ -10,7 +10,7 @@
     <% else %>
       <div class="split">
         <% sections.each do |section| %>
-          <div class="split__section">
+          <div class="split__section split__section--wide">
             <h3 class="h2--like"><%= section.shift %></h2>
             <% section.each do |row| %>
               <% if row[0].present? %>
