@@ -17,6 +17,9 @@
         </div>
       </div>
     </div>
+    <% if Rails.configuration.hackathon['event_is_over'] %>
+      <div class="cta-text">WiCHacks was a blast! See you next year.</div>
+    <% end %>
     <div class="cta-button__wrapper">
       <% if current_user %>
         <% if current_user.admin %>
