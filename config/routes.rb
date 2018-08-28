@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/extras', to: 'pages#extras'
   get '/home', to: 'pages#home'
 
-  root 'pages#home'
+  root 'pages#splash'
 end
