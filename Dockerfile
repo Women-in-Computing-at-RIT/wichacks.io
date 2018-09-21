@@ -1,4 +1,4 @@
-FROM ruby:2.4.2
+FROM ruby:2.5.1
 
 RUN apt-get update -qq && apt-get install -y build-essential
 
@@ -29,3 +29,6 @@ ENV BUNDLE_PATH=/bundle \
     BUNDLE_BIN=/bundle/bin \
     GEM_HOME=/bundle
 ENV PATH="${BUNDLE_BIN}:${PATH}"
+
+# Update to most recent bundler
+RUN gem update bundler
