@@ -9,6 +9,7 @@ defaults: &defaults
   # Content config
   name: WiCHacks
   logo_asset: wic-hacks-logo-white.png
+  # favicon_asset: favicon.ico
   agreement_pdf_asset: "WiCHacks Agreement to Participate.pdf"
   email_from: '"WiCHacks" <hello@wichacks.io>'
   default_page_title: WiCHacks
