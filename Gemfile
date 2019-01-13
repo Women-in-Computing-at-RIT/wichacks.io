@@ -11,7 +11,7 @@ if ENV['HACKATHON_MANAGER_DEV'] == '1'
   gem 'hackathon_manager', path: '../hackathon_manager'
 else
   # rubocop:disable Bundler/DuplicatedGem
-  gem 'hackathon_manager', '~> 0.9.0'
+  gem 'hackathon_manager', '~> 0.11.0'
   # rubocop:enable Bundler/DuplicatedGem
 end
 
