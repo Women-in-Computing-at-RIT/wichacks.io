@@ -92,7 +92,7 @@
         <p>&nbsp;</p>
         <h3>Getting There</h3>
         <p class="margin-after">For driving directions, RIT provides info on <a href="http://www.rit.edu/emcs/admissions/visit/info/getting-to-rit">getting to RIT</a>.</p>
-        <p>Busses are being provided to Brockport, Waterloo, Cornell, Ithaca, Syracuse, Le Moyne and Oswego.</p>
+        <!--<p>Busses are being provided to Brockport, Buffalo, Cornell, Oswego, Syracuse, and Waterloo.</p>-->
         <p>&nbsp;</p>
         <h3>Eligibility</h3>
         <p>All attendees must be female students currently enrolled at a college/university or high school.</p>
@@ -181,6 +181,13 @@
     <h2 class="pull-into-squig">Sponsors</h2>
     <p>&nbsp;</p>
     <div class="box__wrapper">
+    <div class="box box--noborder box--variable box--double">
+        <div class="box__inner">
+          <a class="box__display box__display--logo" href="https://www.atlassian.com/">
+            <%= image_tag 'sponsors/atlassian.png', class: 'box__image', alt: 'Atlassian' %>
+          </div>
+        </a>
+      </div>
       <div class="box box--noborder box--variable box--double">
         <div class="box__inner">
           <a class="box__display box__display--logo" href="https://www.tcgplayer.com/">
@@ -191,7 +198,7 @@
       <div class="box box--noborder box--variable box--double">
         <div class="box__inner">
           <a class="box__display box__display--logo" href="https://www.jpmorganchase.com/">
-            <%= image_tag 'sponsors/jpmorganchaseco.png', class: 'box__image',  alt: 'JP Morgan Chase & Co.'%>
+            <%= image_tag 'sponsors/jpmorganchase.png', class: 'box__image',  alt: 'JP Morgan Chase & Co.', style: 'margin-bottom: -40px' %>
           </a>
         </div>
       </div>
@@ -202,15 +209,7 @@
           </div>
         </a>
       </div>
-        <div class="box box--noborder box--variable box--double">
-        <div class="box__inner">
-          <a class="box__display box__display--logo" href="https://www.capitalone.com/">
-            <%= image_tag 'sponsors/capitalone.png', class: 'box__image', alt: 'Capital One' %>
-          </div>
-        </a>
-      </div>
     </div>
-       
     <div class="box__wrapper">
       <div class="box box--noborder box--variable box--small-triple">
         <div class="box__inner">
@@ -288,13 +287,6 @@
         <div class="box__inner">
           <a class="box__display box__display--logo" href="https://magic.rit.edu/">
             <%= image_tag 'sponsors/magic.jpg', class: 'box__image', alt: 'MAGIC @ RIT' %>
-          </a>
-        </div>
-      </div>
-      <div class="box box--noborder box--variable box--small-quad">
-        <div class="box__inner">
-          <a class="box__display box__display--logo" href="https://www.datadoghq.com/">
-            <%= image_tag 'sponsors/datadog.png', class: 'box__image', alt: 'Datadog' %>
           </a>
         </div>
       </div>
