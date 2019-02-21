@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_05_040958) do
+ActiveRecord::Schema.define(version: 2019_02_21_203922) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -242,6 +242,7 @@ ActiveRecord::Schema.define(version: 2019_02_05_040958) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "allow_duplicate_band_events", default: true, null: false
     t.index ["name"], name: "index_trackable_tags_on_name", unique: true
   end
 
