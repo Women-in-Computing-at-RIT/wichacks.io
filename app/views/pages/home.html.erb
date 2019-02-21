@@ -22,7 +22,7 @@
     <% end %>
     <div class="cta-button__wrapper">
       <% if current_user %>
-        <% if current_user.admin %>
+        <% if current_user.admin? %>
           <%= link_to manage_dashboard_index_path, class: 'cta-button' do %>
             Management Dashboard<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
           <% end %>
@@ -222,7 +222,7 @@
         </a>
       </div>
     </div>
-       
+
     <div class="box__wrapper">
       <div class="box box--noborder box--variable box--small-triple">
         <div class="box__inner">
@@ -324,7 +324,7 @@
           </a>
         </div>
       </div>
-      
+
     </div>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
