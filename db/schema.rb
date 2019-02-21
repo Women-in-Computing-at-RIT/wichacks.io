@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_13_185849) do
+ActiveRecord::Schema.define(version: 2019_02_21_203922) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -172,7 +172,7 @@ ActiveRecord::Schema.define(version: 2019_01_13_185849) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string "shirt_size"
-    t.string "dietary_restrictions"
+    t.text "dietary_restrictions"
     t.boolean "international"
     t.string "portfolio_url"
     t.string "vcs_url"
@@ -189,7 +189,7 @@ ActiveRecord::Schema.define(version: 2019_01_13_185849) do
     t.string "phone"
     t.boolean "can_share_info", default: false
     t.boolean "code_of_conduct_accepted", default: false
-    t.string "special_needs"
+    t.text "special_needs"
     t.string "gender"
     t.string "major"
     t.boolean "travel_not_from_school", default: false
@@ -205,6 +205,8 @@ ActiveRecord::Schema.define(version: 2019_01_13_185849) do
     t.datetime "boarded_bus_at"
     t.integer "graduation_year"
     t.string "race_ethnicity"
+    t.integer "bus_list_id"
+    t.index ["bus_list_id"], name: "index_questionnaires_on_bus_list_id"
     t.index ["user_id"], name: "index_questionnaires_on_user_id"
   end
 
@@ -224,7 +226,6 @@ ActiveRecord::Schema.define(version: 2019_01_13_185849) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "questionnaire_count", default: 0
-    t.integer "bus_list_id"
   end
 
   create_table "trackable_events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -241,6 +242,7 @@ ActiveRecord::Schema.define(version: 2019_01_13_185849) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "allow_duplicate_band_events", default: true, null: false
     t.index ["name"], name: "index_trackable_tags_on_name", unique: true
   end
 
@@ -257,11 +259,10 @@ ActiveRecord::Schema.define(version: 2019_01_13_185849) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.boolean "admin", default: false
-    t.boolean "admin_limited_access", default: false
     t.string "provider"
     t.string "uid"
     t.datetime "reminder_sent_at"
+    t.integer "role", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["provider"], name: "index_users_on_provider"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -270,6 +271,7 @@ ActiveRecord::Schema.define(version: 2019_01_13_185849) do
 
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
+  add_foreign_key "questionnaires", "bus_lists"
   add_foreign_key "school_name_duplicates", "schools"
   add_foreign_key "trackable_events", "trackable_tags"
   add_foreign_key "trackable_events", "users"
