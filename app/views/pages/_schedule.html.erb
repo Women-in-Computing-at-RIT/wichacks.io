@@ -1,4 +1,7 @@
-<% event_schedule = Schedule.new("1DSsg4dJaQiqy4VUc6R79haiHVeLLITPo9yKf2n8gkjg", 0) %>
+<%
+  event_schedule = Schedule.new("1DSsg4dJaQiqy4VUc6R79haiHVeLLITPo9yKf2n8gkjg", 0)
+  current_time = Time.now
+%>
 <% sections = event_schedule.sections %>
 <div id="schedule" class="hash-anchor"></div>
 <div class="section section--white">
@@ -9,14 +12,24 @@
       <br/>
     <% else %>
       <div class="split">
-        <% sections.each do |section| %>
+        <% sections.each_with_index do |section, section_index| %>
+          <% section_date = Rails.configuration.hackathon['event_start_date'] + (section_index * 1.day) %>
           <div class="split__section split__section--wide">
-            <h3 class="h2--like"><%= section.shift %></h2>
+            <h3 class="h2--like"><%= section.shift %></h3>
             <% section.each do |row| %>
-              <% if row[0].present? %>
-                <p class="margin-after"><strong><%= row[0] %></strong> - <%= row[1] %></p>
+              <%
+                time, title, location, desc = row # row[0], [1], [2], and [3]
+                parsed_time = Time.zone.parse("#{section_date.to_s} #{time}")
+                parsed_time += 30.minutes
+                style = ''
+                if parsed_time < current_time
+                  style = 'opacity: 0.4;'
+                end
+              %>
+              <% if time.present? %>
+                <p class="margin-after" style="<%= style %>"><strong><%= time %></strong> - <%= title %></p>
               <% else %>
-                <p class="margin-after"><em><%= row[1] %></em></p>
+                <p class="margin-after" style="<%= style %>"><em><%= title %></em></p>
               <% end %>
             <% end %>
           </div>
