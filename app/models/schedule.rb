@@ -27,6 +27,9 @@ class Schedule
     section = []
     sections = []
     rows.each do |row|
+      if !row["values"] || !row["values"][0]
+        next
+      end
       if row["values"][0]["userEnteredValue"]["stringValue"] == SECTION
         sections << section unless section.count.zero?
         section = [row["values"][1]["userEnteredValue"]["stringValue"]]
