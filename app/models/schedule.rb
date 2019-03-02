@@ -18,7 +18,9 @@ class Schedule
   end
 
   def rows
-    @sheet ? @sheet["data"][0]["rowData"] : []
+    rows = @sheet ? @sheet["data"][0]["rowData"] : []
+    # The first row is an instructional row
+    rows.count > 1 ? rows.drop(1) : []
   end
 
   def sections
