@@ -40,11 +40,11 @@
         <% end %>
       <% end %>
       <% if Rails.configuration.hackathon['event_is_over'] %>
-        <%= link_to "https://wichacks2018.devpost.com/submissions/", class: 'cta-button' do %>
+        <%= link_to "https://wichacks2019.devpost.com/submissions", class: 'cta-button' do %>
           Submissions<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
         <% end %>
       <% elsif !Rails.configuration.hackathon['registration_is_open'] %>
-        <%= link_to "https://wichacks2018.devpost.com/", class: 'cta-button' do %>
+        <%= link_to "https://wichacks2019.devpost.com/", class: 'cta-button' do %>
           Submit to Devpost<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
         <% end %>
       <% end %>
