@@ -12,10 +12,13 @@
       <br/>
     <% else %>
       <div class="split">
-        <% sections.each_with_index do |section, section_index| %>
-          <% section_date = Rails.configuration.hackathon['event_start_date'] + (section_index * 1.day) %>
+        <% schedule_day_offset = -1 %>
+        <% sections.each do |section| %>
+          <% day_title = section.shift %>
+          <% schedule_day_offset += 1 if day_title.present? %>
+          <% section_date = Rails.configuration.hackathon['event_start_date'] + (schedule_day_offset * 1.day) %>
           <div class="split__section split__section--wide">
-            <h3 class="h2--like"><%= section.shift %></h3>
+            <h3 class="h2--like"><%= day_title %></h3>
             <% section.each do |row| %>
               <%
                 time, title, location, desc = row # row[0], [1], [2], and [3]
