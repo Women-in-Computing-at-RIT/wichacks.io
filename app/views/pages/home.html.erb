@@ -1,4 +1,8 @@
-<% google_maps_link = "https://www.google.com/maps/place/Louise+Slaughter+Hall/@43.0844832,-77.6816009,18.82z/data=!4m5!3m4!1s0x89d14c5f34b7e501:0xfb14257f3669ce54!8m2!3d43.0849683!4d-77.6822032" %>
+<%
+  google_maps_link = "https://www.google.com/maps/place/Louise+Slaughter+Hall/@43.0844832,-77.6816009,18.82z/data=!4m5!3m4!1s0x89d14c5f34b7e501:0xfb14257f3669ce54!8m2!3d43.0849683!4d-77.6822032"
+  event_is_over = true
+  registration_is_open = false
+%>
 
 <div class="section section--gradient section--top">
   <div class="section__content section__content--top">
@@ -17,33 +21,23 @@
         </div>
       </div>
     </div>
-    <% if Rails.configuration.hackathon['event_is_over'] %>
+    <% if event_is_over %>
       <div class="cta-text">WiCHacks was a blast! See you next year.</div>
     <% end %>
     <div class="cta-button__wrapper">
-      <% if current_user %>
-        <% if current_user.admin? %>
-          <%= link_to manage_dashboard_index_path, class: 'cta-button' do %>
-            Management Dashboard<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
-          <% end %>
-        <% else %>
-          <%= link_to questionnaires_path, class: 'cta-button' do %>
-            View My Account<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
-          <% end %>
-        <% end %>
-      <% elsif Rails.configuration.hackathon['registration_is_open'] %>
-        <%= link_to user_mlh_omniauth_authorize_path, class: 'cta-button' do %>
+      <% if registration_is_open %>
+        <%= link_to 'https://apply.wichacks.io', class: 'cta-button' do %>
           Apply Now<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
           <div class="cta-button__mlh-usage">
             Using <%= image_tag 'my-mlh.svg', alt: 'MyMLH', class: 'cta-button__mlh-usage-image' %>
           </div>
         <% end %>
       <% end %>
-      <% if Rails.configuration.hackathon['event_is_over'] %>
+      <% if event_is_over %>
         <%= link_to "https://wichacks2019.devpost.com/submissions", class: 'cta-button' do %>
           Submissions<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
         <% end %>
-      <% elsif !Rails.configuration.hackathon['registration_is_open'] %>
+      <% elsif !registration_is_open %>
         <%= link_to "https://wichacks2019.devpost.com/", class: 'cta-button' do %>
           Submit to Devpost<span class="fa fa-chevron-right icon-space-l cta-button__icon"></span>
         <% end %>
