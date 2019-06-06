@@ -7,18 +7,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-if ENV['HACKATHON_MANAGER_DEV'] == '1'
-  gem 'hackathon_manager', path: '../hackathon_manager'
-else
-  # rubocop:disable Bundler/DuplicatedGem
-  gem 'hackathon_manager', '~> 0.13.0'
-  # rubocop:enable Bundler/DuplicatedGem
-end
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+# gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -48,14 +40,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Rollbar for error reporting in production
 gem 'rollbar'
 
+# HTTParty for easy JSON API calls
+gem 'httparty'
+
 # Font awesome icons, served locally
 gem 'font-awesome-rails', '~> 4.7'
-
-# Sparkpost for email delivery
-gem 'sparkpost_rails'
-
-# For generating resume .zip for sponsors
-gem 'rubyzip', '>= 1.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
