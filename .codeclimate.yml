@@ -20,5 +20,3 @@ exclude_paths:
 - public/**/*
 - test/**/*
 - "**/vendor/**/*"
-- db/schema.rb
-- db/migrate/**/*
