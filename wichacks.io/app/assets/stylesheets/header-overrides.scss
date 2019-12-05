@@ -1,0 +1,21 @@
+.header {
+  $color-stop-1: rgb(188, 126, 78);
+  $color-stop-2: rgb(156, 60, 140);
+  $color-stop-3: rgb(116, 73, 156);
+  background-color: #402761;
+  background: linear-gradient(90deg, $color-stop-1, $color-stop-2, $color-stop-3) !important;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 400px) {
+    margin-left: -10px;
+  }
+}
+
+.header-logo__image {
+  height: auto !important;
+  max-height: 70px;
+}

@@ -1,0 +1,133 @@
+@import 'variables';
+
+$box--height: 200px;
+$box-spacer--vert: 12px;
+$box-spacer--horiz: 12px;
+
+.box__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 (-1 * $box-spacer--horiz) (-1 * $box-spacer--vert);
+}
+
+.box {
+  flex: 1 0 200px;
+  max-width: 240px;
+  border: 4px solid $magenta;
+  margin: $box-spacer--vert $box-spacer--horiz;
+  box-sizing: border-box;
+  height: $box--height;
+  overflow: hidden;
+}
+
+.box--animates {
+  cursor: default;
+
+  &:hover, &.active {
+    .box__display {
+      transform: scale(0.75) translateY(-90px);
+      opacity: 0.6;
+      flex: 0 0 1;
+    }
+
+    .box__description {
+      transform: scale(1.0) translateY(-186px);
+    }
+  }
+}
+
+.box--inverted {
+  $shadow-color: rgba($white, 0.5);
+  border-color: $white;
+  box-shadow: 0 0 10px $shadow-color, inset 0 0 10px $shadow-color;
+}
+
+.box--noborder {
+  border-color: transparent;
+}
+
+.box--variable {
+  flex: none;
+  max-width: 100%;
+  height: 140px;
+
+  .box__inner {
+    height: 140px;
+  }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    height: 100px;
+
+    .box__inner {
+      height: 100px;
+    }
+  }
+}
+
+.box--double {
+  width: 46.6%;
+
+  @media (max-width: $breakpoint-mobile-max) {
+    width: 80%;
+  }
+}
+
+.box--small-triple {
+  width: 27%;
+  height: 120px;
+
+  @media (max-width: $breakpoint-mobile-max) {
+    width: 40%;
+  }
+}
+
+.box--small-quad {
+  width: 19%;
+  min-width: 120px;
+  height: 120px;
+
+  @media (max-width: $breakpoint-mobile-max) {
+    width: 33%;
+  }
+
+  @media (min-width: $breakpoint-xlarge) {
+    width: 16%;
+  }
+}
+
+.box__inner {
+  text-align: center;
+  height: $box--height;
+
+  /* Vertically center text */
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.box__display {
+  padding: 20px;
+  width: 100%;
+}
+
+.box__display--small-padding {
+  padding: 10px;
+}
+
+.box__display--logo {
+  @media (max-width: $breakpoint-mobile-max) {
+    padding: 10px;
+  }
+}
+
+.box__description {
+  transform: scale(0.1);
+  padding: 20px;
+  width: 100%;
+  font-size: $font-size - 2px;
+}
+
+.box__image {
+  width: 100%;
+}
