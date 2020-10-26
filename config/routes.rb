@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   get '/splash', to: 'pages#splash'
   get '/extras', to: 'pages#extras'
-  get '/home', to: 'pages#splash'
+  get '/home', to: 'pages#home'
 
-  root 'pages#home'
+  root 'pages#splash'
 end
