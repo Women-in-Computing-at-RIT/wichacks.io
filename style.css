@@ -260,7 +260,7 @@ section#sponsors {
     padding:3em;
     height:auto;
     display:grid;
-    grid-template-columns:calc(80% + 3em);
+    grid-template-columns:calc(70% + 3em);
     grid-template-rows: auto;
     place-items:start;
     justify-content: center;
