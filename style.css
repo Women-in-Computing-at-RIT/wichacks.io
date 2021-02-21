@@ -285,9 +285,10 @@ section#sponsors {
     width:100%;
     column-gap: 3em;
     row-gap: 3em;
+    padding:0 5em;
     align-items: center;
     justify-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .sponlogoimg.large img{
