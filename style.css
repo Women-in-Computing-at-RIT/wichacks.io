@@ -161,7 +161,7 @@ section#about a, .sponsorinfo a, footer a {
     text-decoration: underline;
 }
 
-.abtheading, .faqheading, .sponheading {
+.abtheading, .faqheading, .sponheading, .scheduleheading {
     text-transform: uppercase;
     font-weight:700;
     font-size:1.5em;
@@ -182,7 +182,7 @@ p.blockqt {
     width:100%;
 }
 
-section#faq {
+section#faq, section#schedule {
     background: #70499F;
     width:100%;
     box-sizing: border-box;
@@ -195,7 +195,7 @@ section#faq {
     justify-content: center;
 }
 
-.faqheading {
+.faqheading, .scheduleheading {
     color:#fff;
     padding-bottom:1em;
 }
@@ -257,9 +257,9 @@ section#sponsors {
     background: #fff;
     width:100%;
     box-sizing: border-box;
-    padding:3em;
     height:auto;
     display:grid;
+    padding:3em 0;
     grid-template-columns:calc(70% + 3em);
     grid-template-rows: auto;
     place-items:start;
@@ -304,7 +304,7 @@ section#sponsors {
 }
 
 .sponsorinfo {
-    padding-top:1em;
+    padding-top:1em;text-align:center;
 }
 
 .sponsorinfo b{
@@ -315,12 +315,64 @@ footer {
     color:#222;
     font-size:.7em;
     text-align:center;
-    padding:0 3em 3em 3em;
+    padding:3em 3em 3em 3em;
+}
+
+.scheduleborder {
+    border-left: 3px solid #fff;
+    padding-left: 1em;
+    box-sizing:border-box;
+    color:#fff;
+}
+
+.event {
+    padding-top:1em;
+}
+
+.event b{  
+    color:#fff;
+}
+
+.timeinfo {
+    padding-bottom:1.5em;
+}
+
+.timeinfo, .timeinfo a {
+    color:#fff;
+}
+
+.timeinfo a {
+    text-decoration: underline;
+}
+
+.eventdate {
+    font-weight:700;
+    color:#fff;
+    font-size:1.3em;
+    padding-bottom:1em;
+}
+
+.event .scheduledot {
+    font-size:90px;
+    margin:-8px 0 0 -37px;
+    position:absolute;
+}
+
+.event:last-child {
+    padding-bottom:1em;
+}
+
+.scheduleborder .event br {
+    padding-top:5em;
 }
 
 @media only screen and (max-width: 600px) {
     .navsocials-links {
         display:none;
+    }
+
+    .navlinks a {
+        font-size:.65em;
     }
 
     nav {
