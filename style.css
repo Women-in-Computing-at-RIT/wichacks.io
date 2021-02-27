@@ -363,7 +363,8 @@ footer {
 }
 
 .scheduleborder .event br {
-    padding-top:5em;
+    display: block !important;
+    margin-bottom: 1.5em !important;
 }
 
 @media only screen and (max-width: 600px) {
