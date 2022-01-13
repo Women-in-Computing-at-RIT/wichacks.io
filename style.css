@@ -311,6 +311,21 @@ section#sponsors {
     color:#70499F;
 }
 
+.directHeading {
+    color:#70499F;
+    padding-bottom:2em;
+    text-align:left;
+}
+
+.directorGrid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 300px;
+    height: 400px;
+
+}
+
 footer {
     color:#222;
     font-size:.7em;
