@@ -311,6 +311,20 @@ section#sponsors {
     color:#70499F;
 }
 
+.directorGridOuter{
+    padding-top: 50px;
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.directorGridHeading{
+    color:#70499F;
+    padding-bottom:2em;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
 .directHeading {
     color:#70499F;
     padding-bottom:2em;
@@ -321,9 +335,13 @@ section#sponsors {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    width: 300px;
-    height: 400px;
+}
 
+.directorImage {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 250px;
+    width: 250px;
 }
 
 footer {
