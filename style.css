@@ -135,7 +135,7 @@ section {
 #mlh-trust-badge {
     max-width:100px;
     position:fixed;
-    right:1.5em;
+    /*right:1.5em;*/
     top:0;
     z-index:2;
 }
