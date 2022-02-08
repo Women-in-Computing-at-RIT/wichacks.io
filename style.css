@@ -93,7 +93,8 @@ section {
     text-align:center;
 }
 #home-content {
-    background-color: rgba(0,0,0,.5);
+    background-color: grey;
+    opacity: .65;
 }
 
 .landingpg.homelogo img{
