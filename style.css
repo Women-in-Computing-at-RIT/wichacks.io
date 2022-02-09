@@ -93,7 +93,7 @@ section {
     text-align:center;
 }
 #home-content {
-    background-color: grey;
+    background-color: rgba(144, 23, 214, 0.5);
     opacity: .65;
 }
 
