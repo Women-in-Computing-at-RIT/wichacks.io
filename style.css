@@ -93,8 +93,10 @@ section {
     text-align:center;
 }
 #home-content {
-    background-color: grey;
-    opacity: .65;
+    background-color: rgba(144, 23, 214, 0.5);
+    padding: 2em;
+    border-radius: 25px;
+
 }
 
 .landingpg.homelogo img{
@@ -108,7 +110,7 @@ section {
     font-size:1.2em;
     font-weight:700;
     color:#fff;
-    padding-bottom:1em;
+    padding:0.5em;
 }
 
 .landingpg.hackdate span{
@@ -165,7 +167,7 @@ section#about a, .sponsorinfo a, footer a {
     text-decoration: underline;
 }
 
-.abtheading, .faqheading, .sponheading, .scheduleheading {
+.abtheading, .faqheading, .sponheading, .scheduleheading, .directorGridHeading {
     text-transform: uppercase;
     font-weight:700;
     font-size:1.5em;
@@ -199,7 +201,7 @@ section#faq, section#schedule {
     justify-content: center;
 }
 
-.faqheading, .scheduleheading {
+.faqheading, .scheduleheading, .directorGridHeading {
     color:#fff;
     padding-bottom:1em;
 }
@@ -315,19 +317,26 @@ section#sponsors {
     color:#70499F;
 }
 
-.directorGridOuter{
+#directorGridOuter{
     padding-top: 50px;
     width: 100vw;
+    background: #70499F;
+    box-sizing: border-box;
+    padding:3em;
+    height:auto;
+    display:grid;
+    grid-template-columns:calc(80% + 3em);
+    grid-template-rows: auto;
+    place-items:start;
     justify-content: center;
-    text-align: center;
 }
 
-.directorGridHeading{
+/*.directorGridHeading{
     color:#70499F;
     padding-bottom:2em;
     font-weight: 700;
     font-size: 1.5em;
-}
+}*/
 
 .directHeading {
     color:#70499F;
@@ -346,6 +355,7 @@ section#sponsors {
     margin-bottom: 15px;
     height: 250px;
     width: 250px;
+    border: 10px solid white;
 }
 
 footer {
