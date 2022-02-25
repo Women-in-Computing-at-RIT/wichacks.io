@@ -201,7 +201,7 @@ section#faq, section#schedule {
     justify-content: center;
 }
 
-.faqheading, .scheduleheading, .directorGridHeading {
+.faqheading, .scheduleheading {
     color:#fff;
     padding-bottom:1em;
 }
@@ -272,7 +272,7 @@ section#sponsors {
     justify-content: center;
 }
 
-.sponheading {
+.sponheading, .directorGridHeading {
     color:#70499F;
     padding-bottom:2em;
     text-align:left;
@@ -331,12 +331,12 @@ section#sponsors {
     justify-content: center;
 }
 
-.directorGridHeading{
+/*.directorGridHeading{
     color:#70499F;
     padding-bottom:2em;
     font-weight: 700;
     font-size: 1.5em;
-}
+}*/
 
 .directHeading {
     color:#70499F;
