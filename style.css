@@ -413,6 +413,9 @@ footer {
     display: block !important;
     margin-bottom: 1.5em !important;
 }
+.strike {
+    text-decoration: line-through;
+}
 
 @media only screen and (max-width: 600px) {
     .navsocials-links {
