@@ -17,7 +17,6 @@ body {
     box-sizing: border-box;
     -moz-osx-font-smoothing:grayscale;
     -webkit-font-smoothing:antialiased;
-    font-smoothing:antialiased;
 }
 
 a {
@@ -299,10 +298,14 @@ section#sponsors {
 
 .sponlogoimg.large img{
     width:300px;
+    background-color: #70499F;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .sponlogoimg.medium img{
     width:150px;
+    background-color: #70499F
 }
 
 .sponlogoimg.small img{
