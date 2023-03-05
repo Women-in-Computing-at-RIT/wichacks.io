@@ -381,6 +381,11 @@ footer {
 .event b{  
     color:#fff;
 }
+.over {
+    color: black;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
 
 .timeinfo {
     padding-bottom:1.5em;
