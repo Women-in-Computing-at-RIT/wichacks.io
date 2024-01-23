@@ -1,22 +1,21 @@
-
-
 :root {
     --accent: #4D1E5B;
     --text: #222222;
-  }
-  
+    overflow-x: hidden;
+}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
     background: #fff;
     color: var(--text);
-    margin:0;
-    padding:0;
-    font-size:1.4em;
-    line-height:180%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    line-height: 180%;
     box-sizing: border-box;
-    -moz-osx-font-smoothing:grayscale;
-    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -25,72 +24,77 @@ a {
 
 b {
     font-weight: 700;
-    color:#70499F;
+    color: #70499F;
 }
 
 nav {
-    top:0;
-    left:0;
-    height:70px;
-    width:100%;
-    display:grid;
-    box-sizing:border-box;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
     padding: 0 2em;
     align-items: center;
-    grid-template-columns:50% 50%;
-    grid-template-rows:auto;
-    z-index:1;
-    position:fixed;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    z-index: 1;
+    position: fixed;
     /*background-color:rgba(225,225,225,.3);*/
-    background-color:rgba(112,73,159,.1);
+    background-color: rgba(112, 73, 159, .3);
+    overflow-x: hidden;
 }
 
 nav a {
-    color:#fff;
+    color: #fff;
 }
 
 .navlinks a {
-    font-size:.8em;
+    font-size: .8em;
 }
 
-.navlinks a, .navsocials a {
-    padding-left:1em;
+.navlinks a,
+.navsocials a {
+    padding-left: 1em;
 }
 
-.navlinks a:first-child, .navsocials a:first-child {
-    padding-left:0;
+.navlinks a:first-child,
+.navsocials a:first-child {
+    padding-left: 0;
 }
 
 .navsocials {
-    text-align:right;
-    margin-right:150px;
+    text-align: right;
+    margin-right: 150px;
 }
 
 .navsocials a {
-    font-size:1em;
+    font-size: 1em;
 }
 
 section {
-    width:100vw;
-    height:100vh;    
+    width: 100vw;
+    height: 100vh;
 }
 
 
 #homepage {
-    height:100vh;
-    background: url(assets/media/background.jpg) no-repeat center center fixed; 
+    height: 100vh;
+    background: url(assets/media/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     /*background: linear-gradient(196deg, rgba(144,63,144,1) 0%, rgba(167,84,119,1) 34%, rgba(177,101,103,1) 100%);*/
-    top:0;
+    top: 0;
     box-sizing: border-box;
-    padding:0 3em;
-    display:grid;
-    place-items:center;
-    text-align:center;
+    padding: 0 3em;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    overflow-x: hidden;
 }
+
 #home-content {
     background-color: rgba(144, 23, 214, 0.5);
     padding: 2em;
@@ -98,39 +102,39 @@ section {
 
 }
 
-.landingpg.homelogo img{
-    width:80%;
-    text-align:center;
+.landingpg.homelogo img {
+    width: 80%;
+    text-align: center;
     box-sizing: border-box;
-    border:8px solid #fff;
+    border: 8px solid #fff;
 }
 
-.landingpg.info{
-    font-size:1.2em;
-    font-weight:700;
-    color:#fff;
-    padding:0.5em;
+.landingpg.info {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    padding: 0.5em;
 }
 
-.landingpg.hackdate span{
-    padding:.5em 1em;
-    font-size:1em;
-    font-weight:700;
-    background:#fff;
-    color:#8b3883;
+.landingpg.hackdate span {
+    padding: .5em 1em;
+    font-size: 1em;
+    font-weight: 700;
+    background: #fff;
+    color: #8b3883;
 }
 
 .landingpg.homelogo {
-    padding:1.5em 0 ;
+    padding: 1.5em 0;
 }
 
 .landingpg.button a {
-    color:#fff;
+    color: #fff;
     text-transform: uppercase;
-    background: linear-gradient(196deg, rgba(144,63,144,1) 0%, rgba(167,84,119,1) 34%, rgba(177,101,103,1) 100%);
-    font-weight:700;
-    padding:.5em 1em;
-    font-size:1em;
+    background: linear-gradient(196deg, rgba(144, 63, 144, 1) 0%, rgba(167, 84, 119, 1) 34%, rgba(177, 101, 103, 1) 100%);
+    font-weight: 700;
+    padding: .5em 1em;
+    font-size: 1em;
     border-radius: 1.5em;
     -moz-border-radius: 1.5em;
     -webkit-border-radius: 1.5em;
@@ -138,79 +142,87 @@ section {
 }
 
 #mlh-trust-badge {
-    max-width:100px;
-    position:fixed;
+    max-width: 100px;
+    position: fixed;
     /*right:1.5em;*/
-    top:0;
-    z-index:2;
+    top: 0;
+    z-index: 2;
 }
 
 section#about {
     background: #fff;
-    display:grid;
-    width:100%;
-    grid-template-columns:40% 40%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 40%;
     grid-template-rows: auto;
-    place-items:start center;
+    place-items: start center;
     box-sizing: border-box;
-    padding:3em;
-    height:auto;
-    column-gap:3em;
+    padding: 3em;
+    height: auto;
+    column-gap: 3em;
     justify-content: center;
     justify-items: center;
-    color:#222222;
+    color: #222222;
 }
 
-section#about a, .sponsorinfo a, footer a {
-    color:#8B3882;
+section#about a,
+.sponsorinfo a,
+footer a {
+    color: #8B3882;
     text-decoration: underline;
 }
 
-.abtheading, .faqheading, .sponheading, .scheduleheading, .directorGridHeading {
+.abtheading,
+.faqheading,
+.sponheading,
+.scheduleheading,
+.directorGridHeading {
     text-transform: uppercase;
-    font-weight:700;
-    font-size:1.5em;
+    font-weight: 700;
+    font-size: 1.5em;
 }
 
 .abtheading {
-    color:#70499F;
+    color: #70499F;
 }
 
 p.blockqt {
-    border-left:8px solid #70499F;
+    border-left: 8px solid #70499F;
     box-sizing: border-box;
-    padding:1em;
-    background-color:rgba(112,73,159,.1);
+    padding: 1em;
+    background-color: rgba(112, 73, 159, .1);
 }
 
 .video {
-    width:100%;
+    width: 100%;
 }
 
-section#faq, section#schedule {
+section#faq,
+section#schedule {
     background: #70499F;
-    width:100%;
+    width: 100%;
     box-sizing: border-box;
-    padding:3em;
-    height:auto;
-    display:grid;
-    grid-template-columns:calc(80% + 3em);
+    padding: 3em;
+    height: auto;
+    display: grid;
+    grid-template-columns: calc(80% + 3em);
     grid-template-rows: auto;
-    place-items:start;
+    place-items: start;
     justify-content: center;
 }
 
-.faqheading, .scheduleheading {
-    color:#fff;
-    padding-bottom:1em;
+.faqheading,
+.scheduleheading {
+    color: #fff;
+    padding-bottom: 1em;
 }
 
 .faqcontact {
-    color:#fff;
+    color: #fff;
 }
 
 .faqcontact a {
-    color:#fff;
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -220,10 +232,10 @@ section#faq, section#schedule {
     cursor: pointer;
     padding: 1em;
     box-sizing: border-box;
-    width:100%;
-    font-size:1em;
+    width: 100%;
+    font-size: 1em;
     border: none;
-    margin-top:1em;
+    margin-top: 1em;
     text-align: left;
     outline: none;
     font-family: 'Montserrat', sans-serif;
@@ -232,11 +244,12 @@ section#faq, section#schedule {
     -moz-border-radius: .5em;
     -webkit-border-radius: .5em;
 }
-  
-.active, .accordion:hover {
+
+.active,
+.accordion:hover {
     background-color: #fff;
 }
-  
+
 .accordion:after {
     content: '\002B';
     color: #8B3882;
@@ -244,92 +257,94 @@ section#faq, section#schedule {
     float: right;
     margin-left: 5px;
 }
-  
+
 .active:after {
     content: "\2212";
-  }
-  
+}
+
 .panel {
     padding: .5em 1em 0 1em;
     max-height: 0;
     box-sizing: border-box;
-    color:#fff;
+    color: #fff;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
 
 section#sponsors {
     background: #fff;
-    width:100%;
+    width: 100%;
     box-sizing: border-box;
-    height:auto;
-    display:grid;
-    padding:3em 0;
-    grid-template-columns:calc(70% + 3em);
+    height: auto;
+    display: grid;
+    padding: 3em 0;
+    grid-template-columns: calc(70% + 3em);
     grid-template-rows: auto;
-    place-items:start;
+    place-items: start;
     justify-content: center;
 }
 
-.sponheading, .directorGridHeading {
-    color:#70499F;
-    padding-bottom:2em;
-    text-align:left;
+.sponheading,
+.directorGridHeading {
+    color: #70499F;
+    padding-bottom: 2em;
+    text-align: left;
 }
 
 #sponsors b {
-    color:#222;
-    font-weight:700;
+    color: #222;
+    font-weight: 700;
 }
 
 .sponlogo {
-    display:grid;
+    display: grid;
     box-sizing: border-box;
-    grid-template-columns:auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
-    width:100%;
+    width: 100%;
     column-gap: 3em;
     row-gap: 3em;
-    padding:0 5em;
+    padding: 0 5em;
     align-items: center;
     justify-items: center;
     justify-content: center;
 }
 
-.sponlogoimg.large img{
-    width:300px;
+.sponlogoimg.large img {
+    width: 300px;
     background-color: #70499F;
     padding: 5px;
     border-radius: 10px;
 }
 
-.sponlogoimg.medium img{
-    width:150px;
+.sponlogoimg.medium img {
+    width: 150px;
 }
 
-.sponlogoimg.small img{
-    width:100px;
+.sponlogoimg.small img {
+    width: 100px;
 }
 
 .sponsorinfo {
-    padding-top:1em;text-align:center;
+    padding-top: 1em;
+    text-align: center;
 }
 
-.sponsorinfo b{
-    color:#70499F;
+.sponsorinfo b {
+    color: #70499F;
 }
 
-#directorGridOuter{
+#directorGridOuter {
     padding-top: 50px;
     width: 100vw;
     background: white;
     box-sizing: border-box;
-    padding:3em;
-    height:auto;
-    display:grid;
-    grid-template-columns:calc(80% + 3em);
+    padding: 3em;
+    height: auto;
+    display: grid;
+    grid-template-columns: calc(80% + 3em);
     grid-template-rows: auto;
-    place-items:start;
+    place-items: start;
     justify-content: center;
 }
 
@@ -341,9 +356,9 @@ section#sponsors {
 }*/
 
 .directHeading {
-    color:#70499F;
-    padding-bottom:2em;
-    text-align:left;
+    color: #70499F;
+    padding-bottom: 2em;
+    text-align: left;
 }
 
 .directorGrid {
@@ -361,26 +376,27 @@ section#sponsors {
 }
 
 footer {
-    color:#222;
-    font-size:.7em;
-    text-align:center;
-    padding:3em 3em 3em 3em;
+    color: #222;
+    font-size: .7em;
+    text-align: center;
+    padding: 3em 3em 3em 3em;
 }
 
 .scheduleborder {
     border-left: 3px solid #fff;
     padding-left: 1em;
-    box-sizing:border-box;
-    color:#fff;
+    box-sizing: border-box;
+    color: #fff;
 }
 
 .event {
-    padding-top:1em;
+    padding-top: 1em;
 }
 
-.event b{  
-    color:#fff;
+.event b {
+    color: #fff;
 }
+
 .over {
     color: black;
     text-decoration: line-through;
@@ -388,11 +404,12 @@ footer {
 }
 
 .timeinfo {
-    padding-bottom:1.5em;
+    padding-bottom: 1.5em;
 }
 
-.timeinfo, .timeinfo a {
-    color:#fff;
+.timeinfo,
+.timeinfo a {
+    color: #fff;
 }
 
 .timeinfo a {
@@ -400,75 +417,72 @@ footer {
 }
 
 .eventdate {
-    font-weight:700;
-    color:#fff;
-    font-size:1.3em;
-    padding-bottom:1em;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.3em;
+    padding-bottom: 1em;
 }
 
 .event .scheduledot {
-    font-size:90px;
-    margin:-8px 0 0 -37px;
-    position:absolute;
+    font-size: 90px;
+    margin: -8px 0 0 -37px;
+    position: absolute;
 }
 
 .event:last-child {
-    padding-bottom:1em;
+    padding-bottom: 1em;
 }
 
 .scheduleborder .event br {
     display: block !important;
     margin-bottom: 1.5em !important;
 }
+
 .strike {
     text-decoration: line-through;
 }
 
 @media only screen and (max-width: 600px) {
     .navsocials-links {
-        display:none;
+        display: none;
     }
 
     .navlinks a {
-        font-size:.65em;
+        font-size: .65em;
     }
 
     nav {
-        grid-template-columns:70% 30%;
+        grid-template-columns: 70% 30%;
     }
 
     section#about {
-        grid-template-columns:auto;
+        grid-template-columns: auto;
         grid-template-rows: auto auto;
-        column-gap:0;
-        grid-row-gap:1em;
+        column-gap: 0;
+        grid-row-gap: 1em;
     }
 }
 
 @media only screen and (max-width: 768px) {
 
     section#about {
-        grid-template-columns:auto;
+        grid-template-columns: auto;
         grid-template-rows: auto auto;
-        column-gap:0;
-        grid-row-gap:1em;
+        column-gap: 0;
+        grid-row-gap: 1em;
     }
 }
 
 @media only screen and (max-width: 1170px) {
     .sponlogo {
-        grid-template-columns:auto auto;
+        grid-template-columns: auto auto;
         grid-template-rows: auto;
     }
 }
 
 @media only screen and (max-width: 808px) {
     .sponlogo {
-        grid-template-columns:auto;
+        grid-template-columns: auto;
         grid-template-rows: auto;
     }
 }
-
-
-
-
