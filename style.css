@@ -80,7 +80,7 @@ section {
 
 #homepage {
     height: 100vh;
-    background: url(assets/media/background.jpg) no-repeat center center fixed;
+    background: url(assets/media/WiCHacksNewBanner2.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -139,6 +139,17 @@ section {
     -moz-border-radius: 1.5em;
     -webkit-border-radius: 1.5em;
 
+}
+
+.widget{
+    position: absolute;
+    top: 70%;
+    left: 65%;
+}
+
+img.widget {
+    width: 30%;
+    max-width: 500px;
 }
 
 #mlh-trust-badge {
