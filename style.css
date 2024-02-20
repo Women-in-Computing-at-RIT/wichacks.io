@@ -222,6 +222,21 @@ section#schedule {
     justify-content: center;
 }
 
+section#contents{
+        background: #fff;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-top: 3em;
+        height: auto;
+        display: grid;
+        grid-template-columns: calc(80% + 3em);
+        grid-template-rows: auto;
+        place-items: start;
+        justify-content: center;
+    }
+
 .faqheading,
 .scheduleheading {
     color: #fff;
@@ -358,6 +373,7 @@ section#sponsors {
     place-items: start;
     justify-content: center;
 }
+
 
 /*.directorGridHeading{
     color:#70499F;
