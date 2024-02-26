@@ -226,9 +226,10 @@ section#contents{
         background: #fff;
         width: 100%;
         box-sizing: border-box;
-        padding-left: 3em;
+        /* padding-left: 3em;
         padding-right: 3em;
-        padding-top: 3em;
+        padding-top: 3em; */
+        padding: 2em;
         height: auto;
         display: grid;
         grid-template-columns: calc(80% + 3em);
