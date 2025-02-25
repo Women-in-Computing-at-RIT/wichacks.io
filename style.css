@@ -4,6 +4,7 @@
     overflow-x: hidden;
 }
 
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: #fff;
@@ -39,6 +40,7 @@ nav {
     grid-template-rows: auto;
     z-index: 1;
     position: fixed;
+    /*background-color:rgba(225,225,225,.3);*/
     background-color: rgba(112, 73, 159, .3);
     overflow-x: hidden;
 }
@@ -75,6 +77,7 @@ section {
     height: 100vh;
 }
 
+
 #homepage {
     height: 100vh;
     background: url(assets/media/WiCHacksNewBanner2.png) no-repeat center center fixed;
@@ -82,13 +85,12 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100vw;
+    /*background: linear-gradient(196deg, rgba(144,63,144,1) 0%, rgba(167,84,119,1) 34%, rgba(177,101,103,1) 100%);*/
     top: 0;
     box-sizing: border-box;
     padding: 0 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     text-align: center;
     overflow-x: hidden;
 }
@@ -97,8 +99,7 @@ section {
     background-color: rgba(144, 23, 214, 0.5);
     padding: 2em;
     border-radius: 25px;
-    max-width: 80%;
-    margin: 0 auto;
+
 }
 
 .landingpg.homelogo img {
@@ -137,9 +138,10 @@ section {
     border-radius: 1.5em;
     -moz-border-radius: 1.5em;
     -webkit-border-radius: 1.5em;
+
 }
 
-.widget {
+.widget{
     position: absolute;
     top: 70%;
     left: 65%;
@@ -153,8 +155,9 @@ img.widget {
 #mlh-trust-badge {
     max-width: 100px;
     position: fixed;
+    /*right:1.5em;*/
     top: 0;
-    z-index: 10;
+    z-index: 2;
 }
 
 section#about {
@@ -224,18 +227,21 @@ section#faq a {
     text-decoration: underline;
 }
 
-section#contents {
-    background: #fff;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2em;
-    height: auto;
-    display: grid;
-    grid-template-columns: calc(80% + 3em);
-    grid-template-rows: auto;
-    place-items: start;
-    justify-content: center;
-}
+section#contents{
+        background: #fff;
+        width: 100%;
+        box-sizing: border-box;
+        /* padding-left: 3em;
+        padding-right: 3em;
+        padding-top: 3em; */
+        padding: 2em;
+        height: auto;
+        display: grid;
+        grid-template-columns: calc(80% + 3em);
+        grid-template-rows: auto;
+        place-items: start;
+        justify-content: center;
+    }
 
 .faqheading,
 .scheduleheading {
@@ -374,6 +380,7 @@ section#sponsors {
     justify-content: center;
 }
 
+
 /*.directorGridHeading{
     color:#70499F;
     padding-bottom:2em;
@@ -479,28 +486,13 @@ footer {
 
 .hamburger-menu .bar {
     width: 25px;
-    height: 4px;
-    border-radius: 3px;
-    background-color: #fff;
+    height: 3px;
+    background-color: #333;
     margin: 4px 0;
     transition: 0.4s;
 }
 
 @media (max-width: 768px) {
-    .countdown {
-        display: none;
-    }
-
-    #home-content {
-        margin-top: 2dvh;
-        padding: 1em;
-    }
-
-    .landingpg.button {
-        padding: .5em 1em;
-        font-size: .8em;
-    }
-
     .navlinks {
         display: none;
         flex-direction: column;
@@ -522,23 +514,14 @@ footer {
         display: flex;
     }
 
-        .navlinks.visible {
-            display: flex;
-            position: fixed;
-            /*right:1.5em;*/
-            top: 60px;
-            z-index: 1;
-        }
-
-    section#about {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        column-gap: 0;
-        grid-row-gap: 1em;
+    .navlinks.visible {
+        position: flex;
+        display: flex;
+        z-index: 1000000;
     }
 }
 
-@media (max-width: 610px) {
+@media only screen and (max-width: 600px) {
     .navsocials-links {
         display: none;
     }
@@ -557,31 +540,29 @@ footer {
         column-gap: 0;
         grid-row-gap: 1em;
     }
-
-        .navlinks.visible {
-            display: flex;
-            position: fixed;
-            /*right:1.5em;*/
-            top: 60px;
-            z-index: 1;
-        }
+    
 }
 
-@media (max-width: 420px) {
-    .landingpg.button {
-        padding: .5em 1em;
-        font-size: .6em;
+@media only screen and (max-width: 768px) {
+
+    section#about {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        column-gap: 0;
+        grid-row-gap: 1em;
     }
+
+    
 }
 
-@media (max-width: 1170px) {
+@media only screen and (max-width: 1170px) {
     .sponlogo {
         grid-template-columns: auto auto;
         grid-template-rows: auto;
     }
 }
 
-@media (max-width: 808px) {
+@media only screen and (max-width: 808px) {
     .sponlogo {
         grid-template-columns: auto;
         grid-template-rows: auto;
