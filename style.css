@@ -221,7 +221,6 @@ section#schedule {
     place-items: start;
     justify-content: center;
 }
-
 section#faq a {
     color: #fff;
     text-decoration: underline;
@@ -475,52 +474,6 @@ footer {
     text-decoration: line-through;
 }
 
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-@media (max-width: 768px) {
-    .navlinks {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: rgba(112, 73, 159, .9);
-    }
-
-    .navlinks a {
-        padding: 10px;
-        text-align: center;
-        border-top: 1px solid #ddd;
-        color: #fff;
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .navlinks.visible {
-        position: flex;
-        display: flex;
-        z-index: 1000000;
-    }
-}
-
 @media only screen and (max-width: 600px) {
     .navsocials-links {
         display: none;
@@ -540,7 +493,6 @@ footer {
         column-gap: 0;
         grid-row-gap: 1em;
     }
-    
 }
 
 @media only screen and (max-width: 768px) {
@@ -551,8 +503,6 @@ footer {
         column-gap: 0;
         grid-row-gap: 1em;
     }
-
-    
 }
 
 @media only screen and (max-width: 1170px) {
