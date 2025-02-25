@@ -222,6 +222,11 @@ section#schedule {
     justify-content: center;
 }
 
+section#faq a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 section#contents{
         background: #fff;
         width: 100%;
