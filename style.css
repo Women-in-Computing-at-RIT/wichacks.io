@@ -142,10 +142,7 @@ section {
 .widget {
     position: absolute;
     top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    max-width: 500px;
+    left: 65%;
 }
 
 img.widget {
