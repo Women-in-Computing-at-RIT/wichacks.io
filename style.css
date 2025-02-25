@@ -85,12 +85,13 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /*background: linear-gradient(196deg, rgba(144,63,144,1) 0%, rgba(167,84,119,1) 34%, rgba(177,101,103,1) 100%);*/
+    width: 100vw;
     top: 0;
     box-sizing: border-box;
     padding: 0 3em;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     overflow-x: hidden;
 }
@@ -99,7 +100,8 @@ section {
     background-color: rgba(144, 23, 214, 0.5);
     padding: 2em;
     border-radius: 25px;
-
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .landingpg.homelogo img {
@@ -152,12 +154,13 @@ img.widget {
     max-width: 500px;
 }
 
+
 #mlh-trust-badge {
     max-width: 100px;
     position: fixed;
     /*right:1.5em;*/
     top: 0;
-    z-index: 2;
+    z-index: 10;
 }
 
 section#about {
@@ -227,21 +230,21 @@ section#faq a {
     text-decoration: underline;
 }
 
-section#contents{
-        background: #fff;
-        width: 100%;
-        box-sizing: border-box;
-        /* padding-left: 3em;
+section#contents {
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    /* padding-left: 3em;
         padding-right: 3em;
         padding-top: 3em; */
-        padding: 2em;
-        height: auto;
-        display: grid;
-        grid-template-columns: calc(80% + 3em);
-        grid-template-rows: auto;
-        place-items: start;
-        justify-content: center;
-    }
+    padding: 2em;
+    height: auto;
+    display: grid;
+    grid-template-columns: calc(80% + 3em);
+    grid-template-rows: auto;
+    place-items: start;
+    justify-content: center;
+}
 
 .faqheading,
 .scheduleheading {
@@ -475,7 +478,81 @@ footer {
     text-decoration: line-through;
 }
 
-@media only screen and (max-width: 600px) {
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+
+    .countdown {
+        display: none;
+    }
+
+
+    #home-content{
+        margin-top: 2dvh;
+        padding: 1em;
+    }
+
+    .landingpg.button {
+        padding: .5em 1em;
+        font-size: .8em;
+    }
+
+    .navlinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: rgba(112, 73, 159, .9);
+    }
+
+    .navlinks a {
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        color: #fff;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navlinks.visible {
+        display: flex;
+        position: fixed;
+        /*right:1.5em;*/
+        top: 60px;
+        z-index: 1;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .landingpg.button {
+            padding: .5em 1em;
+            font-size: .6em;
+        }
+}
+
+@media only screen and (max-width: 610px) {
+    
     .navsocials-links {
         display: none;
     }
@@ -493,6 +570,11 @@ footer {
         grid-template-rows: auto auto;
         column-gap: 0;
         grid-row-gap: 1em;
+    }
+
+    .navlinks.visible {
+        display: flex !important;
+        z-index: 1000;
     }
 }
 
