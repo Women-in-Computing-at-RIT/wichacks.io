@@ -139,6 +139,10 @@ section {
     -webkit-border-radius: 1.5em;
 }
 
+#newsletter {
+    margin-top: 1em;
+}
+
 .widget {
     position: absolute;
     top: 70%;
