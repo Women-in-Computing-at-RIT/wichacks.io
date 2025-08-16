@@ -194,6 +194,13 @@ footer a {
     font-size: 1.5em;
 }
 
+.sponsubheading {
+    color: #70499F;
+    font-weight: 700;
+    font-size: 1.3em;
+    padding-bottom: 1em;
+}
+
 .abtheading {
     color: #70499F;
 }
@@ -317,7 +324,7 @@ section#sponsors {
 .sponheading,
 .directorGridHeading {
     color: #70499F;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     text-align: left;
 }
 
