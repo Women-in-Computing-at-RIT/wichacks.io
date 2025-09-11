@@ -216,6 +216,11 @@ p.blockqt {
     width: 100%;
 }
 
+iframe {
+    padding: 10px;
+    border-radius: 24px;
+}
+
 section#faq,
 section#schedule {
     background: #70499F;
