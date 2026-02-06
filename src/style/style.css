@@ -1058,6 +1058,29 @@ html, body {
   font-family: "Montserrat", sans-serif;
 }
 
+@media (max-width: 500px) {
+  .schedule-block {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 14px 16px;
+  }
+  .schedule-block h3 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 12px;
+  }
+  .schedule-time {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+  }
+  .schedule-event {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+  }
+}
 .faq {
   background: white;
 }

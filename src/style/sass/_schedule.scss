@@ -74,3 +74,25 @@
     color: #3B3C74;
     @include ms-font(18px);
 }
+
+
+@media (max-width: 500px) {
+    .schedule-block {
+        min-width: 300px;
+        max-width: 400px;
+        padding: 14px 16px;
+
+        h3 {
+            @include ms-font(18px);
+            padding-bottom: 12px;
+        }
+    }
+
+    .schedule-time {
+        @include ms-font(16px);
+    }
+
+    .schedule-event {
+        @include ms-font(16px);
+    }
+}
