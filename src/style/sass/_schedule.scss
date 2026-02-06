@@ -12,19 +12,65 @@
 
     .schedule-boxes {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 22px;
 
-        img {
-            height: auto;
-            max-height: 70vh;
-            max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 10px;
 
-            object-fit: contain;
-            flex-shrink: 0;
-            align-self: center;
-
-            display: block;
-        }
+        scroll-behavior: smooth;
     }
+}
+
+.schedule-block {
+    min-width: 350px;
+    max-width: 500px;
+    padding: 18px 20px;
+    border-radius: 16px;
+
+    background: #f0ecf5;
+    flex-shrink: 0;
+
+    h3 {
+        @include ms-font(22px);
+        padding-bottom: 15px;
+        color: #22233b;
+        font-weight: 700;
+    }
+}
+
+
+.schedule-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 14px;
+    padding: 8px 0;
+}
+
+.schedule-time {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #3B3C74;
+    @include ms-font(18px);
+}
+
+.schedule-spacer {
+    height: 1px;
+    background: rgba(#3B3C74, 0.25);
+}
+
+.schedule-event {
+    white-space: nowrap;
+    text-align: right;
+    color: #3B3C74;
+    @include ms-font(18px);
 }
