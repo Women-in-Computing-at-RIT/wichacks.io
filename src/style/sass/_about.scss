@@ -1,0 +1,123 @@
+.about {
+    background: rgba($purple, 0.10);
+    h2 {
+        color: #3B3C74;
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+}
+
+.about .description {
+    width: 80%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(20px, 3vw, 40px);
+    align-items: start;
+}
+
+.about-left {
+    p {
+        @include ms-font(18px);
+        line-height: 2;
+        color: #22243c;
+        margin: 0 0 14px 0;
+
+        strong {
+            font-weight: 700;
+            color: $purple;
+        }
+    }
+}
+
+.inclusion-disclaimer {
+    margin-top: 20px;
+    background: rgba($purple, 0.10);
+    padding: 20px;
+    border-radius: 12px;
+
+    p {
+        margin: 0;
+        @include ms-font(18px);
+        line-height: 2;
+        color: $purple;
+        font-weight: 500;
+        
+        strong {
+            font-weight: 700;
+            color: #3B3C74;
+        }
+    }
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+
+        border-radius: 16px;
+        object-fit: cover;
+
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    h3 {
+        margin: 6px 0 0 0;
+        @include ms-font(16px);
+        font-weight: 700;
+        color: #3B3C74;
+    }
+
+    p {
+        margin: 0;
+        @include ms-font(14px);
+        line-height: 1.6;
+        color: #22243c;
+    }
+
+    a {
+        color: $purple;
+        text-decoration: underline;
+        font-weight: 600;
+
+        &:hover, &:focus-visible {
+            opacity: 0.85;
+        }
+    }
+}
+
+.about-right p a + a {
+    margin-left: 8px;
+}
+
+@media (max-width: 980px) {
+    .about .description, .about h2 {
+        width: 92%;
+    }
+
+    .about .description {
+        grid-template-columns: 1fr;
+    }
+
+    .about-right {
+        order: -1;
+    }
+}
+
+@media (max-width: 520px) {
+    .about-left p {
+        @include ms-font(15px);
+    }
+
+    .about-right img {
+        border-radius: 14px;
+    }
+}

@@ -1,0 +1,148 @@
+.sponsors-background {
+    background: rgba($purple, 0.10);
+}
+.sponsors {
+    h2 {
+        margin-top: -60px;
+        color: #3B3C74;
+    }
+    p {
+        @include ms-font(18px);
+        text-align: left;
+        font-weight: 400;
+        margin: 0 0 5px 0;
+        color: #3B3C74;
+
+        strong {
+            font-weight: 600;
+        }
+        a {
+            color: $purple;
+            text-decoration: underline;
+        }
+    }
+}
+
+// wiggle effect for sponsor logos
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.sponsors-row {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 0rem;
+    flex-wrap: nowrap;
+
+    img {
+        max-width: 300px;
+        object-fit: contain;
+        margin-bottom: -20px;
+        
+
+        &:hover, &:focus {
+            animation: wiggle 0.5s ease-in-out;
+        }
+    }
+}
+
+.sponsors-text{
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.sponsors-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    // center container on page
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        max-width: 300px;
+        object-fit: contain;
+
+        &:hover, &:focus {
+            animation: wiggle 0.5s ease-in-out;
+        }
+    }
+}
+
+.new-sponsors {
+    margin-top: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background: rgba($purple, 0.10);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+@media (max-width: 800px) {
+    .sponsors-container {
+        img {
+            max-width: 250px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .sponsors-container {
+        img {
+            max-width: 200px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .sponsors {
+        p {
+            @include ms-font(16px);
+        }
+    }
+
+    .sponsors-container {
+        width: 100%;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .sponsors-container img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .sponsors-row {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sponsors-row img {
+        width: 70%;
+        max-width: 260px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .sponsors-text {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}

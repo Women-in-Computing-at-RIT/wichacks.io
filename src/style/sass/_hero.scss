@@ -1,0 +1,422 @@
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 100svh;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "top top"
+        "middle-left middle-right"
+        "bottom bottom";
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.hero-top {
+    margin-top: -40px;
+    grid-area: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-devpost-link::before {
+    content: "";
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background: rgba($purple, 0.20);
+
+    mask-image: url("../assets/flower-outline.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    -webkit-mask-image: url("../assets/flower-outline.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    z-index: -1;
+    pointer-events: none;
+
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+
+.hero-devpost-link {
+    grid-area: middle-left;
+
+    position: relative;
+    z-index: 1;
+    margin-left: 18vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    width: min(520px, 100%);
+    max-width: none;
+    align-self: center;
+    color: white;
+
+    h3 {
+        margin: 0;
+        line-height: 1.35;
+
+        @include ms-font(20px);
+        font-weight: 600;
+        color: #3B3C74;
+        max-width: 18ch;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        padding: 15px 22px;
+        min-width: 220px;
+        width: fit-content;
+
+        background: rgba($purple, 0.85);
+        color: white;
+        border-radius: 50px;
+        letter-spacing: 2px;
+        @include ms-font(16px);
+        font-weight: 700;
+
+        transition: background 1s ease, transform 120ms ease;
+        &:hover {
+            background: rgba(#21233C, 0.85);
+            transform: translateY(-1px);
+        }
+    }
+}
+
+
+
+@media (max-width: 820px) {
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "top"
+            "middle-left"
+            "bottom";
+    }
+
+    .hero-spacer {
+        display: none;
+    }
+
+    .hero-devpost-link {
+        margin-left: 0;
+        width: min(750px, 100%);
+        padding: 1rem 0;
+        margin-left: 0;
+
+        h3 {
+            max-width: 34ch;
+            font-size: 22px;
+            color: white;
+        }
+
+        a {
+            width: 100%;
+        }
+
+        .button {
+            width: min(250px, 100%);
+        }
+    }
+
+    .hero-devpost-link::before {
+        width: 70vw;
+        height: 70vw;
+
+        background: rgba($purple, 0.38);
+
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+
+.hero-spacer {
+    grid-area: middle-right;
+}
+.hero-bottom {
+    grid-area: bottom;
+    margin-top: 20px;
+}
+
+.countdown {
+    text-align: center;
+    padding: 1.25rem 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 3rem auto 0;
+
+    background: rgba(#3B3C74, 0.45);
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+
+    h2 {
+        margin-bottom: 0.75rem;
+        color: white;
+        font-weight: 600;
+        @include ms-font(20px);
+    }
+}
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.countdown-box {
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    max-width: none;
+}
+
+.countdown-value {
+    color: white;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.15rem;
+    @include ms-font(28px);
+}
+
+.countdown-label {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    @include ms-font(14px);
+}
+
+html, body {
+    overflow-x: clip;
+}
+
+@media (max-width: 500px) {
+    .hero {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 100%;
+        min-height: 100svh;
+        box-sizing: border-box;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "top"
+            "middle-left"
+            "bottom";
+        gap: 1rem;
+
+        padding: 1.25rem 1rem;
+    }
+
+    .hero-top {
+        grid-area: top;
+        margin-top: -20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: min(3000px, 80vw);
+            height: auto;
+        }
+    }
+
+    .hero-spacer {
+        display: none;
+    }
+
+    .hero-devpost-link {
+        top: -20px;
+        grid-area: middle-left;
+
+        position: relative;
+        z-index: 1;
+
+        margin-left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.9rem;
+
+        width: 100%;
+        max-width: 360px;
+        margin-inline: auto;
+
+        padding: 1.75rem 1rem;
+        color: white;
+
+        h3 {
+            margin: 0;
+            line-height: 1.25;
+
+            @include ms-font(24px);
+            font-weight: 700;
+            color: white;
+            // add dark purple outline to text for better visibility
+            text-shadow: 0 0 8px rgba(48, 25, 52, 0.9);
+
+            max-width: 22ch;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            width: min(260px, 100%);
+            padding: 14px 18px;
+
+            background: rgba($purple, 0.85);
+            color: white;
+            border-radius: 999px;
+
+            letter-spacing: 1.6px;
+            @include ms-font(16px);
+            font-weight: 700;
+
+            transition: background 300ms ease, transform 120ms ease;
+
+            &:hover {
+                background: rgba(#21233C, 0.85);
+                transform: translateY(-1px);
+            }
+        }
+    }
+
+    .hero-devpost-link::before {
+        content: "";
+        position: absolute;
+
+        width: min(320px, 92vw);
+        height: min(320px, 92vw);
+
+        background: rgba($purple, 0.28);
+
+        mask-image: url("../assets/flower-outline.svg");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+
+        -webkit-mask-image: url("../assets/flower-outline.svg");
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+
+        z-index: -1;
+        pointer-events: none;
+
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-bottom {
+        grid-area: bottom;
+        margin-top: 0.5rem;
+    }
+
+    .countdown {
+        text-align: center;
+        padding: 1rem 1rem;
+
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+
+        background: rgba(#3B3C74, 0.45);
+        border-radius: 14px;
+        backdrop-filter: blur(6px);
+
+        h2 {
+            margin: 0 0 0.75rem 0;
+            color: white;
+            font-weight: 600;
+            @include ms-font(18px);
+        }
+    }
+
+    .countdown-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .countdown-box {
+        padding: 0;
+        background: none;
+        border-radius: 0;
+        max-width: none;
+    }
+
+    .countdown-value {
+        color: white;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 0.15rem;
+        @include ms-font(26px);
+    }
+
+    .countdown-label {
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        @include ms-font(13px);
+    }
+
+    html, body {
+        overflow-x: clip;
+    }
+}

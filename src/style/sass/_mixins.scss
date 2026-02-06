@@ -1,0 +1,12 @@
+@mixin ms-font($size:20px) {
+    font-size: $size;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin respond($breakpoint) {
+    $breakpointPX: ($breakpoint) * 1px;
+    @media (max-width: $breakpointPX) {
+        @content;
+    }
+}

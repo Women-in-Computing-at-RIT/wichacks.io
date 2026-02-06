@@ -1,0 +1,33 @@
+import React, { useState } from "react";
+import "../style/style.css";
+
+function CategoryBox({ image, category, description, fitClass }) {
+    const [flipped, setFlipped] = useState(false);
+
+    return (
+        <button
+            type="button"
+            className={`category-card ${flipped ? "is-flipped" : ""}`}
+            onClick={() => setFlipped((v) => !v)}
+            aria-pressed={flipped}
+            aria-label={`${category} category card`}
+        >
+            <div className="category-inner">
+                <div className="category-face category-front">
+                    <img src={image} alt="" className="category-img" />
+                </div>
+
+                <div className={`category-face category-back`}>
+                    <div className="category-mask" style={{ "--mask-url": `url(${image})` }}>
+                        <div className={`category-back-content ${fitClass}`}>
+                            <h3 className="category-title">{category}</h3>
+                            <p className="category-desc">{description}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </button>
+    );
+}
+
+export default CategoryBox;
