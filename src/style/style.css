@@ -223,7 +223,8 @@ section {
   transform: scaleX(0);
   transition: transform 180ms ease;
 }
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a:focus-visible {
   background: rgba(255, 255, 255, 0.12);
   transform: translateY(-1px);
 }
@@ -235,13 +236,34 @@ section {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-right: 132px;
+}
+
+.nav-icons .nav-icon {
+  border-radius: 12px;
+  display: block;
+  height: min-content;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.nav-icons .nav-icon:hover,
+.nav-icons .nav-icon:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-icons a:hover,
+.nav-icons a:focus-visible {
+  transform: translateY(-1px);
+}
+
+#instagram-nav-item {
+  padding: 6px 6px 2px;
 }
 
 .nav-icon svg {
   width: 36px;
   height: 36px;
   color: white;
-  margin-right: 120px;
 }
 
 .mlh-banner {
@@ -252,6 +274,7 @@ section {
   margin: 0;
   background: transparent;
   z-index: 1001;
+  padding: 0 6px;
 }
 .mlh-banner img {
   display: block;
@@ -408,7 +431,6 @@ section {
 }
 .hero-devpost-link a {
   text-decoration: none;
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -431,7 +453,8 @@ section {
   font-weight: 700;
   transition: background 1s ease, transform 120ms ease;
 }
-.hero-devpost-link .button:hover {
+.hero-devpost-link .button:hover,
+.hero-devpost-link a:focus-visible .button {
   background: rgba(33, 35, 60, 0.85);
   transform: translateY(-1px);
 }
@@ -787,8 +810,9 @@ html, body {
   text-decoration: underline;
   font-weight: 600;
 }
-.about-right a:hover, .about-right a:focus-visible {
-  opacity: 0.85;
+.about-right a:hover,
+.about-right a:focus-visible {
+  color: #9563d3;
 }
 
 .about-right p a + a {
@@ -1125,13 +1149,14 @@ html, body {
   margin-bottom: 5vh;
 }
 
-.question {
+.questions .question {
   width: min(92%, 520px);
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.question h3 {
+.questions .question h3 {
   width: 100%;
   text-align: center;
   margin: 0;
@@ -1142,6 +1167,12 @@ html, body {
   font-weight: 700;
   color: white;
   text-shadow: 0 0 10px #3B3C74;
+  transition: text-shadow 0.1s linear;
+}
+.questions .question:hover h3,
+.questions .question:focus-visible h3 {
+  text-shadow: 0 0 12px #080938;
+  text-decoration: underline;
 }
 
 .answer {
@@ -1378,14 +1409,20 @@ html, body {
 .sponsors p strong {
   font-weight: 600;
 }
-.sponsors p a {
+.sponsors a {
   color: #70499F;
   text-decoration: underline;
+}
+
+.sponsors a:hover,
+.sponsors a:focus-visible {
+  color: #9563d3;
 }
 
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
+    bottom: 0;
   }
   25% {
     transform: rotate(3deg);
@@ -1398,6 +1435,7 @@ html, body {
   }
   100% {
     transform: rotate(0deg);
+    bottom: 5px;
   }
 }
 .sponsors-row {
@@ -1409,14 +1447,43 @@ html, body {
   gap: 0rem;
   flex-wrap: nowrap;
 }
+.sponsors-row div {
+  position: relative;
+}
 .sponsors-row img {
   max-width: 300px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: -20px;
+  transition: bottom 0.5s linear;
+  position: relative;
+  bottom: 0;
 }
-.sponsors-row img:hover, .sponsors-row img:focus {
+.sponsors-row img:hover,
+.sponsors-row a:focus-visible img {
+  transform-origin: center;
   animation: wiggle 0.5s ease-in-out;
+  bottom: 5px;
+}
+
+.sponsors-row .sponsor-box::after,
+.sponsors-row a .sponsor-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60%;
+  margin: 0 20%;
+  height: 10%;
+  background-image: radial-gradient(closest-side, #000, #0000);
+  border-radius: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.sponsors-row .sponsor-box:hover::after,
+.sponsors-row a:focus-visible .sponsor-box::after {
+  opacity: 1;
 }
 
 .sponsors-text {

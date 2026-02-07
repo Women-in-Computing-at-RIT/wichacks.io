@@ -19,11 +19,11 @@ function FAQ() {
             <div className="qna">
                 <div className="questions">
                     {qa.map((item, idx) => (
-                        <Question key={idx} classic={idx % 2 === 0 ? 'left question' : 'right question'} question={item.question} onClickEvent={() => setSelected(item)}/>
+                        <Question key={idx} classic={idx % 2 === 0 ? 'left' : 'right'} question={item.question} onClickEvent={() => setSelected(item)}/>
                     ))}
                 </div>
                 <div className="answer">
-                    <textarea value={selected?.answer ?? ""} readOnly></textarea>
+                    <textarea tabIndex="-1" value={selected?.answer ?? ""} readOnly></textarea>
                     {selected?.link ? (
                         <a href={selected.link} target="_blank" rel="noopener noreferrer">
                             {selected.linktext}
