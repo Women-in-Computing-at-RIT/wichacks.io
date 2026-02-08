@@ -160,6 +160,12 @@ section {
   overflow: visible;
 }
 
+@media (prefers-reduced-transparency: reduce) {
+  .navbar {
+    background: rgb(112, 73, 159);
+  }
+}
+
 .nav-inner {
   height: 100%;
   display: flex;
@@ -306,6 +312,13 @@ section {
     display: flex;
   }
 }
+@media (max-width: 750px) and (prefers-reduced-transparency: reduce) {
+  .nav-links {
+    background: rgb(112, 73, 159);
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
 @media (max-width: 900px) {
   .mlh-banner {
     right: 16px;
@@ -315,8 +328,8 @@ section {
     min-width: 0;
     max-width: 80px;
   }
-  .nav-icon svg {
-    margin-right: 90px;
+  .nav-icons {
+    margin-right: 95px;
   }
 }
 #hero {
@@ -453,6 +466,7 @@ section {
   font-weight: 700;
   transition: background 1s ease, transform 120ms ease;
 }
+
 .hero-devpost-link .button:hover,
 .hero-devpost-link a:focus-visible .button {
   background: rgba(33, 35, 60, 0.85);
@@ -495,6 +509,26 @@ section {
     pointer-events: none;
   }
 }
+
+@media (prefers-reduced-transparency: reduce) {
+  .hero-devpost-link::before {
+    background: rgb(112, 73, 159);
+  }
+  
+  .hero-devpost-link h3 {
+    margin: 0 0 50px 0;
+    color: white;
+  }
+  
+  .hero-devpost-link .button {
+    background: rgb(59, 60, 116);
+  }
+  .hero-devpost-link .button:hover,
+  .hero-devpost-link a:focus-visible .button {
+    background: rgba(33, 35, 60);
+  }
+}
+
 .hero-spacer {
   grid-area: middle-right;
 }
@@ -515,6 +549,15 @@ section {
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
 }
+
+@media (prefers-reduced-transparency: reduce) {
+  .countdown {
+    background: rgb(59, 60, 116);
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
+
 .countdown h2 {
   margin-bottom: 0.75rem;
   color: white;
@@ -614,7 +657,6 @@ html, body {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     color: white;
-    text-shadow: 0 0 8px rgba(48, 25, 52, 0.9);
     max-width: 22ch;
     text-align: center;
   }
@@ -631,7 +673,6 @@ html, body {
     text-align: center;
     width: min(260px, 100%);
     padding: 14px 18px;
-    background: rgba(112, 73, 159, 0.85);
     color: white;
     border-radius: 999px;
     letter-spacing: 1.6px;
@@ -650,7 +691,6 @@ html, body {
     position: absolute;
     width: min(320px, 92vw);
     height: min(320px, 92vw);
-    background: rgba(112, 73, 159, 0.28);
     mask-image: url("../assets/flower-outline.svg");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -675,7 +715,6 @@ html, body {
     width: 100%;
     max-width: 360px;
     margin: 0 auto;
-    background: rgba(59, 60, 116, 0.45);
     border-radius: 14px;
     -webkit-backdrop-filter: blur(6px);
             backdrop-filter: blur(6px);
