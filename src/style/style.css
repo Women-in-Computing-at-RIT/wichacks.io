@@ -891,6 +891,12 @@ html, body {
   border-radius: 16px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .category-inner {
+    transition: none;
+  }
+}
+
 .category-card.is-flipped .category-inner {
   transform: rotateY(180deg);
 }
@@ -1326,6 +1332,21 @@ html, body {
     transform: translateX(-50%);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .team-marquee {
+    -webkit-mask-image: unset;
+            mask-image: unset;
+  }
+  
+  .team-track {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .team-member {
   flex: 0 0 auto;
   font-size: 22px;
@@ -1457,11 +1478,12 @@ html, body {
   margin-bottom: -20px;
   transition: bottom 0.5s linear;
   position: relative;
+  transform-origin: center;
   bottom: 0;
 }
+
 .sponsors-row img:hover,
 .sponsors-row a:focus-visible img {
-  transform-origin: center;
   animation: wiggle 0.5s ease-in-out;
   bottom: 5px;
 }
@@ -1521,6 +1543,14 @@ html, body {
   background: rgba(112, 73, 159, 0.1);
   padding: 20px;
   border-radius: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsors-row img:hover,
+  .sponsors-row a:focus-visible img {
+    animation: none;
+    bottom: 0;
+  }
 }
 
 @media (max-width: 800px) {
