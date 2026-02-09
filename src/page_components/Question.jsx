@@ -2,9 +2,9 @@ import "../style/style.css";
 
 function Question({ question, side, onClickEvent, classic}) {
     return (
-        <div className={classic} onClick={onClickEvent}>
+        <button type="button" className={`${classic} question`} onClick={onClickEvent}>
             <h3>{question}</h3>
-        </div>
+        </button>
     );
 }
 
