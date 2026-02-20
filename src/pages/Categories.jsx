@@ -9,6 +9,7 @@ import boots from "../assets/categories/boots.png";
 import watering_pail from "../assets/categories/watering-pail.png";
 import teacup from "../assets/categories/teacup.png";
 import cupcake from "../assets/categories/cupcake.PNG";
+import traver_pdf from "../assets/categories/Traver-Slide-16inx9in_Final.pdf";
 
 const past_categories = [
     { fitClass: "widget-flower", image: widget_flower, category: "WiC: Best Women and Gender Hack", description: "Best hack that promotes women and gender minorities." },
@@ -40,6 +41,7 @@ function Categories() {
                     ))}
                 </div>
             </div>
+            <div className="traver">MAGIC Spells Studio is looking for their next batch of Traver project entrepreneurs at WiCHacks this year. Interested? Find out more <a href={traver_pdf} target="_blank" rel="noopener noreferrer">here</a>.</div>
         </div>
     );
 }

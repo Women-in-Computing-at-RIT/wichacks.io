@@ -935,6 +935,21 @@ html, body {
   line-height: 1.35;
 }
 
+.traver {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #3B3C74;
+}
+.traver a {
+  color: #70499F;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 @media (max-width: 900px) {
   .categories-container {
     grid-template-columns: repeat(2, 1fr);
@@ -957,6 +972,9 @@ html, body {
     font-family: "Montserrat", sans-serif;
     line-height: 1.35;
   }
+  .traver {
+    font-size: 18px;
+  }
 }
 @media (max-width: 500px) {
   .categories-container {
@@ -976,6 +994,9 @@ html, body {
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     line-height: 1.35;
+  }
+  .traver {
+    font-size: 14px;
   }
 }
 .schedule {

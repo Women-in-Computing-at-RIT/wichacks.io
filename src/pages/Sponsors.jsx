@@ -9,6 +9,7 @@ import mlh from "../assets/sponsors/mlh.png";
 import sg from "../assets/sponsors/student-gov.png";
 import wegmans from "../assets/sponsors/wegmans.png";
 import pure from "../assets/sponsors/pure.png";
+import poppi from "../assets/sponsors/poppi.png";
 
 const sponsors = [
     { image: csl, link: "https://www.csl.com/careers/early-careers-at-csl" },
@@ -19,11 +20,12 @@ const sponsors = [
     { image: magic },
     { image: mlh },
     { image: sg },
+    { image: poppi },
     { image: wegmans },
     { image: pure },
 ];
 
-const sponsor_rows = [1, 4, 5];
+const sponsor_rows = [1, 4, 3, 3];
 
 function chunk_sponsors(list, row_sizes) {
     let result = [];
