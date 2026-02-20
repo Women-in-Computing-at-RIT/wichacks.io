@@ -42,27 +42,26 @@
 
 }
 
-.container::-webkit-scrollbar {
-    display: none;
-    height: 80px; /* Set height for horizontal scrollbar */
-    }
+.schedule-boxes {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #f0ecf5 #2B2C5E;
+}
 
-    .container::-webkit-scrollbar-track {
-    background-color: #3B3C74; /* Track color */
-    border-radius: 10px;
-    }
+.schedule-boxes::-webkit-scrollbar {
+    height: 10px;
+}
 
-    .container::-webkit-scrollbar-thumb {
-    background-color: #3B3C74; /* Thumb (handle) color */
-    border-radius: 10px;
-    border: 2px solid #3B3C74; /* Optional padding */
-    }
+.schedule-boxes::-webkit-scrollbar-track {
+    background: #2B2C5E;
+    border-radius: 999px;
+}
 
-    .container {
-    scrollbar-width: none; /* Options: auto, thin, none */
-    scrollbar-color: #3B3C74 #3B3C74; /* thumb track */
-    }
-
+.schedule-boxes::-webkit-scrollbar-thumb {
+    background: #f0ecf5;
+    border-radius: 999px;
+    border: 2px solid #2B2C5E;
+}
 
 .schedule-list {
     list-style: none;
