@@ -39,7 +39,29 @@
         color: #22233b;
         font-weight: 700;
     }
+
 }
+
+.container::-webkit-scrollbar {
+    display: none;
+    height: 80px; /* Set height for horizontal scrollbar */
+    }
+
+    .container::-webkit-scrollbar-track {
+    background-color: #3B3C74; /* Track color */
+    border-radius: 10px;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+    background-color: #3B3C74; /* Thumb (handle) color */
+    border-radius: 10px;
+    border: 2px solid #3B3C74; /* Optional padding */
+    }
+
+    .container {
+    scrollbar-width: none; /* Options: auto, thin, none */
+    scrollbar-color: #3B3C74 #3B3C74; /* thumb track */
+    }
 
 
 .schedule-list {
@@ -74,6 +96,7 @@
     color: #3B3C74;
     @include ms-font(18px);
 }
+
 
 
 @media (max-width: 500px) {

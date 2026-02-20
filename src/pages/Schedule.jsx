@@ -4,27 +4,64 @@ import ScheduleBlock from "../page_components/ScheduleBlock";
 function Schedule() {
     const schedule = [
         {
-        label: "Saturday, February 28",
+        label: "Saturday Morning, 2/28",
         slots: [
-            { time: "10:00 AM", event: "Hacker Check-In" },
+            { time: "10:00 AM", event: "Hacker Check-In Begins" },
             { time: "12:00 PM", event: "Opening Ceremony" },
-            { time: "12:30 PM", event: "Team Formation" },
-            { time: "1:00 PM", event: "Hacking Begins & Lunch" },
-
-            { time: "2:00-6:00 PM", event: "Tech Talks & Workshops" },
-            { time: "6:00 PM", event: "Dinner" },
-            { time: "7:00 PM", event: "Activities" },
-            { time: "10:00 PM", event: "Midnight Snack" },
+            { time: "12:30 PM", event: "Team Formation Event" },
+            { time: "1:00 PM", event: "Hacking Begins" },
+        ],
+        },
+        {
+        label: "Saturday Lunch, 2/28",
+        slots: [
+            { time: "1:00 PM", event: "Wegmans Assorted Subs" },
+        ],
+        },
+        {
+        label: "Saturday Afternoon, 2/28",
+        slots: [
+            { time: "2:00 PM", event: "COMS DevPost Talk" },
+            { time: "2:30 PM", event: "CSL Sponsor Symposium" },
+            { time: "2:30 PM", event: "SSE Hardware Lab Workshop" },
+            { time: "4:00 PM", event: "Wegmans Sponsor Symposium" },
+            { time: "5:30 PM", event: "MLH Workshop" },
+        ],
+        },
+        {
+        label: "Saturday Dinner, 2/28",
+        slots: [
+            { time: "6:00 PM", event: "Olive Garden Pasta & Breadsticks" },
+        ],
+        },
+        {
+        label: "Saturday Evening, 2/28",
+        slots: [
+            { time: "7:00 PM", event: "Air Plant Terrarium Bar" },
+            { time: "8:00 PM", event: "MLH Workshop" },
+            { time: "9:00 PM", event: "Rock Painting" },
+            { time: "10:00 PM", event: "CSL's Midnight Snack" },
             { time: "11:00 PM", event: "Cup Stacking" },
         ],
         },
         {
-        label: "Sunday, March 1",
+        label: "Sunday Breakfast, 3/1",
         slots: [
-            { time: "8:00 AM", event: "Breakfast" },
-            { time: "12:00 PM", event: "Hacking Ends & Lunch" },
+            { time: "8:00 AM", event: "Assorted Breakfast Items" },
+        ],
+        },
+        {
+        label: "Sunday Lunch 3/1",
+        slots: [
+            { time: "12:00 PM", event: "Chipotle" },
+        ],
+        },
+        {
+        label: "Sunday Afternoon, 3/1",
+        slots: [
+            { time: "12:00 PM", event: "Hacking Ends" },
             { time: "1:00 PM", event: "Judging" },
-            { time: "3:30 PM", event: "Closing Ceremony ends" },
+            { time: "3:00 PM", event: "Closing Ceremony" },
         ],
         },
     ];
