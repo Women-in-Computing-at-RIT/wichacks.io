@@ -12,17 +12,17 @@ import pure from "../assets/sponsors/pure.png";
 import poppi from "../assets/sponsors/poppi.png";
 
 const sponsors = [
-    { image: csl, link: "https://www.csl.com/careers/early-careers-at-csl" },
-    { image: mandt},
-    { image: capitalone, link: "https://www.capitalonecareers.com/students" },
-    { image: kodak},
-    { image: mindex},
-    { image: magic },
-    { image: mlh },
-    { image: sg },
-    { image: poppi },
-    { image: wegmans },
-    { image: pure },
+    { label: "CSL", image: csl, link: "https://www.csl.com/careers/early-careers-at-csl" },
+    { label: "M and T Tech", image: mandt},
+    { label: "Capital One", image: capitalone, link: "https://www.capitalonecareers.com/students" },
+    { label: "Kodak", image: kodak},
+    { label: "Mindex", image: mindex},
+    { label: "Magic Spell Studios", image: magic },
+    { label: "Major League Hacking",image: mlh },
+    { label: "RIT Student Government", image: sg },
+    { label: "Poppi", image: poppi },
+    { label: "Wegmans", image: wegmans },
+    { label: "Pure", image: pure },
 ];
 
 const sponsor_rows = [1, 4, 3, 3];
@@ -57,7 +57,7 @@ function Sponsors() {
                                 <div className="sponsor-box">
                                     <img
                                         src={sponsor.image}
-                                        alt={`sponsor-${rowIndex}-${index}`}
+                                        alt={sponsor.label}
                                         className="sponsor-image"
                                     />
                                 </div>
@@ -69,11 +69,14 @@ function Sponsors() {
                                     href={sponsor.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label={sponsor.label}
                                 >
                                     {content}
                                 </a>
                             ) : (
-                                <div key={index}>{content}</div>
+                                <div key={index} role="img" aria-label={sponsor.label}>
+                                    {content}
+                                </div>
                             );
                         })}
                     </div>

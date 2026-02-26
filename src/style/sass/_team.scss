@@ -34,7 +34,7 @@
     animation: team-scroll 28s linear infinite;
     will-change: transform;
 
-    &:hover {
+    &:hover, &:focus-within {
         animation-play-state: paused;
     }
 }
@@ -113,5 +113,19 @@
         width: 160px;
         height: 160px;
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-marquee {
+        -webkit-mask-image: unset;
+                mask-image: unset;
+    }
+    
+    .team-track {
+        animation: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

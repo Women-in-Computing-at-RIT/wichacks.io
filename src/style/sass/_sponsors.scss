@@ -16,10 +16,10 @@
         strong {
             font-weight: 600;
         }
-        a {
+    }
+    a {
             color: $purple;
             text-decoration: underline;
-        }
     }
 }
 
@@ -45,11 +45,40 @@
         max-width: 300px;
         object-fit: contain;
         margin-bottom: -20px;
-        
 
-        &:hover, &:focus {
+        &:hover {
             animation: wiggle 0.5s ease-in-out;
         }
+    }
+
+    a:focus-visible img {
+        animation: wiggle 0.5s ease-in-out;
+    }
+
+    a .sponsor-box {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 60%;
+            margin: 0 20%;
+            height: 10%;
+            background-image: radial-gradient(closest-side, #000, #0000);
+            border-radius: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s linear;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+
+    a:focus-visible .sponsor-box::after {
+        opacity: 1;
     }
 }
 
@@ -76,9 +105,39 @@
         max-width: 300px;
         object-fit: contain;
 
-        &:hover, &:focus {
+        &:hover {
             animation: wiggle 0.5s ease-in-out;
         }
+    }
+
+    a:focus-visible img {
+        animation: wiggle 0.5s ease-in-out;
+    }
+
+    a .sponsor-box {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 60%;
+            margin: 0 20%;
+            height: 10%;
+            background-image: radial-gradient(closest-side, #000, #0000);
+            border-radius: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s linear;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+
+    a:focus-visible .sponsor-box::after {
+        opacity: 1;
     }
 }
 
@@ -144,5 +203,14 @@
     .sponsors-text {
         max-width: 100%;
         margin-top: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sponsors-row img:hover,
+    .sponsors-row a:focus-visible img,
+    .sponsors-container img:hover,
+    .sponsors-container a:focus-visible img {
+        animation: none;
     }
 }

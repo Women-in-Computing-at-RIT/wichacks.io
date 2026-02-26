@@ -27,7 +27,7 @@ const team_members = [
 ];
 
 function Team() {
-    const loopMembers = [...team_members, ...team_members];
+    const loopMembers = [...team_members];
 
     return (
         <section className="team section" id="team">

@@ -54,6 +54,7 @@ export default function App() {
 
           <div className="nav-icons">
             <a
+              id="instagram-nav-item"
               className="nav-icon"
               href="https://www.instagram.com/wichacks/"
               target="_blank"

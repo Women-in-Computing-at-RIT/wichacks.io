@@ -34,8 +34,9 @@
         outline: 3px solid rgba($purple, 0.85);
         outline-offset: 6px;
         border-radius: 16px;
+        transform: scale(1.03);
     }
-    &:hover, &:focus {
+    &:hover {
         transform: scale(1.03);
     }
 }
@@ -175,5 +176,11 @@
     }
     .traver {
         font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .category-inner {
+        transition: none;
     }
 }

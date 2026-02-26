@@ -32,6 +32,13 @@
 
     background: #f0ecf5;
     flex-shrink: 0;
+    outline: none;
+    transition: box-shadow 160ms ease, background-color 160ms ease;
+
+    &:focus-visible {
+        outline: 3px solid #3B3C74;
+        outline-offset: 4px;
+    }
 
     h3 {
         @include ms-font(22px);
@@ -96,7 +103,28 @@
     @include ms-font(18px);
 }
 
+.schedule-list--meal {
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
 
+    li {
+        padding: 6px 0;
+        color: #3B3C74;
+        @include ms-font(18px);
+        line-height: 1.4;
+    }
+}
+
+.meal-item-time {
+    font-weight: 400;
+    margin-right: 6px;
+}
+
+.meal-item-text {
+    font-style: italic;
+}
 
 @media (max-width: 500px) {
     .schedule-block {

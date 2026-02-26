@@ -36,6 +36,12 @@ section {
     overflow: visible;
 }
 
+@media (prefers-reduced-transparency: reduce) {
+    .navbar {
+        background: $purple;
+    }
+}
+
 .nav-inner {
     height: 100%;
     display: flex;
@@ -99,7 +105,7 @@ section {
             transition: transform 180ms ease;
         }
 
-        &:hover {
+        &:hover, &:focus-visible {
             background: rgba(255, 255, 255, 0.12);
             transform: translateY(-1px);
 
@@ -178,6 +184,14 @@ section {
 
     .nav-icon svg {
         margin-right: 90px;
+    }
+}
+
+@media (max-width: 750px) and (prefers-reduced-transparency: reduce) {
+    .nav-links {
+        background: $purple;
+        -webkit-backdrop-filter: none;
+                backdrop-filter: none;
     }
 }
 

@@ -57,6 +57,17 @@
 
   position: relative;
   display: block;
+
+  &:focus-visible {
+    outline: 3px solid rgba($purple, 0.85);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  &:focus {
+    transform: scale(1.02);
+    transition: transform 160ms ease;
+  }
 }
 
 /* image slice fills full width (THIS is the big one) */

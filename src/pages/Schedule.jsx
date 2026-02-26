@@ -1,5 +1,6 @@
 import "../style/style.css";
 import ScheduleBlock from "../page_components/ScheduleBlock";
+import { useRef, useEffect } from "react";
 
 function Schedule() {
     const schedule = [
@@ -14,15 +15,15 @@ function Schedule() {
         },
         {
         label: "Saturday Lunch, 2/28",
+        isMeal: true,
         slots: [
             { time: "1:00 PM", event: "Wegmans Assorted Subs" },
-            {time: ""},
             { time: "Salami, Capicola, Spicy Ham w/ American on Wheat" },
             { time: "Turkey w/ Swiss on White" },
             { time: "Roastbeef w/ Provolone on Wheat" },
             { time: "Ham w/ Pepper Jack on White" },
             { time: "Veggie w/ Mozzarella on White" },
-            { time: "Garden or Caesar Salad", event: "Vegan & GF"}
+            { time: "Garden or Caesar Salad", event: "(Vegan & GF)"}
         ],
         },
         {
@@ -37,16 +38,16 @@ function Schedule() {
         },
         {
         label: "Saturday Dinner, 2/28",
+        isMeal: true,
         slots: [
             { time: "6:00 PM", event: "Olive Garden Pasta & Breadsticks" },
-            {time: ""},
-            { time: "Spaghetti, Fettuccine, or Gluten Free Pasta", event: "Vegan"},
-            { time: "Alfredo", event: "Contains Dairy & Gluten"},
-            { time: "Meat Sauce", event: "Contains Pork | Dairy & Gluten Free"},
-            { time: "Marinara", event: "Vegan, Dairy & Gluten Free"},
-            { time: "Grilled Chicken", event: "GF"},
-            { time: "Meat Balls", event: "Contains Gluten & Dairy | Pork Free"},
-            { time: "Italian Sausage", event: "Contains Pork | Gluten & Dairy Free"},
+            { time: "Spaghetti, Fettuccine, or Gluten Free Pasta", event: "(Vegan)"},
+            { time: "Alfredo", event: "(Contains Dairy & Gluten)"},
+            { time: "Meat Sauce", event: "(Contains Pork | Dairy & Gluten Free)"},
+            { time: "Marinara", event: "(Vegan, Dairy & Gluten Free)"},
+            { time: "Grilled Chicken", event: "(GF)"},
+            { time: "Meat Balls", event: "(Contains Gluten & Dairy | Pork Free)"},
+            { time: "Italian Sausage", event: "(Contains Pork | Gluten & Dairy Free)"},
             { time: "House Salad & Breadsticks"}
         ],
         },
@@ -62,9 +63,9 @@ function Schedule() {
         },
         {
         label: "Sunday Breakfast, 3/1",
+        isMeal: true,
         slots: [
             { time: "8:00 AM", event: "Assorted Breakfast Items" },
-            { time: "" },
             { time: "Bagels" },
             { time: "Fruit" },
             { time: "& More!" },
@@ -72,11 +73,11 @@ function Schedule() {
         },
         {
         label: "Sunday Lunch 3/1",
+        isMeal: true,
         slots: [
             { time: "12:00 PM", event: "Chipotle" },
-            { time: "" },
             { time: "Chicken or Steak" },
-            { time: "Sofrita", event: "Vegan" },
+            { time: "Sofrita", event: "(Vegan)" },
             { time: "Black or Pinto Beans" },
             { time: "White or Brown Rice" },
             { time: "Soft or Hard Shells" },
@@ -93,18 +94,34 @@ function Schedule() {
         ],
         },
     ];
+    const scheduleBoxesRef = useRef(null);
 
+    useEffect(() => {
+        const scheduleBoxes = scheduleBoxesRef.current;
+        if (!scheduleBoxes) return;
+
+        const handleWheel = (e) => {
+            if (e.deltaY !== 0) {
+                e.preventDefault();
+                scheduleBoxes.scrollLeft += e.deltaY * 3;
+            }
+        };
+
+        scheduleBoxes.addEventListener('wheel', handleWheel, { passive: false });
+        return () => scheduleBoxes.removeEventListener('wheel', handleWheel);
+    }, []);
     return (
         <div className="schedule section">
         <div className="schedule-background">
             <h2>Schedule</h2>
 
-            <div className="schedule-boxes">
+            <div className="schedule-boxes" ref={scheduleBoxesRef}>
             {schedule.map((day) => (
                 <ScheduleBlock
                 key={day.label}
                 partOfDay={day.label}
                 timeSlots={day.slots}
+                isMeal={day.isMeal}
                 />
             ))}
             </div>
