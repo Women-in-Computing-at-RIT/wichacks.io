@@ -16,6 +16,13 @@ function Schedule() {
         label: "Saturday Lunch, 2/28",
         slots: [
             { time: "1:00 PM", event: "Wegmans Assorted Subs" },
+            {time: ""},
+            { time: "Salami, Capicola, Spicy Ham w/ American on Wheat" },
+            { time: "Turkey w/ Swiss on White" },
+            { time: "Roastbeef w/ Provolone on Wheat" },
+            { time: "Ham w/ Pepper Jack on White" },
+            { time: "Veggie w/ Mozzarella on White" },
+            { time: "Garden or Caesar Salad", event: "Vegan & GF"}
         ],
         },
         {
@@ -32,6 +39,15 @@ function Schedule() {
         label: "Saturday Dinner, 2/28",
         slots: [
             { time: "6:00 PM", event: "Olive Garden Pasta & Breadsticks" },
+            {time: ""},
+            { time: "Spaghetti, Fettuccine, or Gluten Free Pasta", event: "Vegan"},
+            { time: "Alfredo", event: "Contains Dairy & Gluten"},
+            { time: "Meat Sauce", event: "Contains Pork | Dairy & Gluten Free"},
+            { time: "Marinara", event: "Vegan, Dairy & Gluten Free"},
+            { time: "Grilled Chicken", event: "GF"},
+            { time: "Meat Balls", event: "Contains Gluten & Dairy | Pork Free"},
+            { time: "Italian Sausage", event: "Contains Pork | Gluten & Dairy Free"},
+            { time: "House Salad & Breadsticks"}
         ],
         },
         {
@@ -48,12 +64,24 @@ function Schedule() {
         label: "Sunday Breakfast, 3/1",
         slots: [
             { time: "8:00 AM", event: "Assorted Breakfast Items" },
+            { time: "" },
+            { time: "Bagels" },
+            { time: "Fruit" },
+            { time: "& More!" },
         ],
         },
         {
         label: "Sunday Lunch 3/1",
         slots: [
             { time: "12:00 PM", event: "Chipotle" },
+            { time: "" },
+            { time: "Chicken or Steak" },
+            { time: "Sofrita", event: "Vegan" },
+            { time: "Black or Pinto Beans" },
+            { time: "White or Brown Rice" },
+            { time: "Soft or Hard Shells" },
+            { time: "Cheese, Lettuce, Veggies, Salsa" },
+            { time: "Queso, Sour Cream, Guacamole" },
         ],
         },
         {
