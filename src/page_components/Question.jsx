@@ -1,10 +1,9 @@
-import "../style/style.css";
-
-function Question({ question, side, onClickEvent, classic}) {
+function Question({ question, classic, onClickEvent, bgImage }) {
     return (
-        <div className={classic} onClick={onClickEvent}>
-            <h3>{question}</h3>
-        </div>
+        <button type="button" className={classic} onClick={onClickEvent}>
+        <img src={bgImage} alt="" className="book-slice" />
+        <h3><span className="qtext">{question}</span></h3>
+        </button>
     );
 }
 

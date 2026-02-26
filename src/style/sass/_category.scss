@@ -120,6 +120,20 @@
     line-height: 1.35;
 }
 
+.traver {
+    margin-top: 4rem;
+    text-align: center;
+    @include ms-font(22px);
+    color: #3B3C74;
+
+    a {
+        color: $purple;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+
 
 @media (max-width: 900px) {
     .categories-container {
@@ -139,6 +153,9 @@
         @include ms-font(14px);
         line-height: 1.35;
     }
+    .traver {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -155,5 +172,8 @@
         margin: 0;
         @include ms-font(12px);
         line-height: 1.35;
+    }
+    .traver {
+        font-size: 14px;
     }
 }

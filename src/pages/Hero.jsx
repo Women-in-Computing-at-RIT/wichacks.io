@@ -24,7 +24,7 @@ function format(durationMs) {
 }
 
 function Hero() {
-    const target = useMemo(() => { return new Date("2026-02-28T00:00:00-05:00").getTime(); }, []);
+    const target = useMemo(() => { return new Date("2026-02-28T12:00:00-05:00").getTime(); }, []);
     const remaining = useCountdown(target);
     const { days, hours, minutes, seconds } = format(remaining);
     const isLive = remaining === 0;
