@@ -9,6 +9,7 @@ function Schedule() {
         slots: [
             { time: "10:00 AM", event: "Hacker Check-In Begins" },
             { time: "12:00 PM", event: "Opening Ceremony" },
+            { time: "12:30 PM", event: "Q&A with Dorrene Brown"},
             { time: "12:30 PM", event: "Team Formation Event" },
             { time: "1:00 PM", event: "Hacking Begins" },
         ],
@@ -33,7 +34,7 @@ function Schedule() {
             { time: "2:30 PM", event: "CSL Sponsor Symposium" },
             { time: "2:30 PM", event: "SSE Hardware Lab Workshop" },
             { time: "4:00 PM", event: "Wegmans Sponsor Symposium" },
-            { time: "5:30 PM", event: "MLH Workshop" },
+            { time: "5:30 PM", event: "MLH Google AI Workshop" },
         ],
         },
         {
@@ -55,7 +56,7 @@ function Schedule() {
         label: "Saturday Evening, 2/28",
         slots: [
             { time: "7:00 PM", event: "Air Plant Terrarium Bar" },
-            { time: "8:00 PM", event: "MLH Workshop" },
+            { time: "8:00 PM", event: "MLH Github Copilot Workshop" },
             { time: "9:00 PM", event: "Rock Painting" },
             { time: "10:00 PM", event: "CSL's Midnight Snack" },
             { time: "11:00 PM", event: "Cup Stacking" },
@@ -72,6 +73,16 @@ function Schedule() {
         ],
         },
         {
+        label: "Sunday, 3/1",
+        slots: [
+            { time: "9:30 PM", event: "Devpost Soft Submission Deadline" },
+            { time: "12:00 PM", event: "Hacking Ends" },
+            { time: "1:00 PM", event: "Judging" },
+            { time: "3:00 PM", event: "Closing Ceremony" },
+            { time: "3:30 PM", event: "Prize Collection" },
+        ],
+        },
+        {
         label: "Sunday Lunch 3/1",
         isMeal: true,
         slots: [
@@ -83,14 +94,6 @@ function Schedule() {
             { time: "Soft or Hard Shells" },
             { time: "Cheese, Lettuce, Veggies, Salsa" },
             { time: "Queso, Sour Cream, Guacamole" },
-        ],
-        },
-        {
-        label: "Sunday Afternoon, 3/1",
-        slots: [
-            { time: "12:00 PM", event: "Hacking Ends" },
-            { time: "1:00 PM", event: "Judging" },
-            { time: "3:00 PM", event: "Closing Ceremony" },
         ],
         },
     ];
