@@ -48,7 +48,7 @@ function Sponsors() {
         <div className="sponsors-background section">
             <div className="sponsors">
                 <div className="sponsors-text">
-                    <h2>Sponsors</h2>
+                    <h2>2026 Sponsors</h2>
                 </div>
                 {rows.map((row, rowIndex) => (
                     <div className="sponsors-row" key={rowIndex}>

@@ -116,7 +116,7 @@ function Schedule() {
     return (
         <div className="schedule section">
         <div className="schedule-background">
-            <h2>Schedule</h2>
+            <h2>2026 Schedule</h2>
 
             <div className="schedule-boxes" ref={scheduleBoxesRef}>
             {schedule.map((day) => (

@@ -28,7 +28,7 @@ function Categories() {
     return (
         <div className="categories-background section">
             <div className ="categories">
-                <h2>Hack Categories</h2>
+                <h2>2026 Categories</h2>
                 <div className="categories-container">
                     {past_categories.map((cat, index) => (
                         <CategoryBox
