@@ -1,24 +1,24 @@
 .sponsors-background {
-    background: rgba($purple, 0.10);
+    background: rgba($main-dark, 0.10);
 }
 .sponsors {
     h2 {
         margin-top: -60px;
-        color: #3B3C74;
+        color: $secondary-dark;
     }
     p {
         @include ms-font(18px);
         text-align: left;
         font-weight: 400;
         margin: 0 0 5px 0;
-        color: #3B3C74;
+        color: $secondary-dark;
 
         strong {
             font-weight: 600;
         }
     }
     a {
-            color: $purple;
+            color: $main-dark;
             text-decoration: underline;
     }
 }
@@ -146,7 +146,7 @@
     display: block;
     justify-content: center;
     align-items: center;
-    background: rgba($purple, 0.10);
+    background: rgba($main-dark, 0.10);
     padding: 20px;
     border-radius: 12px;
 }

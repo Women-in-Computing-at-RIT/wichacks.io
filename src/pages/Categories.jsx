@@ -12,15 +12,14 @@ import cupcake from "../assets/categories/cupcake.PNG";
 import traver_pdf from "../assets/categories/Traver-Slide-16inx9in_Final.pdf";
 
 const past_categories = [
-    { fitClass: "widget-flower", image: widget_flower, category: "WiC: Best Women and Gender Hack", description: "Best hack that promotes women and gender minorities." },
-    { fitClass: "watering-pail", image: watering_pail, category: "WiC: Best Accessible UI/UX", description: "Best UI/UX project with an emphasis on inclusivity/accessibility."},
-    { fitClass: "teacup", image: teacup, category: "WiC: Best Hardware Hack", description: "Best hack which utilizes physical hardware." },
-    // { fitClass: "cupcake", image: cupcake, category: "Widget's Wonder Hack", description: "Hackathons are about enjoying yourself! Best fun, silly project about something you enjoy." },
-    { fitClass: "boots", image: boots, category: "WiC: Best Game Hack", description: "Best hack with gameplay." },
-    { fitClass: "flower", image: flower, category: "WiC: Failure to Launch", description: "Best hack that didn't happen to work out in the end." },
-    { fitClass: "ribbon", image: ribbon, category: "WiC: Fan Favorite", description: "Best hack according to hackers." },
+    { image: widget_flower, category: "WiC: Best Women and Gender Hack", description: "Best hack that promotes women and gender minorities." },
+    { image: watering_pail, category: "WiC: Best Accessible UI/UX", description: "Best UI/UX project with an emphasis on inclusivity/accessibility."},
+    { image: teacup, category: "WiC: Best Hardware Hack", description: "Best hack which utilizes physical hardware." },
+    // { image: cupcake, category: "Widget's Wonder Hack", description: "Hackathons are about enjoying yourself! Best fun, silly project about something you enjoy." },
+    { image: boots, category: "WiC: Best Game Hack", description: "Best hack with gameplay." },
+    { image: flower, category: "WiC: Failure to Launch", description: "Best hack that didn't happen to work out in the end." },
+    { image: ribbon, category: "WiC: Fan Favorite", description: "Best hack according to hackers." },
     // { fitClass: "teabag", image: teabag, category: "Constellation Brands: Digital Meets Reality", description: "Create a digital experience that interacts with the physical world using movement, light, or sound." },
-
 ];
 
 // map category boxes here
@@ -36,7 +35,6 @@ function Categories() {
                             image={cat.image}
                             category={cat.category}
                             description={cat.description}
-                            fitClass={`fit-${cat.fitClass}`}
                         />
                     ))}
                 </div>
