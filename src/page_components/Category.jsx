@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../style/style.css";
 
-function CategoryBox({ image, category, description, fitClass }) {
+function CategoryBox({ image, category, description }) {
     const [flipped, setFlipped] = useState(false);
 
     return (
@@ -20,7 +20,7 @@ function CategoryBox({ image, category, description, fitClass }) {
             <div className="category-face category-back">
             {/* IMPORTANT: pass the raw image path, not url(...) */}
             <div className="category-mask" style={{ "--mask-url": image }} aria-hidden={!flipped}>
-                <div className={`category-back-content ${fitClass}`}>
+                <div className={`category-back-content`}>
                 <h3 className="category-title">{category}</h3>
                 <p className="category-desc">{description}</p>
                 </div>

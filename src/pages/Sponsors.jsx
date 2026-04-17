@@ -83,7 +83,7 @@ function Sponsors() {
                 ))}
                 <div className="sponsors-text">
                     <div className="new-sponsors">
-                        <p><strong>Is your company interested in sponsoring WiCHacks?</strong> &nbsp; Please email <a href="mailto:wichacks@rit.edu">wichacks@rit.edu</a> or view our <a href="https://wichacks.io/assets/documents/2026WiCHacksSponsorshipPacket.pdf">2026 information packet</a>.</p>
+                        <p><strong>Is your company interested in sponsoring WiCHacks?</strong> &nbsp; Please email <a href="mailto:wichacks@rit.edu">wichacks@rit.edu</a> or view our <a href={`${import.meta.env.BASE_URL}2026WiCHacksSponsorshipPacket.pdf`}>2026 information packet</a>.</p>
                     </div>
                 </div>
             </div>
