@@ -1,5 +1,5 @@
 .team {
-    background: $purple;
+    background: $main-dark;
 
     h2 {
         color: white;
@@ -52,7 +52,7 @@
     flex: 0 0 auto;
     @include ms-font(22px);
 
-    background: rgba(#3B3C74, 0.6);
+    background: rgba($secondary-dark, 0.6);
     border-radius: 8px;
     padding: 16px;
     margin: 12px;

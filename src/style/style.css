@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /***
     The new CSS reset - version 1.11.3 (last updated 25.08.2024)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -533,6 +532,16 @@ section {
   font-size: 28px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
+}
+
+.countdown-live {
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.15rem;
 }
 
 .countdown-label {
@@ -1077,14 +1086,14 @@ html, body {
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   padding-bottom: 15px;
-  color: #22233b;
+  color: #22243c;
   font-weight: 700;
 }
 
 .schedule-boxes {
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #f0ecf5 #2B2C5E;
+  scrollbar-color: #f0ecf5 #21233C;
 }
 
 .schedule-boxes::-webkit-scrollbar {
@@ -1092,14 +1101,14 @@ html, body {
 }
 
 .schedule-boxes::-webkit-scrollbar-track {
-  background: #2B2C5E;
+  background: #21233C;
   border-radius: 999px;
 }
 
 .schedule-boxes::-webkit-scrollbar-thumb {
   background: #f0ecf5;
   border-radius: 999px;
-  border: 2px solid #2B2C5E;
+  border: 2px solid #21233C;
 }
 
 .schedule-list {
@@ -1347,7 +1356,6 @@ html, body {
   }
 }
 /* Phones: tighten everything, keep paper readable */
-/* Phones: tighten everything, keep paper readable */
 @media (max-width: 600px) {
   .qna {
     width: 90%;
@@ -1366,9 +1374,8 @@ html, body {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
   }
-  /* 🔥 Stretch paper vertically */
   .answer {
-    background-size: 100% 100%; /* fill width AND height */
+    background-size: 100% 100%;
     background-position: center;
   }
   .answer p,

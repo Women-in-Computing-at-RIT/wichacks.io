@@ -1,5 +1,5 @@
 .schedule {
-    background: $purple;
+    background: $main-dark;
 
     h2 {
         color: white;
@@ -30,20 +30,20 @@
     padding: 18px 20px;
     border-radius: 16px;
 
-    background: #f0ecf5;
+    background: $light-background;
     flex-shrink: 0;
     outline: none;
     transition: box-shadow 160ms ease, background-color 160ms ease;
 
     &:focus-visible {
-        outline: 3px solid #3B3C74;
+        outline: 3px solid $secondary-dark;
         outline-offset: 4px;
     }
 
     h3 {
         @include ms-font(22px);
         padding-bottom: 15px;
-        color: #22233b;
+        color: $dark-text;
         font-weight: 700;
     }
 
@@ -52,7 +52,7 @@
 .schedule-boxes {
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: #f0ecf5 #2B2C5E;
+    scrollbar-color: $light-background $dark-hover;
 }
 
 .schedule-boxes::-webkit-scrollbar {
@@ -60,14 +60,14 @@
 }
 
 .schedule-boxes::-webkit-scrollbar-track {
-    background: #2B2C5E;
+    background: $dark-hover;
     border-radius: 999px;
 }
 
 .schedule-boxes::-webkit-scrollbar-thumb {
-    background: #f0ecf5;
+    background: $light-background;
     border-radius: 999px;
-    border: 2px solid #2B2C5E;
+    border: 2px solid $dark-hover;
 }
 
 .schedule-list {
@@ -87,19 +87,19 @@
 .schedule-time {
     white-space: nowrap;
     font-weight: 600;
-    color: #3B3C74;
+    color: $secondary-dark;
     @include ms-font(18px);
 }
 
 .schedule-spacer {
     height: 1px;
-    background: rgba(#3B3C74, 0.25);
+    background: rgba($secondary-dark, 0.25);
 }
 
 .schedule-event {
     white-space: nowrap;
     text-align: right;
-    color: #3B3C74;
+    color: $secondary-dark;
     @include ms-font(18px);
 }
 
@@ -111,7 +111,7 @@
 
     li {
         padding: 6px 0;
-        color: #3B3C74;
+        color: $secondary-dark;
         @include ms-font(18px);
         line-height: 1.4;
     }

@@ -2,7 +2,7 @@
   background: white;
 
   h2 {
-    color: #3B3C74;
+    color: $secondary-dark;
     width: 80%;
     margin: 0 auto;
     padding-bottom: 20px;
@@ -59,7 +59,7 @@
   display: block;
 
   &:focus-visible {
-    outline: 3px solid rgba($purple, 0.85);
+    outline: 3px solid rgba($main-dark, 0.85);
     outline-offset: 4px;
     border-radius: 4px;
   }
@@ -98,7 +98,7 @@
   @include ms-font(20px);
   font-weight: 700;
   color: white;
-  text-shadow: 0 0 10px #3B3C74;
+  text-shadow: 0 0 10px $secondary-dark;
 }
 
 /* RIGHT SIDE (ANSWER PAPER) */
@@ -122,13 +122,13 @@
   width: 80%;
   @include ms-font(24px);
   line-height: 1.4;
-  color: #22243c;
+  color: $dark-text;
   margin: 0 0 1rem 0;
 }
 
 .answer a {
   @include ms-font(24px);
-  color: $purple;
+  color: $main-dark;
   font-weight: 700;
   text-decoration: underline;
 }
@@ -169,7 +169,6 @@
 }
 
 /* Phones: tighten everything, keep paper readable */
-/* Phones: tighten everything, keep paper readable */
 @media (max-width: 600px) {
   .qna {
     width: 90%;
@@ -190,9 +189,8 @@
     font-weight: 600;
   }
 
-  /* 🔥 Stretch paper vertically */
   .answer {
-    background-size: 100% 100%;   /* fill width AND height */
+    background-size: 100% 100%;
     background-position: center;
   }
 

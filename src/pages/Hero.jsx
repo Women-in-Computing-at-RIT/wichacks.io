@@ -4,6 +4,8 @@ import "../style/style.css";
 import WiCLogo from "../assets/wichackslogo-darker.png";
 import backgroundImage from "../assets/sleepy-widget.png";
 
+const WiCHacksDate = new Date("2027-02-27T12:00:00-05:00");
+
 function useCountdown(targetDate) {
     const [now, setNow] = useState(() => Date.now());
     useEffect(() => {
@@ -24,7 +26,7 @@ function format(durationMs) {
 }
 
 function Hero() {
-    const target = useMemo(() => { return new Date("2026-02-28T12:00:00-05:00").getTime(); }, []);
+    const target = useMemo(() => { return WiCHacksDate.getTime(); }, []);
     const remaining = useCountdown(target);
     const { days, hours, minutes, seconds } = format(remaining);
     const isLive = remaining === 0;
@@ -44,10 +46,10 @@ function Hero() {
             </div>
             <div className="hero-spacer"></div> {/* gives space on right so you can see widget */}
             <div className="hero-bottom">
-                {/* <div className="countdown" role="timer" aria-live="polite">
+                <div className="countdown" role="timer" aria-live="polite">
                     <h2>Countdown to WiCHacks 2026</h2>
                     {isLive ? (
-                        <div className="countdown-live">We're live!</div>
+                        <div className="countdown-live">WiCHacks is live!</div>
                     ) : (
                         <div className="countdown-grid">
                             <div className="countdown-box">
@@ -68,7 +70,7 @@ function Hero() {
                             </div>
                         </div>
                     )}
-                </div> */}
+                </div>
             </div>
         </div>
     );
