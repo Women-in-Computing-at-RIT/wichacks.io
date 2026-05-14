@@ -9,6 +9,7 @@ import Schedule from "./pages/Schedule";
 import FAQ from "./pages/FAQ";
 import Team from "./pages/Team";
 import Sponsors from "./pages/Sponsors";
+import Footer from "./pages/Footer";
 
 import mlh_badge from "./assets/mlh-trust-badge-2026-white.svg";
 
@@ -83,6 +84,7 @@ export default function App() {
       <section id="faq"><FAQ /></section>
       <section id="team"><Team /></section>
       <section id="sponsors"><Sponsors /></section>
+      <section id="footer"><Footer /></section>
     </>
   );
 }

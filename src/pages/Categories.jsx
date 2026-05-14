@@ -40,7 +40,7 @@ function Categories() {
                 </div>
                 <div className="projects-text">
                     <div className="past-projects">
-                        <p>Check out projects from last year on <a href="https://wichacks-26.devpost.com/?_gl=1*v4e3ds*_gcl_au*ODg4ODE5MDEyLjE3NzM4Njk4MzM.*_ga*NjU2MzQ5MjUuMTc3Mzg2OTgzMw..*_ga_0YHJK3Y10M*czE3NzQ0NzM2ODIkbzIkZzAkdDE3NzQ0NzM2ODIkajYwJGwwJGgw">Devpost</a></p>
+                        <p>Check out projects from last year on <a href="https://wichacks-26.devpost.com/?_gl=1*v4e3ds*_gcl_au*ODg4ODE5MDEyLjE3NzM4Njk4MzM.*_ga*NjU2MzQ5MjUuMTc3Mzg2OTgzMw..*_ga_0YHJK3Y10M*czE3NzQ0NzM2ODIkbzIkZzAkdDE3NzQ0NzM2ODIkajYwJGwwJGgw">Devpost!</a></p>
                     </div>
                 </div>
             </div>

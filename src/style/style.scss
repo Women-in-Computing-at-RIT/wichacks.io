@@ -10,7 +10,7 @@ body {
     background-color: white;
 }
 h1 {
-    color: $purple;
+    color: $main-dark;
     @include ms-font(48px);
 }
 html {
@@ -27,7 +27,7 @@ section {
     left: 0;
     right: 0;
     height: var(--nav-h);
-    background: rgba($purple, 0.55);
+    background: rgba($main-dark, 0.55);
     backdrop-filter: blur(10px);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
 
@@ -38,7 +38,7 @@ section {
 
 @media (prefers-reduced-transparency: reduce) {
     .navbar {
-        background: $purple;
+        background: $main-dark;
     }
 }
 
@@ -161,7 +161,7 @@ section {
         flex-direction: column;
         gap: 6px;
         padding: 12px 16px 16px;
-        background: rgba($purple, 0.92);
+        background: rgba($main-dark, 0.92);
         backdrop-filter: blur(10px);
         box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
     }
@@ -189,7 +189,7 @@ section {
 
 @media (max-width: 750px) and (prefers-reduced-transparency: reduce) {
     .nav-links {
-        background: $purple;
+        background: $main-dark;
         -webkit-backdrop-filter: none;
                 backdrop-filter: none;
     }
@@ -205,7 +205,7 @@ section {
     left: 0;
     right: 0;
     height: var(--nav-h);
-    background: $purple;
+    background: $main-dark;
     z-index: 0;
 }
 #hero > * {
@@ -238,3 +238,4 @@ section {
 @import 'sass/faq';
 @import 'sass/team';
 @import 'sass/sponsors';
+@import 'sass/footer';

@@ -8,6 +8,21 @@
     h2 {
         color: $secondary-dark;
     }
+    p {
+        @include ms-font(18px);
+        text-align: left;
+        font-weight: 400;
+        margin: 0 0 5px 0;
+        color: $secondary-dark;
+
+        strong {
+            font-weight: 600;
+        }
+    }
+    a {
+            color: $main-dark;
+            text-decoration: underline;
+    }
 }
 
 .categories-container {
@@ -109,7 +124,7 @@
 }
 
 .projects-text{
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     margin-top: 80px;
 }

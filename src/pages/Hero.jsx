@@ -39,9 +39,9 @@ function Hero() {
                 <img src={WiCLogo} alt="WiCHacks Logo" />
             </div>
             <div className="hero-devpost-link">
-                <h3>Checkout projects from 2026!</h3>
-                <a href="https://wichacks-26.devpost.com/?_gl=1*v4e3ds*_gcl_au*ODg4ODE5MDEyLjE3NzM4Njk4MzM.*_ga*NjU2MzQ5MjUuMTc3Mzg2OTgzMw..*_ga_0YHJK3Y10M*czE3NzQ0NzM2ODIkbzIkZzAkdDE3NzQ0NzM2ODIkajYwJGwwJGgw" target="_blank" rel="noopener noreferrer">
-                    <div className="button">Devpost</div>
+                <h3>Interested in WiCHacks 2027?</h3>
+                <a href="https://forms.gle/FuqoB6B4Eox3cesW9" target="_blank" rel="noopener noreferrer">
+                    <div className="button">Interest Form</div>
                 </a>
             </div>
             <div className="hero-spacer"></div> {/* gives space on right so you can see widget */}
