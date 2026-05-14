@@ -47,7 +47,7 @@ function Hero() {
             <div className="hero-spacer"></div> {/* gives space on right so you can see widget */}
             <div className="hero-bottom">
                 <div className="countdown" role="timer" aria-live="polite">
-                    <h2>Countdown to WiCHacks 2026</h2>
+                    <h2>Countdown to WiCHacks 2027</h2>
                     {isLive ? (
                         <div className="countdown-live">WiCHacks is live!</div>
                     ) : (

@@ -108,6 +108,22 @@
     text-align: center;
 }
 
+.projects-text{
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.past-projects {
+    margin-top: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background: rgba($main-dark, 0.10);
+    padding: 20px;
+    border-radius: 12px;
+}
+
 .category-title {
     margin: 0 0 0.5rem 0;
     @include ms-font(22px);
