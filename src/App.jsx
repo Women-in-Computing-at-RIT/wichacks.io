@@ -11,7 +11,7 @@ import Team from "./pages/Team";
 import Sponsors from "./pages/Sponsors";
 import Footer from "./pages/Footer";
 
-import mlh_badge from "./assets/mlh-trust-badge-2026-white.svg";
+import mlh_badge from "./assets/mlh-trust-badge-2027-white.svg";
 
 export default function App() {
   const navRef = useRef(null);
