@@ -39,6 +39,12 @@
     }
 }
 
+.team-group {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+}
+
 @keyframes team-scroll {
     0% {
         transform: translateX(0%);
@@ -127,5 +133,15 @@
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .team-group {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team-group[aria-hidden="true"] {
+        display: none;
     }
 }
